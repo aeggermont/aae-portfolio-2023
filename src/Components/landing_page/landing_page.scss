@@ -5,11 +5,13 @@
 		display: flex;
 		align-content: space-evenly;
 		text-align: center;
-		position: absolute;	
-		top: 10%;
+		position: relative;	
 		flex-direction: column;
+		margin-top: 90px;
 
 		.aae-banner {
+			//position: absolute;
+			top: 10%;
 			padding: 10px 0;
 
 			.banner-photo { 
@@ -80,13 +82,14 @@
 		display: flex;
 		align-content: space-evenly;
 		text-align: center;
-		position: absolute;	
+		//position: absolute
+		margin-top: 100px;
 		top: 12%;
 		flex-direction: column;
 		
 		.sphere-shape {
 			position: absolute;
-			top: -5%;
+			top: 10%;
 			float: left;
 			width: 440px;
 			height: 440px;
