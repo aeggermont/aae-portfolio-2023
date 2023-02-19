@@ -34,8 +34,8 @@ export default function BackgroundCard(props) {
                 maxHeight: '314px', 
                 minWidth: '150px',
                 '&:hover': {
-                    backgroundColor: 'primary.secondary',
-                    opacity: [0.9, 0.8, 0.7],
+                    // backgroundColor: 'primary.secondary',
+                    // opacity: [0.9, 0.8, 0.7],
                 }, 
             }}
 
