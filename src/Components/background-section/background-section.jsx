@@ -42,7 +42,7 @@ function BackgroundSection() {
             <Box
                 sx={{
                     width: '100%',
-                    height: '500px',
+                    height: '100%',
                     display: 'flex',
                     flexWrap: 'wrap',
                    
