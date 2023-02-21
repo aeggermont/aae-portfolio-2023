@@ -1,0 +1,29 @@
+@import "../../scss/variables.scss";
+
+@media #{$xs} {
+    .projects-section-divider {
+        margin-top: 60px;
+        margin-left: 15px;
+        margin-bottom: 30px;
+   
+        .section-divider-typography {
+           font-weight: 800;
+           font-size: 24px;
+           color: #074C5F;
+        }
+   }
+}
+
+@media #{$lg}{
+    .projects-section-divider {
+        margin-top: 100px;
+        margin-left: 40px;
+        margin-bottom: 50px;
+   
+        .section-divider-typography {
+           font-weight: 800;
+           font-size: 40px;
+           color: #074C5F;
+        }
+   }
+}
