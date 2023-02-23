@@ -48,10 +48,7 @@ function BackgroundSection() {
                    
                     gap: 2,
                     alignContent: 'flex-start',
-                    justifyContent: 'center',
-                    '&:hover': {
-                        opacity: [0.9, 0.8, 0.7],
-                    },
+                    justifyContent: 'center'
             }}>
                 <BackgroundCard info={backgroundInfo[0]}/>
                 <BackgroundCard info={backgroundInfo[1]}/>
