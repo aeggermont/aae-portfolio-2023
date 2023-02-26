@@ -14,6 +14,21 @@
    }
 }
 
+@media #{$md}{
+   .section-divider {
+       margin-top: 50px;
+       margin-left: 40px;
+       margin-bottom: 50px;
+  
+       .section-divider-typography {
+          font-weight: 800;
+          font-size: 32px;
+          color: #074C5F;
+       }
+  }
+}
+
+
 @media #{$lg}{
     .section-divider {
         margin-top: 50px;
@@ -22,9 +37,24 @@
    
         .section-divider-typography {
            font-weight: 800;
-           font-size: 40px;
+           font-size: 32px;
            color: #074C5F;
         }
    }
+}
+
+@media #{$laptop}{
+   
+   .section-divider {
+       margin-top: 50px;
+       margin-left: 40px;
+       margin-bottom: 50px;
+  
+       .section-divider-typography {
+          font-weight: 800;
+          font-size: 32px;
+          color: #074C5F;
+       }
+  }
 }
 

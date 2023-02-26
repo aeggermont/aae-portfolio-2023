@@ -19,12 +19,13 @@ function LandingPage() {
                         <span className="heading-primary-intro"> Hello, my name is Antonio </span>
                         <span className="heading-primary-main"> UX Engineer, Applications Developer & Technologist </span>
                         <span className="heading-primary-sub"> I design and engineer experiences from inception to completion, and adopt emerging technologies through Human -Centered Design</span>
+                    
+                        <div class="contact-area">
+                            <span> Linkedin </span>
+                        </div>
                     </div>
-
-                    <div class="contact-area">
-                        <span> Linkedin </span>
-
-                    </div>
+                    
+                   
                 </div>
                 <div className="sphere-shape"></div> 
             
