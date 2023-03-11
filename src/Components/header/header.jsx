@@ -42,15 +42,15 @@ function Header() {
                                 <a href="#" className="close_btn"><i><FaTimes/></i></a>
                             </div>
                             <ul className="sidebar-menu">
-                                <li className="menu-item"><a> Home</a></li>
-                                <li className="menu-item"><a> About Me</a>
-                                    <ul className="sub-menu">
-                                        <li className="menu-item"><a>Background</a></li>
+                                <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/"> Home </NavLink></li>
+                                <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/aboutme"> About Me  </NavLink></li>
+                                <li>
+                                        <ul className="sub-menu">
+                                        <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/mywork"> My Work </NavLink></li>
                                         <li className="menu-item"><a>Skills </a></li>
                                     </ul>
                                 </li>
-                                <li className="menu-item"><a> Portfolio</a></li>
-                                <li className="menu-item"><a> Contact Me</a></li>
+                                <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/contact"> Contact </NavLink></li>
                             </ul>
                         </div>
                     </div>
@@ -67,10 +67,10 @@ function Header() {
                                     <div className="primary_menu" id="menu">
                                         <nav className="main_menu">
                                             <ul>
-                                                <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/test"> Home </NavLink></li>
-                                                <li className="menu-item"><a>About Me</a></li>
-                                                <li className="menu-item"><a>Portfolio </a></li>
-                                                <li className="menu-item"><a>Contact Me </a></li>
+                                                <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/"> Home </NavLink></li>
+                                                <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/aboutme"> About Me  </NavLink></li>
+                                                <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/mywork"> My Work </NavLink></li>
+                                                <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/contact"> Contact </NavLink></li>
                                             </ul>
                                         </nav>
                                     </div>

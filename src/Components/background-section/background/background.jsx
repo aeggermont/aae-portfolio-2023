@@ -47,9 +47,14 @@ export default function BackgroundCard(props) {
             <CardActionArea>
                 <CardMedia
                     component="img"
-                    className="card-media-img"
                     image={img}
-                    sx={{ padding: "1em 1em 0 1em", objectFit: "contain" }}
+                    sx={{  
+                        padding: "1em 1em 1em 1em", 
+                        objectFit: "contain",
+                        alignContent: "center",
+                        width: { xs: "80px", sm: "90px", md: "110px", lg: "120px"},
+                        height: { xs: "80px", sm: "90px", md: "110px", lg: "120px" },
+                    }}
                     alt="My skills in UX / UI Engineering"
                 />
                 <CardContent>
@@ -61,9 +66,7 @@ export default function BackgroundCard(props) {
                     
                 </CardContent>
             </CardActionArea>
-            <CardActions>
-                <Button size="small" color="primary"> Learn More </Button>
-            </CardActions>
+     
         </Card>
     )
 

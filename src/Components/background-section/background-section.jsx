@@ -53,7 +53,7 @@ function BackgroundSection() {
         if ( isXSmallScr ) {
             console.log( ' < isXSmallScr > ');
             cardDimensions = {
-                width: '200px',
+                width: '260px',
                 height: '210px',
                 isPortraitScr: isPortraitScr
             };

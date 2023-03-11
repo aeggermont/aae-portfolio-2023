@@ -5,6 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import CardMedia from '@mui/material/CardMedia';
 import { Button, CardActionArea, CardActions } from '@mui/material';
+import './latest-project.scss';
 
 const styles = {
     fullHeightCard: {
@@ -17,19 +18,23 @@ function LatestProject(props) {
     const title = props.info.title;
     const img = props.info.img;
     const desciption = props.info.desciption;
+    const dimensions = props.dimensions;
+
+    console.log(' <<< LatestProject >>> ');
+    console.log(dimensions);
+    console.log('=======================');
 
     return (
         <Card sx={{
-            width: '354px',
-            height: '441px',
+            width: dimensions.width, 
+            height: dimensions.height,
             }}
             raised='true'
             >
-            <CardActionArea>
+            <CardActionArea >
                 <CardMedia
                      component="img"
-                     height='100%'
-                     width='100%'
+                     className="card-media-img"
                      image={img}
                      sx={{ 
                         padding: "0em 0em 0 0em", 
@@ -38,11 +43,12 @@ function LatestProject(props) {
                             opacity: [0.9, 0.8, 0.7],
                         } }}
                 />
-                <CardContent>
-                    <Typography gutterBottom variant="h6" component="div">
+                <CardContent
+                    style={{backgroundColor: "#F3F6F7" }}>
+                    <Typography gutterBottom variant="h5" component="div"  style={{color: "#074C5F" }}>
                         {title }
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography variant="body1" color="text.secondary">
                         {desciption}
                     </Typography>
                 </CardContent>
@@ -56,5 +62,6 @@ export default LatestProject;
 LatestProject.prototype = {
     title : PropTypes.string.isRequired,
     desciption: PropTypes.string.isRequired,
-    img: PropTypes.object.isRequired       
+    img: PropTypes.object.isRequired,
+    dimensions: PropTypes.object.isRequired       
 }
