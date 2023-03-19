@@ -26,12 +26,13 @@ function Project (props) {
     const similarProjects = props.info.similarProjects;
     const skills = props.info.skills;
     const title = props.info.title;
-    const thumbnailImg = '/images/projects/thumbs/arMagicTours-thumb.png';
+    const thumbnailImg = props.info.thumbnailImg;
+    // const thumbnailImg = '/images/projects/thumbs/arMagicTours-thumb.png';
     const navigate = useNavigate();
 
-    const handleClick = (event) => {
+    const handleProjectPage = (event) => {
         setTimeout(() => {
-            navigate(`/character/${projectId}`, { replace: false });
+            navigate( `/${projectLink}` , { replace: false });
         }, 500);
         
     };
@@ -129,7 +130,10 @@ function Project (props) {
                                     {skills}
                                     </Typography>
                                     <CardActions  sx={{ marginTop: '-5px', textAlign: 'center' }} >
-                                        <Button size="small">View Project</Button>
+                                        <Button
+                                            onClick={handleProjectPage}
+                                            value={projectLink} 
+                                            size="small"> View Project</Button>
                                     </CardActions>
                                 </CardContent>
                                
