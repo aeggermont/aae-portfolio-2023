@@ -37,11 +37,23 @@ function Portfolio()  {
             <p className='portfolio-main-summary'> The projects I have developed and collaborate  range from applications development using technologies like Angular, React JS, NodeJs,  and iOS. 
             Design methodologies I employ include Design Thinking, Human Centered Design, and Human Computer Interaction</p>
 
-            {
-                Object.keys(projects).map( project => (
-                    <Project info={projects[project]} />
-                ))
-            }
+            <div className='portfolio-projects-area'>
+                <div className='portfolio-projects-container' >
+                {
+                    Object.keys(projects).map( project => (
+                        <div className='project'>
+                            <Project info={projects[project]} />
+                        </div>
+                    ))
+                }
+                </div>
+               
+            </div>
+
+           
+
+
+
         </section>
     );
 }
