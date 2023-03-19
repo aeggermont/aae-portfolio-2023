@@ -34,7 +34,7 @@ function MainProjectsSection() {
         let cardDimensions = {};
 
         if ( isXSmallScr ) {
-            console.log( ' < isXSmallScr > ');
+            // console.log( ' < isXSmallScr > ');
             cardDimensions = {
                 width: '315px',
                 height: '370px',
@@ -42,7 +42,7 @@ function MainProjectsSection() {
             };
     
         } else if ( isSmallScr ) {
-            console.log( ' < isSmallScr > '); 
+            // console.log( ' < isSmallScr > '); 
             cardDimensions = {
                 width: '315px',
                 height: '370px',
@@ -50,21 +50,22 @@ function MainProjectsSection() {
             };
     
         } else if ( isMediumScr ) {
-            console.log( ' < isMediumScr > '); 
+            // console.log( ' < isMediumScr > '); 
             cardDimensions = {
                 width: '315px',
                 height: '370px',
                 isPortraitScr: isPortraitScr
             };
         } else if ( isLargeScr ) {
-            console.log( ' < isLargeScr > '); 
+            // console.log( ' < isLargeScr > '); 
             cardDimensions = {
                 width: '100px',
                 height: '100px',
                 isPortraitScr: isPortraitScr
             };
         } else if ( isLaptopScr ) {
-            console.log( ' < isLaptopScr > '); cardDimensions = {
+            //console.log( ' < isLaptopScr > '); 
+            cardDimensions = {
                 width: '260px',
                 height: '280px',
                 isPortraitScr: isPortraitScr
