@@ -93,51 +93,54 @@ function Project (props) {
                     </Card>
                 </div>
                 <div className="flip-card-back">
-                    <Card sx={{ 
-                        maxWidth: 345,
-                        height: 213,
-                        '--Card-padding': '0px', 
+                    <Card
+                        sx={{ 
+                            maxWidth: 345,
+                            height: 213,
+                            '--Card-padding': '0px', 
                         }}>
-                            <Box
-                                sx={{
-                                    position: 'relative',
-                                    paddingBlock: '0',
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    alignItems: 'center',
-                                    bottom: 0,
-                                    left: 0,
-                                    width: '100%',
-                                    height: 213,
-                                    '& > :not(style)': {
-                                        m: 1,
+                            <CardActionArea onClick={handleProjectPage}>
+                                <Box
+                                    sx={{
+                                        position: 'relative',
+                                        paddingBlock: '0',
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        alignItems: 'center',
+                                        bottom: 0,
+                                        left: 0,
                                         width: '100%',
-                                      },
-                                    bgcolor: 'rgba(0, 0, 0, 0.05)',
-                                    color: 'black',
-                                    padding: '10px'
-                                }}
-                            >
+                                        height: 213,
+                                        '& > :not(style)': {
+                                            m: 1,
+                                            width: '100%',
+                                        },
+                                        bgcolor: 'rgba(0, 0, 0, 0.05)',
+                                        color: 'black',
+                                        padding: '10px'
+                                    }}
+                                >
 
-                                <CardContent>
-                                    <Typography sx={{ marginTop: '-10px' }} gutterBottom variant="h5" component="div">
-                                        {title}
-                                    </Typography>
-                                    <Typography variant="body2" color="text.secondary">
-                                    {description}
-                                    </Typography>
-                                    <Typography sx={{ marginTop: '5px' }} variant="body2" color="text.secondary">
-                                    {skills}
-                                    </Typography>
-                                    <CardActions  sx={{ marginTop: '-5px', textAlign: 'center' }} >
-                                        <Button
-                                            onClick={handleProjectPage}
-                                            value={projectLink} 
-                                            size="small"> View Project</Button>
-                                    </CardActions>
-                                </CardContent>
-                               
-                            </Box>
+                                    <CardContent>
+                                        <Typography sx={{ marginTop: '-10px' }} gutterBottom variant="h5" component="div">
+                                            {title}
+                                        </Typography>
+                                        <Typography variant="body2" color="text.secondary">
+                                        {description}
+                                        </Typography>
+                                        <Typography sx={{ marginTop: '5px' }} variant="body2" color="text.secondary">
+                                        {skills}
+                                        </Typography>
+                                        <CardActions  sx={{ marginTop: '-5px', textAlign: 'center' }} >
+                                            <Button
+                                                onClick={handleProjectPage}
+                                                value={projectLink} 
+                                                size="small"> View Project</Button>
+                                        </CardActions>
+                                    </CardContent>
+                                
+                                </Box>
+                            </CardActionArea>
                     </Card>
                 </div>
             </div>
