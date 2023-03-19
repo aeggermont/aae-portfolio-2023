@@ -2,14 +2,20 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import BackgroundCard from './background/background';
 import Typography from '@mui/material/Typography';
-import UXUIDesignIcon from '../../assets/images/UXUIDesignIcon.png';
-import FullStrackDevelopmentIcon from '../../assets/images/FullStrackDevelopmentIcon.png';
-import HumanCenteredDesignIcon from '../../assets/images/HumanCenteredDesignIcon.png';
-import SystemsArchitectureIcon from '../../assets/images/SystemsArchitectureIcon.png';
 import './background-section.scss';
 import { useMediaQuery } from "react-responsive";
 import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
 import { useTheme } from '@mui/material/styles';
+import { useEffect, useState } from 'react';
+import { getDoc, doc } from "firebase/firestore";
+import fsReference from '../../firebase';
+
+/* Assets */
+import UXUIDesignIcon from '../../assets/images/UXUIDesignIcon.png';
+import FullStrackDevelopmentIcon from '../../assets/images/FullStrackDevelopmentIcon.png';
+import HumanCenteredDesignIcon from '../../assets/images/HumanCenteredDesignIcon.png';
+import SystemsArchitectureIcon from '../../assets/images/SystemsArchitectureIcon.png';
+
 
 function BackgroundSection() {
 
@@ -27,21 +33,44 @@ function BackgroundSection() {
     const isPortraitScr = useMediaQuery({ query: '(orientation: portrait)' });
     const isRetinaScr = useMediaQuery({ query: '(min-resolution: 2dppx)' });
     
+    const [backgrounds, setBackgrounds] = useState({});
+    const [isLoading, setIsLoading] = useState(true);
+    const [hasError, setHasError] = useState(false);
+    const [error, setError] = useState();
+
+    useEffect(() => {
+        const docRef = doc(fsReference, 'main_page', 'backgrounds');
+        getDoc(docRef)
+            .then((doc) => {
+                setBackgrounds(doc.data());
+                setIsLoading(false);
+            })
+            .catch(() => setError('error getting document'));
+    },[]);
+
+    if (isLoading) {
+        return <p>loading...</p>
+    }
+
+    if (hasError) {
+        return <p>Has error!</p>
+    }
+    
     const backgroundInfo = [
         {
-            title: 'UX/UI Design & Engineering',
+            title: backgrounds['background_1']['title'],
             img: UXUIDesignIcon
         },
         {
-            title: 'Human Centered Design',
+            title: backgrounds['background_2']['title'],
             img: HumanCenteredDesignIcon
         },
         {
-            title: 'Systems Architecture',
+            title: backgrounds['background_3']['title'],
             img: SystemsArchitectureIcon
         },
         {
-            title: 'Full Stack Development',
+            title: backgrounds['background_4']['title'],
             img: FullStrackDevelopmentIcon
         },
     ];
@@ -51,7 +80,7 @@ function BackgroundSection() {
         let cardDimensions = {};
 
         if ( isXSmallScr ) {
-            console.log( ' < isXSmallScr > ');
+            // console.log( ' < isXSmallScr > ');
             cardDimensions = {
                 width: '260px',
                 height: '210px',
@@ -59,7 +88,7 @@ function BackgroundSection() {
             };
     
         } else if ( isSmallScr ) {
-            console.log( ' < isSmallScr > '); 
+            // console.log( ' < isSmallScr > '); 
             cardDimensions = {
                 width: '100px',
                 height: '100px',
@@ -67,21 +96,22 @@ function BackgroundSection() {
             };
     
         } else if ( isMediumScr ) {
-            console.log( ' < isMediumScr > '); 
+            // console.log( ' < isMediumScr > '); 
             cardDimensions = {
                 width: '185px',
                 height: '230px',
                 isPortraitScr: isPortraitScr
             };
         } else if ( isLargeScr ) {
-            console.log( ' < isLargeScr > '); 
+            // console.log( ' < isLargeScr > '); 
             cardDimensions = {
                 width: '100px',
                 height: '100px',
                 isPortraitScr: isPortraitScr
             };
         } else if ( isLaptopScr ) {
-            console.log( ' < isLaptopScr > '); cardDimensions = {
+            // console.log( ' < isLaptopScr > '); 
+            cardDimensions = {
                 width: '260px',
                 height: '280px',
                 isPortraitScr: isPortraitScr
