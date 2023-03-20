@@ -3,3 +3,8 @@ PhotoShopDocs
 node_modules
 /node_modules
 src/firebase.js
+.firebase/
+.firebaserc
+build/
+firebase.json
+package-lock.json
