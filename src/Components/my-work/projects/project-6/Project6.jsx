@@ -1,4 +1,5 @@
 import React from 'react';
+import '../projects.scss';
 
 function Project6()  {
     return (
