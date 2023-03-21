@@ -1,5 +1,6 @@
 import React from 'react';
 import '../projects.scss';
+import pdfDocumentation from './PassportBotPresentation.pdf';
 
 import StickyBoxPanel from '../../../sticky-box-panel/StickyBoxPanel';
 import ProjectRecommendations from '../../../project-recommendations/ProjectRecommendations';
@@ -15,11 +16,6 @@ const options = {
     cMapPacked: true,
     standardFontDataUrl: 'standard_fonts/',
 };
-
-// import { Document, pdfjs, Page } from 'react-pdf';
-// pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
-
-// import pdfDocumentation from '../../../../assets/projects-data/project-6/PassportBotPresentation.pdf';
 
 function Project6()  {
     const [projectData, setProjectData] = useState([]);
@@ -59,16 +55,13 @@ function Project6()  {
         return <p>Has error!</p>
     }
 
-    console.log('>>> Project Data <<<');
-    console.log(projectData);
-    console.log('====================');
     /* file="../../../../assets/projects-data/project-6/PassportBotPresentation.pdf" */
 
     return (
         <div className="container">
             <div className='row'>
                 <div className="col-11">
-                    <Document file="/PassportBotPresentation.pdf" onLoadSuccess={onDocumentLoadSuccess} options={options}>
+                    <Document file={pdfDocumentation} onLoadSuccess={onDocumentLoadSuccess} options={options}>
                         {Array.from(new Array(numPages), (el, index) => (
                             <Page key={`page_${index + 1}`} pageNumber={index + 1} />
                         ))}
