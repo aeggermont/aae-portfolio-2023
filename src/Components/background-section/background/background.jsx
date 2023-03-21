@@ -46,25 +46,23 @@ export default function BackgroundCard(props) {
             >
             <CardActionArea>
                 <CardMedia
+                    sx={{
+                        objectFit: "contain",
+                        padding: "1em 1em 1em 1em", 
+                        width: { xs: "80px", sm: "90px", md: "110px", lg: "120px"},
+                        height: { xs: "80px", sm: "90px", md: "110px", lg: "120px" }}}
                     component="img"
                     image={img}
-                    sx={{  
-                        padding: "1em 1em 1em 1em", 
-                        objectFit: "contain",
-                        alignContent: "center",
-                        width: { xs: "80px", sm: "90px", md: "110px", lg: "120px"},
-                        height: { xs: "80px", sm: "90px", md: "110px", lg: "120px" },
-                    }}
-                    alt="My skills in UX / UI Engineering"
+                    alt={title}
                 />
                 <CardContent>
-                    <Typography
-                        align='center'
-                        gutterBottom
-                        variant="h6"
-                        component="div"> {title} </Typography>
-                    
+                    <div className='background-title'>
+                        <span className='background-title-label'> {title} </span>
+                    </div>
                 </CardContent>
+                <CardActions>
+                    <Button size="small">Learn More</Button>
+                </CardActions>
             </CardActionArea>
      
         </Card>
@@ -77,3 +75,15 @@ BackgroundCard.prototype = {
     img: PropTypes.object.isRequired,
     dimensions: PropTypes.object.isRequired
 }
+
+/*
+
+  sx={{
+                        display:'flex',
+                        justifyContent:'center',
+                        padding: "1em 1em 1em 1em", 
+                        objectFit: "contain",
+                        width: { xs: "80px", sm: "90px", md: "110px", lg: "120px"},
+                        height: { xs: "80px", sm: "90px", md: "110px", lg: "120px" },
+                    }}
+                    */

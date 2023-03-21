@@ -1,45 +1,80 @@
 @import "../../../scss/variables.scss";
 
 @media #{$xs} {
-    .card-media-img {
-        height: 71px;
-        width: 71px;
-        align-items: center;
-    }
-
-    .background-card-typography {
-        font-size: 1.5rem;
+    .background-title {
+        text-align: center;   
+        .background-title-label {
+            margin-bottom: 30px;
+            font-weight: 500;
+            font-size: 18px;
+            color: #074C5F;
+            
+        }
     }
 }
 
 @media #{$sm} {
-    .card-media-img {
-        height: 74px;
-        width: 74px;
-        align-items: center;
+    .background-title {
+        text-align: center;   
+        .background-title-label {
+            margin-bottom: 30px;
+            font-weight: 500;
+            font-size: 18px;
+            color: #074C5F;
+            
+        }
     }
 }
 
 @media #{$md} {
-    .card-media-img {
-        height: 85px;
-        width: 85px;
-        align-items: center;
+    .background-title {
+        text-align: center;   
+        .background-title-label {
+            margin-bottom: 30px;
+            font-weight: 500;
+            font-size: 18px;
+            color: #074C5F;
+            
+        }
     }
 }
 
 @media #{$lg} {
+    .background-title {
+        text-align: center;   
+        .background-title-label {
+            margin-bottom: 30px;
+            font-weight: 500;
+            font-size: 23px;
+            color: #074C5F;
+            
+        }
+    }
+
+    /*
     .card-media-img {
         height: 110px;
         width: 110px;
         align-items: center;
-    }
+    } */
 }
 
 @media #{$laptop} {
+    .background-title {
+        text-align: center;   
+        .background-title-label {
+            margin-bottom: 30px;
+            font-weight: 600;
+            font-size: 23px;
+            color: #074C5F;
+            
+        }
+    }
+    /*
     .card-media-img {
         height: 110px;
         width: 110px;
         align-items: center;
     }
+    */
 }
