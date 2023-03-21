@@ -82,42 +82,25 @@ function BackgroundSection() {
         if ( isXSmallScr ) {
             // console.log( ' < isXSmallScr > ');
             cardDimensions = {
-                width: '260px',
+                width: '175px',
                 height: '210px',
                 isPortraitScr: isPortraitScr
             };
     
-        } else if ( isSmallScr ) {
-            // console.log( ' < isSmallScr > '); 
+        } else if ( isLargeScr) {
             cardDimensions = {
-                width: '100px',
-                height: '100px',
+                width: '210px',
+                height: '270px',
                 isPortraitScr: isPortraitScr
             };
-    
-        } else if ( isMediumScr ) {
-            // console.log( ' < isMediumScr > '); 
+
+        } else {
             cardDimensions = {
-                width: '185px',
-                height: '230px',
+                width: '237px',
+                height: '300px',
                 isPortraitScr: isPortraitScr
             };
-        } else if ( isLargeScr ) {
-            // console.log( ' < isLargeScr > '); 
-            cardDimensions = {
-                width: '100px',
-                height: '100px',
-                isPortraitScr: isPortraitScr
-            };
-        } else if ( isLaptopScr ) {
-            // console.log( ' < isLaptopScr > '); 
-            cardDimensions = {
-                width: '260px',
-                height: '280px',
-                isPortraitScr: isPortraitScr
-            };
-        
-        };
+        }
     
         return cardDimensions;
     };
@@ -126,49 +109,35 @@ function BackgroundSection() {
     console.log(cardDimensions());
 
     return (
-        <section>
-            <div className='section-divider'>
-                <Typography
-                        align='left'
-                        gutterBottom
-                        variant="h4"
-                        className='section-divider-typography'
-                        component="div"> What I do </Typography>
+        <section className='container'>
+            <div className='background-section'>
+                <div className='row'>
+                    <div className='section-title'>
+                        <span className='section-title-label'>
+                            What I do 
+                        </span>
+                    </div>
+                    
+                </div>
+                <div className='row'>
+                    <Box
+                        sx={{
+                            width: '100%',
+                            height: '100%',
+                            display: 'flex',
+                            flexWrap: 'wrap',
+                            gap: 2,
+                            alignContent: 'flex-start',
+                            justifyContent: 'center'
+                    }}>
+                        <BackgroundCard info={backgroundInfo[0]} dimensions={cardDimensions()}/>
+                        <BackgroundCard info={backgroundInfo[1]} dimensions={cardDimensions()}/>
+                        <BackgroundCard info={backgroundInfo[2]} dimensions={cardDimensions()}/>
+                        <BackgroundCard info={backgroundInfo[3]} dimensions={cardDimensions()}/>
+                    </Box>
+                </div>
             </div>
-            <Box
-                sx={{
-                    width: '100%',
-                    height: '100%',
-                    display: 'flex',
-                    flexWrap: 'wrap',
-                   
-                    gap: 2,
-                    alignContent: 'flex-start',
-                    justifyContent: 'center'
-            }}>
-
-
-            </Box>    
-            <Box
-                sx={{
-                    width: '100%',
-                    height: '100%',
-                    display: 'flex',
-                    flexWrap: 'wrap',
-                   
-                    gap: 2,
-                    alignContent: 'flex-start',
-                    justifyContent: 'center'
-            }}>
-                
-                <BackgroundCard info={backgroundInfo[0]} dimensions={cardDimensions()}/>
-                <BackgroundCard info={backgroundInfo[1]} dimensions={cardDimensions()}/>
-                <BackgroundCard info={backgroundInfo[2]} dimensions={cardDimensions()}/>
-                <BackgroundCard info={backgroundInfo[3]} dimensions={cardDimensions()}/>
-            </Box>
-
         </section>
-       
     )
 }
 
