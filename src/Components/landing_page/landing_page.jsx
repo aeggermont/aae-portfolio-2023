@@ -1,8 +1,16 @@
 import React from 'react';
 import shapeImg from "../../assets/shapes/shape_1.png";
+
 import bannerPhoto from "../../assets/images/AE-Front-Page-Photo.png";
 import "./landing_page.scss";
 import fsReference from '../../firebase';
+import Box from '@mui/material/Box';
+import Fab from '@mui/material/Fab';
+
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+
 import { useEffect, useState } from 'react';
 import { collection, where, getDoc, onSnapshot, orderBy, query, deleteDoc, doc } from "firebase/firestore";;
 
@@ -10,6 +18,8 @@ import { collection, where, getDoc, onSnapshot, orderBy, query, deleteDoc, doc }
 
  Streaming document changes: https://blog.logrocket.com/how-to-use-react-hooks-firebase-firestore/
  https://www.google.com/search?q=how+to+ferch+a+single+document+from+firebase+in+ReactJS&rlz=1C5CHFA_enMX904MX904&oq=how+to+ferch+a+single+document+from+firebase+in+ReactJS&aqs=chrome..69i57j33i10i160.12982j0j9&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:cda934a7,vid:lZzd8zurolg
+ 
+  https://www.linkedin.com/in/antonio-aranda-eggermont-23aa7b8/
  */
 
 function LandingPage() {
@@ -18,8 +28,10 @@ function LandingPage() {
     const [isLoading, setIsLoading] = useState(true);
     const [hasError, setHasError] = useState(false);
     const [error, setError] = useState();
-    
-    console.log('>>> about to get stuff ');
+
+    const handleLinkedIn = () => {
+        window.location.href = 'https://www.linkedin.com/in/antonio-aranda-eggermont-23aa7b8/';
+    };
 
     useEffect(() => {
         const docRef = doc(fsReference, 'main_page', 'headers');
@@ -31,34 +43,6 @@ function LandingPage() {
             })
             .catch(() => setError('error getting document'));
     },[]);
-
-    /*
-    useEffect(() => {
-
-        const entriesQuery = doc(fsReference, "main_page", "headers");
-        // const docSnap = getDocs(entriesQuery);
-
-        // onst entriesQuery = query(
-            // collection(fsReference, 'main_page'),
-        //    getDocs(fsReference, 'main_page', 'headers'),
-        //)
-
-        const unsubscribe = onSnapshot(
-            entriesQuery,
-            snapshot => {
-                setEntries(snapshot.docs);
-                setIsLoading(false);
-            },
-            error => {
-                console.log(error);
-                setIsLoading(false);
-                setHasError(true);
-            }
-        )
-
-        return () => unsubscribe();
-    }, []); */
-
 
     if (isLoading) {
         return <p>loading...</p>
@@ -82,6 +66,10 @@ function LandingPage() {
                         <span className="heading-primary-sub"> { headers['header_3'] }</span>
                     
                         <div class="contact-area">
+                            <IconButton color="primary" aria-label="upload picture" component="label" onClick={handleLinkedIn}>
+                                <input hidden accept="image/*" type="file" />
+                                <LinkedInIcon />
+                            </IconButton>
                             <span> Linkedin </span>
                         </div>
                     </div>
