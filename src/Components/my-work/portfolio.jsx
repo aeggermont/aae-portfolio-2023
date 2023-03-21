@@ -3,7 +3,7 @@ import "./portfolio.scss";
 import fsReference from '../../firebase';
 import { useEffect, useState } from 'react';
 import  Project  from './project';
-import { collection, where, getDoc, onSnapshot, orderBy, query, deleteDoc, doc } from "firebase/firestore";;
+import { collection, where, getDoc, onSnapshot, orderBy, query, deleteDoc, doc } from "firebase/firestore";
 
 
 function Portfolio()  {

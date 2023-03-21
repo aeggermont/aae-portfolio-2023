@@ -1,58 +1,106 @@
 @import "../../scss/variables.scss";
+
+
 @media #{$xs} {
-   .section-divider {
-       margin-top: 30px;
-       margin-left: 15px;
-       margin-bottom: 30px;
-  
-       .section-divider-typography {
+   .latest-projects-section {
+      // background-color: blue;
+      margin-top: 60px;
+      margin-left: 15px;
+      margin-bottom: 30px;
+
+      .section-title {
+          margin-bottom: 30px;
+      }
+
+      .section-title-label {
+          margin-bottom: 30px;
           font-weight: 800;
           font-size: 24px;
           color: #074C5F;
        }
-  }
+   }
 }
 
-@media #{$md}{
-  .section-divider {
-      margin-top: 50px;
-      margin-left: 40px;
-      margin-bottom: 50px;
- 
-      .section-divider-typography {
-         font-weight: 800;
-         font-size: 32px;
-         color: #074C5F;
+@media #{$sm} {
+   .latest-projects-section {
+      // background-color: blue;
+      margin-top: 60px;
+      margin-left: 15px;
+      margin-bottom: 30px;
+
+      .section-title {
+          margin-bottom: 30px;
       }
- }
+
+      .section-title-label {
+          margin-bottom: 30px;
+          font-weight: 800;
+          font-size: 24px;
+          color: #074C5F;
+       }
+   }
+}
+
+
+
+@media #{$md}{
+   .latest-projects-section {
+      // background-color: blue;
+      margin-top: 60px;
+      margin-left: 15px;
+      margin-bottom: 30px;
+
+      .section-title {
+          margin-bottom: 30px;
+      }
+
+      .section-title-label {
+          margin-bottom: 30px;
+          font-weight: 800;
+          font-size: 24px;
+          color: #074C5F;
+       }
+   }
 }
 
 
 @media #{$lg}{
-   .section-divider {
-       margin-top: 50px;
-       margin-left: 40px;
-       margin-bottom: 50px;
-  
-       .section-divider-typography {
+   .latest-projects-section {
+      // background-color: blue;
+      margin-top: 100px;
+      margin-left: 40px;
+      margin-bottom: 30px;
+
+      .section-title {
+          margin-bottom: 30px;
+      }
+
+      .section-title-label {
+          margin-bottom: 30px;
           font-weight: 800;
           font-size: 32px;
           color: #074C5F;
        }
-  }
+   }
 }
 
 @media #{$laptop}{
   
-  .section-divider {
-      margin-top: 50px;
+   .latest-projects-section {
+      // background-color: blue;
+      margin-top: 80px;
       margin-left: 40px;
-      margin-bottom: 50px;
- 
-      .section-divider-typography {
-         font-weight: 800;
-         font-size: 32px;
-         color: #074C5F;
+      margin-bottom: 30px;
+
+      .section-title {
+          margin-bottom: 30px;
       }
- }
+
+      .section-title-label {
+          margin-bottom: 30px;
+          font-weight: 800;
+          font-size: 32px;
+          color: #074C5F;
+       }
+   }
 }
