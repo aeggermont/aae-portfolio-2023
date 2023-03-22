@@ -1,9 +1,9 @@
 @import "../../scss/variables.scss";
 
 @media #{$xs} {
-    .testimonials-section {
+    .writeme-section {
         // background-color: blue;
-        margin-top: 100px;
+        margin-top: 30px;
         margin-left: 15px;
         margin-bottom: 30px;
 
@@ -20,10 +20,11 @@
    }
 }
 
+
 @media #{$sm} {
-    .testimonials-section {
+    .writeme-section {
         // background-color: blue;
-        margin-top: 100px;
+        margin-top: 30px;
         margin-left: 15px;
         margin-bottom: 30px;
  
@@ -42,7 +43,7 @@
 
 
 @media #{$md}{
-    .testimonials-section {
+    .writeme-section {
        // background-color: blue;
        margin-top: 30px;
        margin-left: 15px;
@@ -62,7 +63,7 @@
 }
 
 @media #{$lg}{
-    .testimonials-section {
+    .writeme-section {
        // background-color: blue;
        margin-top: 30px;
        margin-left: 15px;
@@ -82,7 +83,7 @@
 }
 
 @media #{$laptop}{
-    .testimonials-section{
+    .writeme-section{
        // background-color: green;
        margin-top: 50px;
        margin-left: 40px;
