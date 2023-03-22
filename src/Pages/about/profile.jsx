@@ -29,13 +29,13 @@ function Profile() {
                                 Hi, I'm <span>Antonio Aranda Eggermont</span>
                             </h3>
                             <p>
-                                My background is in  UX engineering, technology design and applications
-                                development. My technical skills are mostly around app development using
-                                frameworks like Angular, ReactJS, Django, and some iOS. 
-                                My programming skills include Python, JavaScript, TypeScript and some SwiftUI
-                                for front-end development.
-                                For backend development, I have experience developing data APIs in
-                                Python/Flask and exposure to Java.
+                                I am a full stack applications developer and UX engineer with experience in
+                                Web development, AI/ML, data science visualizations, and digital media production. 
+
+                                My interests are interaction design and prototyping of user experiences and user
+                                interfaces, Human Centered Design, Web applications development, back-end Web services,
+                                content management systems, CDN integrations, and analytics applications. 
+                                
                             </p>
                         </div>
                         <div className="my_skills">
