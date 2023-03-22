@@ -13,7 +13,7 @@ function Profile() {
     }
 
     return (
-       <div className="edina_tm_about" id="about">78
+       <div className="aae_about" id="about">78
             <div className="container">
                 <div className="about_title">
                     <h3>About Me</h3>
@@ -28,17 +28,20 @@ function Profile() {
                         data-aos-delay="100">
                         <div className="info">
                             <h3>
-                                Hi, I'm <span>Rokers Nelson</span>
+                                Hi, I'm <span>Antonio Aranda Eggermont</span>
                             </h3>
                             <p>
-                                I'm a Freelancer Front-end Developer with over 6 years of
-                                experience. I'm from San Francisco. I code and create web
-                                elements for amazing people around the world. I like work with
-                                new people.
+                                My background is in  UX engineering, technology design and applications
+                                development. My technical skills are mostly around app development using
+                                frameworks like Angular, ReactJS, Django, and some iOS. 
+                                My programming skills include Python, JavaScript, TypeScript and some SwiftUI
+                                for front-end development.
+                                For backend development, I have experience developing data APIs in
+                                Python/Flask and exposure to Java.
                             </p>
                         </div>
                         <div className="my_skills">
-                            <h3 className="title">What is my skill level?</h3>
+                            <h3 className="title">My Skill Level</h3>
                             <p className="desc">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
                                 ipsum sit nibh amet egestas tellus.
@@ -48,7 +51,7 @@ function Profile() {
                                     <Skills />
                                 </div>
                             </div>
-                            <div className="edina_tm_button">
+                            <div className="seemore_button">
                                 <button
                                     type="submit"
                                     className="color"
@@ -59,38 +62,6 @@ function Profile() {
                             </div>                        
                         </div>
                     </div>
-
-             
-                    <div className="rightpart">
-                        <div className="image">
-                        <img src="images/thumbs/26-35.jpg" alt="thumb" />
-
-                        <div
-                            className="main"
-                            style={{
-                            backgroundImage: `url(${
-                                process.env.PUBLIC_URL + "images/about/2.jpg"
-                            })`,
-                            }}
-                            data-aos="fade-left"
-                            data-aos-duration="1200"
-                            data-aos-delay="200"
-                        ></div>
-
-                        <div
-                            className="experience"
-                            data-aos="fade-up"
-                            data-aos-duration="1200"
-                            data-aos-delay="300"
-                        >
-                            <div className="info">
-                            <h3>6+ Years</h3>
-                            <span>Of Experiance</span>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    {/*  Right Side  */}        
                 </div>           
             </div>
         
