@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import Skills from '../skills/Skills';
-import ModalBackground from './modals/Background';
 import './about.scss';
-import Modal from "react-modal";
-
-Modal.setAppElement("#root");
+import Experience from "./Experience";
+import Education from "./Education";
 
 function Profile() {
     const [isOpen, setIsOpen] = useState(false);
@@ -41,57 +39,27 @@ function Profile() {
                             </p>
                         </div>
                         <div className="my_skills">
-                            <h3 className="title">My Skill Level</h3>
-                            <p className="desc">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-                                ipsum sit nibh amet egestas tellus.
-                            </p>
+                            <h3 className="title">Technical Skills</h3>
+                            <p className="desc"></p>
                             <div className="wrapper">
                                 <div className="dodo_progress">
                                     <Skills />
                                 </div>
                             </div>
-                            <div className="seemore_button">
-                                <button
-                                    type="submit"
-                                    className="color"
-                                    onClick={toggleModalOne}
-                                >
-                                See More
-                                </button>
-                            </div>                        
+                        </div>
+                        <div className="row resume-box">
+                            <div className="col-6">
+                                <h3>Experience</h3>
+                                <Experience />
+                            </div>
+                            <div className="col-6">
+                              <h3>Education</h3>
+                               <Education />
+                            </div>
                         </div>
                     </div>
                 </div>           
-            </div>
-        
-              {/* Start About Details Modal */}
-            <Modal
-                isOpen={isOpen}
-                onRequestClose={toggleModalOne}
-                contentLabel="My dialog"
-                className="custom-modal about-popup-wrapper"
-                overlayClassName="custom-overlay "
-                closeTimeoutMS={500}
-            >
-                <div className="edina_tm_modalbox">
-                <button className="close-modal" onClick={toggleModalOne}>
-                    <img src="/img/svg/cancel.svg" alt="close icon" />
-                </button>
-                {/* End close icon */}
-
-                <div className="box_inner">
-                    <div className="description_wrap scrollable">
-                    <ModalBackground />
-                    </div>
-                </div>
-                {/* End box inner */}
-                </div>
-                {/* End modal box news */}
-            </Modal>
-            {/* End  About Details Modal */}
-            
-            
+            </div>        
         </div>
     );
 };
