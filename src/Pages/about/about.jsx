@@ -8,8 +8,6 @@ function AboutMe() {
     return (
         <Layout>
             <Profile />
-            <Biography/>
-            <Skills />
         </Layout>
     )
 }
