@@ -6,9 +6,11 @@ import Project from '../my-work/project';
 
 /* TODO: Need to remove */
 import LatestProject from './latest-project/latest-project';
+/*
 import Project1 from '../../assets/images/DisneyMagicARTouresIncon.png';
 import Project2 from '../../assets/images/R3XThumbnail.png';
 import Project3 from '../../assets/images/WhereIsPetuniaThumbnail.png';
+*/
 import { useMediaQuery } from "react-responsive";
 
 /* TODO: Need to remove */
@@ -122,6 +124,7 @@ function MainProjectsSection() {
         return cardDimensions;
     };
 
+    /*
     const mainProjectsSecion = [
         {
             title: 'Disney A.R. Magic Tours',
@@ -138,8 +141,7 @@ function MainProjectsSection() {
             desciption: 'Facilitating Trust and Serendipity in Scientific Collaboration addressing socio technical problems through discursive and fiction design. ',
             img: Project3
         },
-
-    ]
+    ] */
 
     return (
         <section className='container'>

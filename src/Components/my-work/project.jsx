@@ -53,12 +53,13 @@ function Project (props) {
                     <Card 
                         sx={{ 
                             maxWidth: 345,
-                            maxHeight: 213,
+                            maxHeight: 221,
                             '--Card-padding': '0px', 
                         }}>
                         <Box sx={{ 
                             position: 'relative'
                             }}>
+                            
                             <CardMedia
                                     component="img"
                                     image={thumbnailImg}

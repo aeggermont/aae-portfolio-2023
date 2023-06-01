@@ -12,8 +12,9 @@ import fsReference from '../../firebase';
 
 /* Assets */
 import UXUIDesignIcon from '../../assets/images/UXUIDesignIcon.png';
-import FullStrackDevelopmentIcon from '../../assets/images/FullStrackDevelopmentIcon.png';
 import HumanCenteredDesignIcon from '../../assets/images/HumanCenteredDesignIcon.png';
+import FontEndDevelopment from '../../assets/images/FullStrackDevelopmentIcon.png';
+
 import SystemsArchitectureIcon from '../../assets/images/SystemsArchitectureIcon.png';
 
 
@@ -59,19 +60,52 @@ function BackgroundSection() {
     const backgroundInfo = [
         {
             title: backgrounds['background_1']['title'],
-            img: UXUIDesignIcon
+            img: UXUIDesignIcon,
+            description: [ "I am a professional with both design and programming skils. \
+                            My experience as UX engineer is in the buidling and designing \
+                            of digital experiences ranging from websites, mobile web apps, \
+                            design and software prototypes, and speculative and fiction \
+                            design narratives.", "Specifically, my experience is in the planning and design \
+                            of web pages and apps employing user research methods, digital \
+                            wireframes, and prototypes.", "I enjoy working as a designer and working with designers, back end engineers, \
+                            and UX researchers to develop products and services." ]
         },
         {
             title: backgrounds['background_2']['title'],
-            img: HumanCenteredDesignIcon
+            img: HumanCenteredDesignIcon,
+            description: [ "I employ user centered design as a framework for design to make products and \
+                             services highly usable. In my experience, user centered design has helped me \
+                             understand where to begin when building or enhancing a new product or service,\
+                             keeping the user-first mind set, employing iteration in the design and development \
+                             process, and building empathy and collaboration. ",
+                             "I enjoy approaching problems using structured methods of gathering observation,\
+                             breaking cognitive fixedness, and generating creative ideas for solutions. ",
+                             "I enjoy using Design Thinking as a toolkit for technology innovation, where I \
+                             practice empathy in applying a human-centered approach to design techniques\
+                             such as user research, user experience, prototyping, and journey mapping."]
         },
         {
             title: backgrounds['background_3']['title'],
-            img: SystemsArchitectureIcon
-        },
+            img:  FontEndDevelopment,
+            description: [ "As a front end engineer, I take the vision and design concepts for implementation\
+                             through code.  Because of my background in UX engineering, I have both design and\
+                             programming abilities. This allows me to build relationships and engage with other\
+                             designers, users and backend engineers during the development process. I have a\
+                             particular interest in interactive applications.",
+                             "I have experience in front end frameworks such as Angular, React, Django and have\
+                             knowledge  of iOS/Swift.  Markup and programming languages include HTML, CSS,\
+                             Javascript, TypeScript and python.",
+                             "The projects I have developed range from content management systems, web mobile apps,\
+                             A.R. , revenue management systems, and applications that interface with machine learning\
+                             backends for data visualization, automation, and recommendations." ]
+        }, 
         {
             title: backgrounds['background_4']['title'],
-            img: FullStrackDevelopmentIcon
+            img: SystemsArchitectureIcon,
+            description_p1: "",
+            description_p2: "",
+            description_p3: "",
+
         },
     ];
 
@@ -87,17 +121,10 @@ function BackgroundSection() {
                 isPortraitScr: isPortraitScr
             };
     
-        } else if ( isLargeScr) {
-            cardDimensions = {
-                width: '210px',
-                height: '270px',
-                isPortraitScr: isPortraitScr
-            };
-
         } else {
             cardDimensions = {
-                width: '237px',
-                height: '300px',
+                width: '210px',
+                height: '260px',
                 isPortraitScr: isPortraitScr
             };
         }
