@@ -102,10 +102,17 @@ function BackgroundSection() {
         {
             title: backgrounds['background_4']['title'],
             img: SystemsArchitectureIcon,
-            description_p1: "",
-            description_p2: "",
-            description_p3: "",
-
+            description: [ "Throughout my career, I have leveraged projects that required different types of\
+                            systems integrations to allow technology ecosystems to share information between\
+                            different sub-systems autonomously via RESTful APIs.",
+                            "My experience in systems integration include legacy systems integration where\
+                            legacy or outdated systems are integrated with modern applications. Examples\
+                            include legacy systems integration with cloud applications and providers, and\
+                            incremental upgrade of legacy Web applications. \
+                            Other integrations include third party systems integrations where met focus has\
+                            been on expanding the functionality of an existing tool or software app.  Examples\
+                            include cloud based solutions for data and video processing, content management\
+                            systems, and data access applications."],
         },
     ];
 
