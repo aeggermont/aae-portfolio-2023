@@ -7,13 +7,55 @@ import CardMedia from '@mui/material/CardMedia';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import './background.scss';
 import UXUIDesignIcon from '../../../assets/images/UXUIDesign-Icon.png'
+import { styled } from '@mui/material/styles';
 import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import DialogContent from '@mui/material/DialogContent';
+import DialogActions from '@mui/material/DialogActions';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
+import Typography from '@mui/material/Typography';
 
+const BootstrapDialog = styled(Dialog)(({ theme }) => ({
+    '& .MuiDialogContent-root': {
+      padding: theme.spacing(2),
+    },
+    '& .MuiDialogActions-root': {
+      padding: theme.spacing(1),
+    },
+  }));
 
+  export interface DialogTitleProps {
+    id: string;
+    children?: React.ReactNode;
+    onClose: () => void;
+  }
+  
+
+function BootstrapDialogTitle(props: DialogTitleProps) {
+    const { children, onClose, ...other } = props;
+
+    return (
+        <DialogTitle sx={{ m: 0, p: 2 }} {...other}>
+        {children}
+        {onClose ? (
+            <IconButton
+            aria-label="close"
+            onClick={onClose}
+            sx={{
+                position: 'absolute',
+                right: 8,
+                top: 8,
+                color: (theme) => theme.palette.grey[500],
+            }}
+            >
+            <CloseIcon />
+            </IconButton>
+        ) : null}
+        </DialogTitle>
+    );
+}
+  
 /*
     Useful links: https://mui.com/material-ui/api/typography/
                   https://mui.com/system/getting-started/the-sx-prop/
@@ -34,7 +76,6 @@ export default function BackgroundCard(props) {
     const title = props.info.title;
     const img = props.info.img;
     const dimensions = props.dimensions;
-    const description = props.info.description;
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -46,7 +87,6 @@ export default function BackgroundCard(props) {
 
     console.log('<<< BackgroundCard ');
     console.log(dimensions.width);
-    console.log(description);
 
     return (
         <div>       
@@ -57,12 +97,34 @@ export default function BackgroundCard(props) {
                 aria-describedby="alert-dialog-description"
             >
                 <DialogTitle id="alert-dialog-title">
-                    {title}
+                    {"My background in UX/UI Design" }
                 </DialogTitle>
-                <DialogContent dividers>
+                <DialogContent>
                     <DialogContentText id="alert-dialog-description">
-                        {description}
+                        Let Google help apps determine location. This means sending anonymous
+                        location data to Google, even when no apps are running.
                     </DialogContentText>
+
+                    <DialogContentText id="alert-dialog-description">
+                        Let Google help apps determine location. This means sending anonymous
+                        location data to Google, even when no apps are running.
+                    </DialogContentText>
+
+                    <DialogContentText id="alert-dialog-description">
+                        Let Google help apps determine location. This means sending anonymous
+                        location data to Google, even when no apps are running.
+                    </DialogContentText>
+
+                    <DialogContentText id="alert-dialog-description">
+                        Let Google help apps determine location. This means sending anonymous
+                        location data to Google, even when no apps are running.
+                    </DialogContentText>
+
+                    <DialogContentText id="alert-dialog-description">
+                        Let Google help apps determine location. This means sending anonymous
+                        location data to Google, even when no apps are running.
+                    </DialogContentText>
+                    
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={handleClose} autoFocus>
@@ -118,8 +180,7 @@ export default function BackgroundCard(props) {
 BackgroundCard.prototype = {
     title : PropTypes.string.isRequired,
     img: PropTypes.object.isRequired,
-    dimensions: PropTypes.object.isRequired,
-    desciption: PropTypes.array.isRequired
+    dimensions: PropTypes.object.isRequired
 }
 
 /*

@@ -56,15 +56,17 @@ function LandingPage() {
         <section className="main-baner-area">
            
                 <div className="aae-banner">
-                    <div class="banner-photo">
-                        <img src={bannerPhoto} width="100%" id="banner-image-dimension" alt="Antonio Aranda Eggermont" />   
-                    </div>
                     
+                    <div class="banner-photo">
+                        <img  src={bannerPhoto} width="100%" id="banner-image-dimension" alt="Antonio Aranda Eggermont" />   
+                    </div>
+                    {/* */}
                     <div className="heading-info">
+                       
                         <span className="heading-primary-intro"> { headers['header_1'] }</span>
                         <span className="heading-primary-main"> { headers['header_2'] }</span>
                         <span className="heading-primary-sub"> { headers['header_3'] }</span>
-                    
+                     
                         <div class="contact-area">
                             <IconButton color="primary" aria-label="upload picture" component="label" onClick={handleLinkedIn}>
                                 <input hidden accept="image/*" type="file" />
@@ -72,6 +74,7 @@ function LandingPage() {
                             </IconButton>
                             <span> Linkedin </span>
                         </div>
+                        
                     </div>
                 </div>
                 <div className="sphere-shape"></div> 
