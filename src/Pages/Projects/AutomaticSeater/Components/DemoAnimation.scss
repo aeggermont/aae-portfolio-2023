@@ -1,0 +1,43 @@
+.mobile-imageanimation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .text-paragraph {
+        padding-top: 1rem;
+        font-family: poppins;
+        font-size: 16px;
+        font-weight: 400;
+        color: #000000;
+    }    
+}
+
+.desktop-imageanimation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .text-paragraph {
+        padding-top: 1rem;
+        font-family: poppins;
+        font-size: 22px;
+        font-weight: 400;
+        color: #000000;
+    }    
+}
+
+.tablet-imageanimation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .text-paragraph {
+        padding-top: 1rem;
+        font-family: poppins;
+        font-size: 22px;
+        font-weight: 400;
+        color: #000000;
+    }    
+
+}

@@ -1,0 +1,66 @@
+.bulletPoint-container-mobile {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-top: 12px;
+    padding-left: 2rem;
+    padding-right: 4rem;
+    align-items: top;
+    justify-content: center;
+
+    .text-paragraph {
+        padding-left: 1rem;
+        font-family: poppins;
+        font-size: 1rem;
+        font-weight: 400;
+        color: #000000; 
+    }
+
+}
+
+.bulletPoint-container-tablet {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    padding-top: 12px;
+    padding-left: 13rem;
+    padding-right: 3rem;
+    align-items: top;
+    justify-content: left;
+
+    .text-paragraph {
+        padding-left: 1rem;
+        font-family: poppins;
+        font-size: 1rem;
+        font-weight: 400;
+        color: #000000; 
+    }
+}
+
+.bulletPoint-container-desktop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .bullet-points {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding-top: 12px;
+        padding-left: 25%;
+        padding-right: 25%;
+        align-items: top;
+        justify-content: left;
+
+        .text-paragraph {
+            padding-left: 1rem;
+            font-family: poppins;
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #000000; 
+            //background-color: aqua;  
+        }
+    }
+  
+
+}
