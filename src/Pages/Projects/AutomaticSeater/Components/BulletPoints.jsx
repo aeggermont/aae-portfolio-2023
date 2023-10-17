@@ -11,9 +11,10 @@ function BulletPoints(props)  {
     const screenDevice = props.screenDevice; 
 
     const bulletPointsRender = bulletPoints.map(
-        bulletPoint =>
+        (bulletPoint, index) =>
 
-        <BulletPoint 
+        <BulletPoint
+            key={index}
             icon={bulletPoint.icon}
             text={bulletPoint.text}
             screenDevice={screenDevice} />
