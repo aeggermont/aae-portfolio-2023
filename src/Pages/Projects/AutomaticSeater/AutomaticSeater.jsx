@@ -1,6 +1,11 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive'
+import {
+    TransformWrapper,
+    TransformComponent,
+    ReactZoomPanPinchRef,
+  } from "react-zoom-pan-pinch";
 import './AutomaticSeater.scss';
 
 /* Project Banner */
@@ -28,24 +33,53 @@ import DemoAnimation from './Components/DemoAnimation';
 import ProjectOverview from './Components/ProjectOverview';
 import BulletPoints from './Components/BulletPoints';
 import IllustrationDiagram from './Components/IllustrationDiagram';
+import Persona from './Components/Persona';
+import WireframeIllustration from './Components/WireframeIllustration';
 
-/* Diagrams */
 
-import ActivityTheoryR3XTablet from './Images/ActivityTheoryR3X-Tablet.png';
-import ActivityTheoryR3XMobile from './Images/ActivityTheoryR3X-Mobile.png';
-import ActivityTheoryR3XDesktop from './Images/ActivityTheoryR3X-Desktop.png';
+/***   Star Tours Section  ***/
 
+import ActivityTheoryR3XTablet from './Images/ActivityTheoryR3X-Tablet.svg';
+import ActivityTheoryR3XDesktop from './Images/ActivityTheoryR3X-Desktop.svg';
+import ActivityTheoryR3XMobile from './Images/ActivityTheoryR3X-Mobile.svg';
+import ActivityTheoryR3XMobileLarge from './Images/ActivityTheoryR3X-Mobile-Large.png';
 import InformationArchitectureDesktop from './Images/InformationArchitecture-Desktop.png';
 import InformationArchitectureMobile from './Images/InformationArchitecture-Mobile.png';
 import InformationArchitectureTablet from './Images/InformationArchitecture-Tablet.png';
- 
-/* Star Tours Section */
 
 import iPadViewAnimated from './Images/iPadViewAnimated.png';
 import STSectionLogo from './Images/STSectionLogo.png';
 import STSectionLogoDesktop from './Images/STSectionLogoDesktop.png';
 import STSectionLogoTablet from './Images/STSectionLogoTablet.png';
 import STSectionLogoMobile from './Images/STSectionLogoMobile.png';
+
+
+// Site Map Diagrams
+import SiteMapMobile from './Images/SiteMap-Mobile.svg';
+import SitemapTablet from './Images/Sitemap-Tablet.svg';
+import SitemapDesktop from './Images/Sitemap-Desktop.svg';
+
+// Personas
+import GrouperPersonaDesktop from './Images/GrouperPersona-Desktop.svg';
+import GateAgentPersonaDesktop from './Images/GateAgentPersona-Desktop.svg';
+
+import GrouperPersonaTablet from './Images/GrouperPersona-Tablet.svg';
+import GateAgentPersonaTablet from './Images/GateAgentPersona-Tablet.svg';
+
+import GrouperPersonaMobile from './Images/GrouperPersona-Mobile.svg';
+import GateAgentPersonaMobile from './Images/GateAgentPersona-Mobile.svg';
+
+// Wireframes Landing Page
+
+import LandingScreenStarToursDesktop from './Images/LandingScreen-StarTours-Desktop.svg';
+import LandingScreenStarToursTablet from './Images/LandingScreen-StarTours-Tablet.svg';
+import LandingScreenStarToursMobile from './Images/LandingScreen-StarTours-Mobile.svg';
+
+import LandingScreenStarToursSpecsDesktop from './Images/LandingScreen-StarToursSpecs-Desktop.svg';
+import LandingScreenStarToursSpecsTablet from './Images/LandingScreen-StarToursSpecs-Tablet.svg';
+import LandingScreenStarToursSpecsMobile from './Images/LandingScreen-StarToursSpecs-Mobile.svg';
+
+
 import { FaRProject } from 'react-icons/fa';
 
 
@@ -104,6 +138,7 @@ function AutomaticSeater()  {
         title: 'Project Overview',   
     }
 
+
     const starToursData = {
         sectionImages : [
             STSectionLogoDesktop,
@@ -140,7 +175,8 @@ function AutomaticSeater()  {
                 ActivityTheoryR3XDesktop,
                 ActivityTheoryR3XTablet,
                 ActivityTheoryR3XMobile
-            ]
+            ],
+            backgroundColor: "#ffffff"
         },
         afinityDiagram : {
             title: "Affinity Map",
@@ -149,24 +185,82 @@ function AutomaticSeater()  {
         ideation : {
             title: "3. Ideation",
             subTitle: "Organizing a Framework",
-            paragraphs: [ "Based on the activity theory analysis and affinity diagram data, the ideas and concepts were sorted and min features and functionality were identified through a sitemap. ",
-                          "This was presented as a way to visualize the navigation structure and information architecture of proposed screens."]
+            paragraphs: [ "Based on the activity theory analysis and affinity diagram data collected,  the ideas and concepts were sorted so features and functionality were identified through a sitemap.",
+                          "TThe goal was to architect an application with components that could be reused following configuration defined based on different park attractions and rides."]
         },
-        infoArch : {
-            tittle: "Site Map",
-            description: "App is designed with reusable components",
+        sideMap : {
+            title: "Site Map",
+            description: "Site Map Visualizing the navigation structure and information architecture for potential screens.",
             images: [
-                InformationArchitectureDesktop,
-                InformationArchitectureMobile,
-                InformationArchitectureTablet
+                SitemapDesktop,
+                SitemapTablet,
+                SiteMapMobile
             ]
         },
-        infoArch : {
-            subTitle: "Personas",
-            paragraphs: ["Two user flows were mapped based on the user research and the identified activities, actions and at the facility's operation. "]
+        persona: {
+            title: "Personas",
+            paragraphs: ["Two user flows were mapped based on the user research and the identified activities, actions and at the facility's operation."],
+            personas: [
+                {
+                    title: "Grouper",
+                    paragraphs: ["An operations cast member helping organize arriving groups of guests at an attraction into parties and assign them to a gate at ride or theater."],
+                    alt: "The Grouper",
+                    images: [
+                        GrouperPersonaDesktop,
+                        GrouperPersonaTablet,
+                        GrouperPersonaMobile
+                    ]
+                },
+                {
+                    title: "Grouper",
+                    paragraphs: ["An operations cast member helping guest grouped into parties find their seats in attraction cabins or theater sections."],
+                    alt: "The Grouper",
+                    images: [
+                        GateAgentPersonaDesktop,
+                        GateAgentPersonaTablet,
+                        GateAgentPersonaMobile
+                    ]
+                },
+            ]
+        },
+        design: {
+            title: "4. Designing for Users First",
+            paragraphs: [
+                "Wireframes were developed to depict dashboards to control the flow of Guests into the facility. In addition to data collected from user research, physical artifacts used in operations were used as a source of inspiration to digitize activities and actions. "   
+            ] 
+        },
+        wireframes: {
+            title: "Wire frames",
+            paragraphs: [ 
+                "Wireframes and simulations were developed using Figma and were extensibly used at multiple design and co-design iterations. "
+            ],
+            wireframes : [
+                {
+                    title: 'Landing Screen',
+                    titleFontColor: '#1D2D92',
+                    backgroundColor: '#ffffff',
+                    images: [
+                        LandingScreenStarToursDesktop,
+                        LandingScreenStarToursTablet,
+                        LandingScreenStarToursMobile
+                    ]
+                },
+                {
+                    title: 'Landing Screen Specs',
+                    titleFontColor: '#00000',
+                    backgroundColor: '#F4F4F4',
+                    images: [
+                        LandingScreenStarToursSpecsDesktop,
+                        LandingScreenStarToursSpecsTablet,
+                        LandingScreenStarToursSpecsMobile
+                    ] 
+                }
+            ]
         }
-    }
 
+    }
+    console.log('DATA');
+    console.log(starToursData);
 
     /*** END OF DATA ***/
 
@@ -179,36 +273,40 @@ function AutomaticSeater()  {
                 images={bannerData['images']}
                 screenDevice={screenDevice}
             />
+    
+            
             <ParagraphBlock
                title="Overview"
                paragraphs={overviewParagraphs}
                screenDevice={screenDevice}
             />
-
+           
             <ParagraphBlock
                title="Problem"
                paragraphs={problemParagraphs}
                screenDevice={screenDevice}
             />
 
+           
             <ParagraphBlock
                title="Solution"
                paragraphs={solutionParagraphs}
                screenDevice={screenDevice}
             />
-
+            
+            
             <DemoAnimation 
                 title={animatedImages['title']}
                 subTitle={animatedImages['subtitle']}
                 images={animatedImages['images']}
                 screenDevice={screenDevice}
             ></DemoAnimation>
-
+             
             <ProjectOverview 
                 title={animatedImages['title']}
                 screenDevice={screenDevice}
             />
-
+           
             <ParagraphImg
                 src={STSectionLogo}
                 screenDevice={screenDevice}
@@ -217,35 +315,38 @@ function AutomaticSeater()  {
                 width="100%"
                 height="189px"
             />
-
+             
             <SectionTitle 
                 title="Star Tours Case Study"
                 screenDevice={screenDevice}
             />
-
+           
             <ParagraphBlock
                title="Overview"
                paragraphs={starToursData.overview}
                screenDevice={screenDevice}
             />
 
+           
+
             <ParagraphBlock
                title="1. Understanding the Problem"
                paragraphs={starToursData.theProblem}
                screenDevice={screenDevice}
             />
-
+            
+             
             <ParagraphBlock
                title="2. User Research"
                paragraphs={starToursData.userResearch}
                screenDevice={screenDevice}
             />
-
+             
             <BulletPoints
                   bulletPoints={starToursData.userResearchMethods}
                   screenDevice={screenDevice}
             />
-
+           
 
             <ParagraphBlock
                title="3. Reframing the Problem"
@@ -253,7 +354,7 @@ function AutomaticSeater()  {
                paragraphs={starToursData.reframingTheProblem}
                screenDevice={screenDevice}
             />
-
+            
             <IllustrationDiagram
                 title={starToursData.hci.title}
                 description={starToursData.hci.description}
@@ -261,37 +362,88 @@ function AutomaticSeater()  {
                 screenDevice={screenDevice}
                 images={starToursData.hci.sectionImages}
                 alt="Star Tours Interactive View"
+                backgroundColor={starToursData.hci.backgroundColor}
                 width="100%"
                 height="189px"
             />
-
+            
             <ParagraphBlock
                subTitle={starToursData.afinityDiagram.title}
                paragraphs={starToursData.afinityDiagram.description}
                screenDevice={screenDevice}
             />
-
+            
+             
             <ParagraphBlock
                title={starToursData.ideation.title}
                subTitle={starToursData.ideation.subTitle}
                paragraphs={starToursData.ideation.paragraphs}
                screenDevice={screenDevice}
             />
-
-
+            
             <IllustrationDiagram
-                title={starToursData.infoArch.tittle}
-                description={starToursData.infoArch.description}
+                title={starToursData.sideMap.title}
+                description={starToursData.sideMap.description}
                 screenDevice={screenDevice}
-                images={starToursData.infoArch.images}
+                images={starToursData.sideMap.images}
+                backgroundColor={starToursData.sideMap.backgroundColor}
                 alt="Star Tours Interactive View"
                 width="100%"
                 height="189px"
             />
+           
+            
+            <ParagraphBlock
+               title={starToursData.persona.title}
+               paragraphs={starToursData.persona.paragraphs}
+               screenDevice={screenDevice}
+            />
+            
+            <Persona
+                title={starToursData.persona.personas[0].title}
+                alt={starToursData.persona.personas[0].alt}
+                screenDevice={screenDevice}
+                paragraphs={starToursData.persona.personas[0].paragraphs}
+                images={starToursData.persona.personas[0].images}
+            />
+             
+            <Persona
+                title={starToursData.persona.personas[1].title}
+                alt={starToursData.persona.personas[1].alt}
+                screenDevice={screenDevice}
+                paragraphs={starToursData.persona.personas[1].paragraphs}
+                images={starToursData.persona.personas[1].images}
+            />
+           
+            <ParagraphBlock
+               title={starToursData.wireframes.title}
+               paragraphs={starToursData.wireframes.paragraphs}
+               screenDevice={screenDevice}
+            />
+            
 
+           
+            <WireframeIllustration
+              title={starToursData.wireframes.wireframes[0].title}
+              titleFontColor={starToursData.wireframes.wireframes[0].titleFontColor}
+              alt={starToursData.wireframes.wireframes[0].alt}
+              backgroundColor={starToursData.wireframes.wireframes[0].backgroundColor}
+              images={starToursData.wireframes.wireframes[0].images}
+              screenDevice={screenDevice}
+            />
 
+             
+            <WireframeIllustration
+              title={starToursData.wireframes.wireframes[1].title}
+              titleFontColor={starToursData.wireframes.wireframes[1].titleFontColor}
+              alt={starToursData.wireframes.wireframes[1].alt}
+              backgroundColor="#ECE5E5"
+              images={starToursData.wireframes.wireframes[1].images}
+              screenDevice={screenDevice}
+            />
+    
         
-        </>
+         </>
     )
 }
 
