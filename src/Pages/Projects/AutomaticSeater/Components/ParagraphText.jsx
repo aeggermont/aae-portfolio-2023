@@ -6,17 +6,18 @@ function ParagraphText(props)  {
     const text = props.text;
     const screenDevice = props.screenDevice; 
 
+    
     if ( screenDevice.isDesktopOrLaptop ) {
         return (
-            <>  
+            <>            
                 <div className='desktop-paragraph-container'>
                     <p className='text-paragraph'> { text }</p>
-                </div>
+                </div> 
             </>
         )
     } else if ( screenDevice.isMobile ) {
         return (
-            <>
+            <>          
                 <div className='mobile-paragraph-container '>
                     <p className='text-paragraph'> { text }</p>
                 </div>
@@ -24,7 +25,7 @@ function ParagraphText(props)  {
         )
     } else if ( screenDevice.isTablet ) {
         return (
-            <>
+            <>     
                 <div className='tablet-paragraph-container '>
                     <p className='text-paragraph'> { text }</p>
                 </div>

@@ -1,8 +1,26 @@
 
-.section-title {
+.desktop-section-title {
     padding-top: 60px;
     font-family: poppins;
-    font-size: 30px;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #1D2D92;
+    text-align: center;
+}
+
+.tablet-section-title {
+    padding-top: 60px;
+    font-family: poppins;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1D2D92;
+    text-align: center;
+}
+
+.mobile-section-title {
+    padding-top: 60px;
+    font-family: poppins;
+    font-size: 2rem;
     font-weight: 600;
     color: #1D2D92;
     text-align: center;

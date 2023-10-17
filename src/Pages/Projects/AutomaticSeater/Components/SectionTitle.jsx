@@ -9,19 +9,19 @@ function SectionTitle(props) {
     if ( screenDevice.isDesktopOrLaptop ) {
         return (
             <>  
-                <div className='section-title'>{ title }</div>
+                <div className='desktop-section-title'>{ title }</div>
             </>
         )
     } else if ( screenDevice.isMobile ) {
         return (
             <>
-                <div className='section-title'>{ title }</div>
+                <div className='mobile-section-title'>{ title }</div>
             </>
         )
     } else if ( screenDevice.isTablet ) {
         return (
             <>
-                <div className='section-title'>{ title }</div>
+                <div className='mobile-section-title'>{ title }</div>
             </>
         )
     } 
