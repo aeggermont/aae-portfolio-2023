@@ -22,6 +22,10 @@ import Project8 from './Components/my-work/projects/project-8/Project8';
 import Project9 from './Components/my-work/projects/project-9/Project9';
 import Project10 from './Components/my-work/projects/project-10/Project10';
 
+/* Project Pages */
+
+import AutomaticSeater from './Pages/Projects/AutomaticSeater/AutomaticSeater';
+
 import { ParallaxProvider } from 'react-scroll-parallax';
 
 
@@ -48,7 +52,11 @@ function App() {
             <Route 
               path="/contact" 
               element={<Contact />}/> 
-            
+
+            <Route
+              path="/mywork/projects/project-4"
+              element={ <AutomaticSeater />}  />
+
             <Route 
               path="/mywork/projects/project-1" 
               element={<Project1 />}/> 
@@ -60,11 +68,7 @@ function App() {
             <Route 
               path="/mywork/projects/project-3" 
               element={<Project3 />}/> 
-            
-            <Route 
-              path="/mywork/projects/project-4" 
-              element={<Project4 />}/> 
-
+          
             <Route 
               path="/mywork/projects/project-5" 
               element={<Project5 />}/>

@@ -1,0 +1,109 @@
+.desktop-illlustration-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .tools {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        width: 20%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around
+    }
+    
+    .illustration-title {
+        font-family: poppins;
+        font-size: 2rem;
+        font-weight: 500;
+        color: #000000;
+    }
+
+    .text-description {
+        width: 80%;
+        padding-top: 1rem;
+        font-family: poppins;
+        font-size: 22px;
+        font-weight: 400;
+        color: #000000;
+    }    
+}
+
+.mobile-illlustration-container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+  
+    .tools {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        width: 20%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around
+    }
+
+    .illustration-title {
+        font-family: poppins;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #000000;
+    }
+
+    .text-description {
+        width: 80%;
+        font-family: poppins;
+        font-size: .8rem;
+        font-weight: 400;
+        color: #000000;
+    }    
+
+}
+
+.tablet-illlustration-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .tools {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        width: 10%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around
+    }
+
+    .illustration-title {
+        font-family: poppins;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #000000;
+    }
+
+    .text-description {
+        width: 80%;
+        padding-top: 1rem;
+        font-family: poppins;
+        font-size: 22px;
+        font-weight: 400;
+        color: #000000;
+    }    
+}
+
+.object-fit_fill {
+    object-fit: fill   
+}
+
+
+button {
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+  }

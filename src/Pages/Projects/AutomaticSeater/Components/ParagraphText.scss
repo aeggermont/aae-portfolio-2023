@@ -1,0 +1,45 @@
+
+
+.desktop-paragraph-container {
+    margin-left: 20%;
+    margin-right: 20%;
+    // background-color: green;
+
+    .text-paragraph {
+        font-family: poppins;
+        font-size: 2rem;
+        font-weight: 400;
+        color: #000000;
+    }    
+}
+
+.tablet-paragraph-container {
+    margin-left: 15%;
+    margin-right: 15%;
+    // background-color: gray;
+
+    .text-paragraph {
+        font-family: poppins;
+        font-size: 18px;
+        font-weight: 400;
+        color: #000000;
+    }
+    
+}
+
+.mobile-paragraph-container {
+    margin-left: 5%;
+    margin-right: 5%;
+    // background-color: blue;
+
+    .text-paragraph {
+        font-family: poppins;
+        font-size: 1rem;
+        font-weight: 400;
+        color: #000000;
+    }
+    
+}   
+
+
+
