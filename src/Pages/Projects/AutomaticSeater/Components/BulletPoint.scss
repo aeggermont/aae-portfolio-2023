@@ -7,6 +7,7 @@
     padding-right: 4rem;
     align-items: top;
     justify-content: center;
+    max-width: 2600px;
 
     .text-paragraph {
         padding-left: 1rem;
@@ -43,19 +44,20 @@
     align-items: center;
 
     .bullet-points {
+        
         display: flex;
         flex-direction: row;
         width: 100%;
-        padding-top: 12px;
+        padding-top: 3rem;
         padding-left: 25%;
         padding-right: 25%;
-        align-items: top;
+        align-items: center;
         justify-content: left;
 
         .text-paragraph {
-            padding-left: 1rem;
+            padding-left: 2rem;
             font-family: poppins;
-            font-size: 1.5rem;
+            font-size: 2rem;
             font-weight: 400;
             color: #000000; 
             //background-color: aqua;  

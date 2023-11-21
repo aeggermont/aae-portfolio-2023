@@ -1,8 +1,12 @@
+/*
 .desktop-banner-container {
-   
+    max-width: 2600px;
+    display: flex;
+    align-items: center;
+    align-content: center;
     .desktop-banner-content {
-        text-align: center;
-        
+
+
     }
 
     .text-paragraph {
@@ -13,7 +17,7 @@
         background-color: green;
     }    
 }
-
+*/
 .tablet-banner-container {
     .text-paragraph {
         padding-top: 400px;
@@ -28,7 +32,12 @@
 
 
 .desktop-banner-container {
-    height: 100%;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ 
     position: relative;
     overflow: hidden;
 
@@ -40,7 +49,7 @@
 
     .image {
         object-fit: cover;
-        width: 500%;
+        width: 100%;
         height: 100%;
     }
     .header {
@@ -52,7 +61,7 @@
         position: absolute;
         top: 60%;
         bottom: 0;
-        left: 10%;
+        left: 20%;
         right: 0;
         height: fit-content;
         margin: auto;
@@ -67,7 +76,7 @@
         position: absolute;
         top: 70%;
         bottom: 0;
-        left: 10%;
+        left: 20%;
         right: 0;
         height: fit-content;
         margin: auto;   

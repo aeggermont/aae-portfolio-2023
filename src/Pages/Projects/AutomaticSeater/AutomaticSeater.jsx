@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { useMediaQuery } from 'react-responsive'
+import { useMediaQuery } from 'react-responsive';
 import {
     TransformWrapper,
     TransformComponent,
@@ -35,18 +35,20 @@ import BulletPoints from './Components/BulletPoints';
 import IllustrationDiagram from './Components/IllustrationDiagram';
 import Persona from './Components/Persona';
 import WireframeIllustration from './Components/WireframeIllustration';
+import ReusableComp from './Components/ReusableComp';
 
 
-/***   Star Tours Section  ***/
+/***   Star Tours Section Images  ***/
 
 import ActivityTheoryR3XTablet from './Images/ActivityTheoryR3X-Tablet.svg';
-import ActivityTheoryR3XDesktop from './Images/ActivityTheoryR3X-Desktop.svg';
+import ActivityTheoryR3XDesktop from './Images/ActivityTheoryR3X-Desktop.png';
 import ActivityTheoryR3XMobile from './Images/ActivityTheoryR3X-Mobile.svg';
 import ActivityTheoryR3XMobileLarge from './Images/ActivityTheoryR3X-Mobile-Large.png';
 import InformationArchitectureDesktop from './Images/InformationArchitecture-Desktop.png';
 import InformationArchitectureMobile from './Images/InformationArchitecture-Mobile.png';
 import InformationArchitectureTablet from './Images/InformationArchitecture-Tablet.png';
-
+import BulletPoint from './Images/BulletPoint.svg'
+import SeaterVideoRecording from './Images/SeaterVideoRecording-Desktop.gif';
 import iPadViewAnimated from './Images/iPadViewAnimated.png';
 import STSectionLogo from './Images/STSectionLogo.png';
 import STSectionLogoDesktop from './Images/STSectionLogoDesktop.png';
@@ -72,20 +74,46 @@ import GateAgentPersonaMobile from './Images/GateAgentPersona-Mobile.svg';
 // Wireframes Landing Page
 
 import LandingScreenStarToursDesktop from './Images/LandingScreen-StarTours-Desktop.svg';
-import LandingScreenStarToursTablet from './Images/LandingScreen-StarTours-Tablet.svg';
+import LandingScreenStarToursTablet from './Images/LandingScreen-StarTours-Tablet.png';
 import LandingScreenStarToursMobile from './Images/LandingScreen-StarTours-Mobile.svg';
 
 import LandingScreenStarToursSpecsDesktop from './Images/LandingScreen-StarToursSpecs-Desktop.svg';
 import LandingScreenStarToursSpecsTablet from './Images/LandingScreen-StarToursSpecs-Tablet.svg';
 import LandingScreenStarToursSpecsMobile from './Images/LandingScreen-StarToursSpecs-Mobile.svg';
 
+import InteractiveModeStarToursDesktop from './Images/InteractiveMode-StarTours-Desktop.svg';
+import InteractiveModeStarToursTablet from './Images/InteractiveMode-StarTours-Tablet.svg';
+import InteractiveModeStarToursMobile from './Images/InteractiveMode-StarTours-Mobile.svg';
 
-import { FaRProject } from 'react-icons/fa';
+import InteractiveModeStarToursSpecsDesktop from './Images/InteractiveMode-StarToursSpecs-Desktop.svg';
+import InteractiveModeStarToursSpecsTablet from './Images/InteractiveMode-StarToursSpecs-Tablet.svg';
+import InteractiveModeStarToursSpecsMobile from './Images/InteractiveMode-StarToursSpecs-Mobile.svg';
+
+// Reusable Components+
+
+import TheSeatReusableCompDesktop from './Images/TheSeatReusableComp-Desktop.svg';
+import TheSeatReusableCompTablet from './Images/TheSeatReusableComp-Tablet.svg';
+import TheSeatReusableCompMobile from './Images/TheSeatReusableComp-Mobile.svg';
+
+import KeypadReusableCompDesktop from './Images/KeypadReusableComp-Desktop.svg';
+import KeypadReusableCompTablet from './Images/KeypadReusableComp-Tablet.svg';
+import KeypadReusableCompMobile from './Images/KeypadReusableComp-Mobile.svg';
+
+import GeometryReusableCompDesktop from './Images/GeometryReusableComp-Desktop.svg';
+import GeometryReusableCompTablet from './Images/GeometryReusableComp-Tablet.svg';
+import GeometryReusableCompMobile from './Images/GeometryReusableComp-Mobile.svg';
+
+import GeometryConfigReusableCompDesktop from './Images/GeometryConfigReusableComp-Desktop.svg';
+import GeometryConfigReusableCompTablet from './Images/GeometryConfigReusableComp-Tablet.svg';
+import GeometryConfigReusableCompMobile from './Images/GeometryConfigReusableComp-Mobile.svg';
+
+
+//import { FaRProject } from 'react-icons/fa';
 
 
 function AutomaticSeater()  {
 
-    const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 1224px) and (max-width: 2600px)' })
+    const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 1224px) and (max-width: 4600px)' })
     const isTablet = useMediaQuery({ query: '(min-width: 1024px) and (max-width: 1366px)' });
     const isMobile = useMediaQuery({ query: '(min-width: 360px) and (max-width: 428px)'});
     const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
@@ -115,9 +143,9 @@ function AutomaticSeater()  {
         title: 'Sample Main Screen Operations',
         subtitle: 'The App iis designed to run on a touch tone tablet device',
         images: [
-            LandingPageDemoMobile,
-            LandingPageDemoTablet,
-            LandingPageDesktop
+            SeaterVideoRecording,
+            SeaterVideoRecording,
+            SeaterVideoRecording
         ]
     }
 
@@ -197,6 +225,67 @@ function AutomaticSeater()  {
                 SiteMapMobile
             ]
         },
+
+        reusableComponents: {
+            title: "Reusable Components",
+            paragraphs: [
+                "The primary  design goal was to build a framework and interactive interface  that can be scalable and reusable across different types of attractions and rides.  To achieve this goal the design was kept minimalistic in the different user interfaces employing material design and a configuration driven backend. ",
+                "During the rapid ethnography and user research,  I learned that white boards and cardboards were used to train operation cast members memorize seat numbers  to  mentally do math to allocate groups of people to be seated together in a section of a ride or attraction.",
+                "This requires a cognitive effort that could be replaced by automating this process so the cast member focuses mainly on bringing the guest the best possible experience and ensure optimal attraction's throughput.",
+                "I identified and developed the following reusable components:"
+            ],
+            components: [
+                {
+                    title: "The Seat",
+                    alt: "The Seat component",
+                    backgroundColor: "#F9F9F9",
+                    widthSize: "30%",
+                    description: ["The most basic element is the seat component. This element is a clickable component that visualizes the state of a given seat."],
+                    images: [
+                        TheSeatReusableCompDesktop,
+                        TheSeatReusableCompTablet,
+                        TheSeatReusableCompMobile
+                    ]
+                },
+                {
+                    title: "Keypad",
+                    alt: "The Keypad component",
+                    backgroundColor: "#FFFFFF",
+                    widthSize: "100%",
+                    description: ["A key path is used to enter a Guest party size and automatically assign the seats while optimizing seating capacity. This key path can be used in other attractions and rides requiring the seating of more than 4 Guests per cabin or vehicle."],
+                    images: [ 
+                        KeypadReusableCompDesktop,
+                        KeypadReusableCompTablet,
+                        KeypadReusableCompMobile 
+                    ]
+                },
+                {
+                    title: "The Cabin - Geometry",
+                    alt: "The Cabin component",
+                    backgroundColor: "#F9F9F9",
+                    widthSize: "50%",
+                    description: ["Each cabin is represented by a geometry element that contains clickable seats for manual seating assignments.  The geometry is an abstraction component  that can be used in different rides and attractions in the form of cabins, vehicles, and theater seating sections."],
+                    images: [
+                        GeometryReusableCompDesktop,
+                        GeometryReusableCompTablet,
+                        GeometryReusableCompMobile
+                    ]
+                },
+                {
+                    title: "Configuration Cabin - Geometry",
+                    alt: "The Configuration Cabin component",
+                    backgroundColor: "#FFFFFF",
+                    widthSize: "50%",
+                    description: ["Configuration geometry for Cabins. Cabins can be configured independently to mark seats as broken, accessibility seats, infants, etc."],
+                    images: [
+                        GeometryConfigReusableCompDesktop,
+                        GeometryConfigReusableCompTablet,
+                        GeometryConfigReusableCompMobile   
+                    ]
+                }
+            ]
+
+        },
         persona: {
             title: "Personas",
             paragraphs: ["Two user flows were mapped based on the user research and the identified activities, actions and at the facility's operation."],
@@ -239,6 +328,7 @@ function AutomaticSeater()  {
                     title: 'Landing Screen',
                     titleFontColor: '#1D2D92',
                     backgroundColor: '#ffffff',
+                    disableZoomTools: false,
                     images: [
                         LandingScreenStarToursDesktop,
                         LandingScreenStarToursTablet,
@@ -249,16 +339,69 @@ function AutomaticSeater()  {
                     title: 'Landing Screen Specs',
                     titleFontColor: '#00000',
                     backgroundColor: '#F4F4F4',
+                    disableZoomTools: true,
                     images: [
                         LandingScreenStarToursSpecsDesktop,
                         LandingScreenStarToursSpecsTablet,
                         LandingScreenStarToursSpecsMobile
                     ] 
+                },
+                {
+                    title: 'Grouper View - Interactive Mode',
+                    titleFontColor: '#1D2D92',
+                    backgroundColor: '#ffffff',
+                    disableZoomTools: false,
+                    images: [
+                        InteractiveModeStarToursDesktop,
+                        InteractiveModeStarToursTablet,
+                        InteractiveModeStarToursMobile
+                    ] 
+                },
+                {
+                    title: 'Grouper View - Interactive Mode Specs',
+                    titleFontColor: '#1D2D92',
+                    backgroundColor: '#F4F4F4',
+                    disableZoomTools: true,
+                    images: [
+                        InteractiveModeStarToursSpecsDesktop,
+                        InteractiveModeStarToursSpecsTablet,
+                        InteractiveModeStarToursSpecsMobile
+                    ] 
                 }
+            ]
+        },
+        testIteration: {
+            title: "5. Test, Iterate, Repeat",
+            paragraphs: [
+                "The primary objective was to gather qualitative data to evaluate Cast Members  interaction with the new design and quantitative data to assess common issues and new feature opportunities that could arise. ",
+                "Weekly usability testing sessions during development post launch phase.",
+                "Co-design usability testing sessions were conducted during development and post launch phase.",
+                "Physical Observations and video surveillance footage was evaluated to analyze new team dynamics and flows in the Guests throughput management ",
+                "New features were developed during the iteration and testings phases such as real time asynchronous communication in the app, manual seat assignments and on the fly gate configurations."   
+            ] 
+        },
+        finalResults: {
+            title: "Final Results & Key Metrics ",
+            bulletPoints: [
+                { icon: BulletPoint , text: "Increase in throughout when the  app was used by Cast Members, in some cases upto 10%." },
+                { icon: BulletPoint , text: "Reduced training time for new  Cast Members."},
+                { icon: BulletPoint , text: "Allowed Cast Members to seat Guests filling all cabins."},
+                { icon: BulletPoint , text: "Reduced congestion at merge point of queue, increasing guest flow."},
+                { icon: BulletPoint , text: "Ability to simulate different party size  scenarios and measure capacity."}
             ]
         }
 
     }
+
+    /*
+     userResearchMethods: [
+            { icon: ResearchMethod , text: "Rapid Ethnography observations at the facility." },
+            { icon: ResearchMethod , text: "Contextual Inquiry Interviews with facility managers and Cast Member leads."},
+            { icon: ResearchMethod , text: "Development Introspection to understand technical capabilities."},
+            { icon: ResearchMethod , text: "Participatory Co-design and ideations with Cast Members working at the facility."}
+        ],
+    */
+
     console.log('DATA');
     console.log(starToursData);
 
@@ -266,182 +409,261 @@ function AutomaticSeater()  {
 
     return (
         <> 
-            <ProjectBanner
-                title= {bannerData['title']}
-                subTitle= {bannerData['subtitle']}
-                alt="Automatic Seating Assignments Project"
-                images={bannerData['images']}
-                screenDevice={screenDevice}
-            />
+            <div className='project-container'>
+                <ProjectBanner
+                    title= {bannerData['title']}
+                    subTitle= {bannerData['subtitle']}
+                    alt="Automatic Seating Assignments Project"
+                    images={bannerData['images']}
+                    screenDevice={screenDevice}
+                />
+
+                <ParagraphBlock
+                    title="Overview"
+                    paragraphs={overviewParagraphs}
+                    screenDevice={screenDevice}
+                />
+
+                <ParagraphBlock
+                    title="Problem"
+                    paragraphs={problemParagraphs}
+                    screenDevice={screenDevice}
+                />
+
+                 
+                <ParagraphBlock
+                    title="Solution"
+                    paragraphs={solutionParagraphs}
+                    screenDevice={screenDevice}
+                />
+
+                <DemoAnimation 
+                    title={animatedImages['title']}
+                    subTitle={animatedImages['subtitle']}
+                    images={animatedImages['images']}
+                    screenDevice={screenDevice}
+                ></DemoAnimation>
+
+                <ProjectOverview 
+                    title={animatedImages['title']}
+                    screenDevice={screenDevice}
+                />
+
+                <ParagraphImg
+                    src={STSectionLogo}
+                    screenDevice={screenDevice}
+                    images={starToursData.sectionImages}
+                    alt="Star Tours Interactive View"
+                    width="100%"
+                    height="189px"
+                />
+                 
+                <SectionTitle 
+                    title="Star Tours Case Study"
+                    screenDevice={screenDevice}
+                />
+
+                <ParagraphBlock
+                    title="Overview"
+                    paragraphs={starToursData.overview}
+                    screenDevice={screenDevice}
+                />
+
+                <ParagraphBlock
+                    title="1. Understanding the Problem"
+                    paragraphs={starToursData.theProblem}
+                    screenDevice={screenDevice}
+                />
+
+                <ParagraphBlock
+                    title="2. User Research"
+                    paragraphs={starToursData.userResearch}
+                    screenDevice={screenDevice}
+                />
+
+
+                <BulletPoints
+                    bulletPoints={starToursData.userResearchMethods}
+                    screenDevice={screenDevice}
+                />
+
+                <ParagraphBlock
+                    title="3. Reframing the Problem"
+                    subTitle="Human Computer Interaction Analysis"
+                    paragraphs={starToursData.reframingTheProblem}
+                    screenDevice={screenDevice}
+                />
+
+                <IllustrationDiagram
+                    title={starToursData.hci.title}
+                    description={starToursData.hci.description}
+                    src={STSectionLogo}
+                    screenDevice={screenDevice}
+                    images={starToursData.hci.sectionImages}
+                    alt="Star Tours Interactive View"
+                    backgroundColor={starToursData.hci.backgroundColor}
+                    width="100%"
+                    height="189px"
+                />
+
+                <ParagraphBlock
+                    title={starToursData.ideation.title}
+                    subTitle={starToursData.ideation.subTitle}
+                    paragraphs={starToursData.ideation.paragraphs}
+                    screenDevice={screenDevice}
+                />
+
+                <IllustrationDiagram
+                    title={starToursData.sideMap.title}
+                    description={starToursData.sideMap.description}
+                    screenDevice={screenDevice}
+                    images={starToursData.sideMap.images}
+                    backgroundColor={starToursData.sideMap.backgroundColor}
+                    alt="Star Tours Interactive View"
+                    width="100%"
+                    height="189px"
+                />
+           
+                <ParagraphBlock
+                    title={starToursData.persona.title}
+                    paragraphs={starToursData.persona.paragraphs}
+                    screenDevice={screenDevice}
+                />
+
+                <Persona
+                    title={starToursData.persona.personas[0].title}
+                    alt={starToursData.persona.personas[0].alt}
+                    screenDevice={screenDevice}
+                    paragraphs={starToursData.persona.personas[0].paragraphs}
+                    images={starToursData.persona.personas[0].images}
+                />
+             
+                <Persona
+                    title={starToursData.persona.personas[1].title}
+                    alt={starToursData.persona.personas[1].alt}
+                    screenDevice={screenDevice}
+                    paragraphs={starToursData.persona.personas[1].paragraphs}
+                    images={starToursData.persona.personas[1].images}
+                />
+
+                <ParagraphBlock
+                    title={starToursData.wireframes.title}
+                    paragraphs={starToursData.wireframes.paragraphs}
+                    screenDevice={screenDevice}
+                />
+
+
+                <WireframeIllustration
+                    title={starToursData.wireframes.wireframes[0].title}
+                    titleFontColor={starToursData.wireframes.wireframes[0].titleFontColor}
+                    alt={starToursData.wireframes.wireframes[0].alt}
+                    backgroundColor={starToursData.wireframes.wireframes[0].backgroundColor}
+                    images={starToursData.wireframes.wireframes[0].images}
+                    disableZoomTools={starToursData.wireframes.wireframes[0].disableZoomTools}
+                    screenDevice={screenDevice}
+                />
+
+
+                <WireframeIllustration
+                    title={starToursData.wireframes.wireframes[1].title}
+                    titleFontColor={starToursData.wireframes.wireframes[1].titleFontColor}
+                    alt={starToursData.wireframes.wireframes[1].alt}
+                    backgroundColor={starToursData.wireframes.wireframes[1].backgroundColor}
+                    images={starToursData.wireframes.wireframes[1].images}
+                    screenDevice={screenDevice}
+                />
+
+                <WireframeIllustration
+                    title={starToursData.wireframes.wireframes[2].title}
+                    titleFontColor={starToursData.wireframes.wireframes[2].titleFontColor}
+                    alt={starToursData.wireframes.wireframes[2].alt}
+                    backgroundColor={starToursData.wireframes.wireframes[2].backgroundColor}
+                    images={starToursData.wireframes.wireframes[2].images}
+                    disableZoomTools={starToursData.wireframes.wireframes[2].disableZoomTools}
+                    screenDevice={screenDevice}
+                />
+
+
+                <WireframeIllustration
+                    title={starToursData.wireframes.wireframes[3].title}
+                    titleFontColor={starToursData.wireframes.wireframes[3].titleFontColor}
+                    alt={starToursData.wireframes.wireframes[3].alt}
+                    backgroundColor={starToursData.wireframes.wireframes[3].backgroundColor}
+                    images={starToursData.wireframes.wireframes[3].images}
+                    disableZoomTools={starToursData.wireframes.wireframes[3].disableZoomTools}
+                    screenDevice={screenDevice}
+                />
+            
+                <ParagraphBlock
+                        title={starToursData.reusableComponents.title}
+                        paragraphs={starToursData.reusableComponents.paragraphs}
+                        screenDevice={screenDevice}
+                />
+
+                <ReusableComp 
+                    title={starToursData.reusableComponents.components[0].title}
+                    backgroundColor={starToursData.reusableComponents.components[0].backgroundColor}
+                    widthSize={starToursData.reusableComponents.components[0].widthSize}
+                    screenDevice={screenDevice}
+                    paragraphs={starToursData.reusableComponents.components[0].description}
+                    alt={starToursData.reusableComponents.components[0].title}
+                    images={starToursData.reusableComponents.components[0].images}
+                />
+
+                <ReusableComp 
+                    title={starToursData.reusableComponents.components[1].title}
+                    backgroundColor= {starToursData.reusableComponents.components[1].backgroundColor}
+                    widthSize={starToursData.reusableComponents.components[1].widthSize}
+                    screenDevice={screenDevice}
+                    paragraphs={starToursData.reusableComponents.components[1].description}
+                    alt={starToursData.reusableComponents.components[1].title}
+                    images={starToursData.reusableComponents.components[1].images}
+                />
+
+
+                <ReusableComp 
+                    title={starToursData.reusableComponents.components[2].title}
+                    backgroundColor= {starToursData.reusableComponents.components[2].backgroundColor}
+                    widthSize={starToursData.reusableComponents.components[2].widthSize}
+                    screenDevice={screenDevice}
+                    paragraphs={starToursData.reusableComponents.components[2].description}
+                    alt={starToursData.reusableComponents.components[2].title}
+                    images={starToursData.reusableComponents.components[2].images}
+                />
+
+                <ReusableComp 
+                    title={starToursData.reusableComponents.components[3].title}
+                    backgroundColor= {starToursData.reusableComponents.components[3].backgroundColor}
+                    widthSize={starToursData.reusableComponents.components[3].widthSize}
+                    screenDevice={screenDevice}
+                    paragraphs={starToursData.reusableComponents.components[3].description}
+                    alt={starToursData.reusableComponents.components[3].title}
+                    images={starToursData.reusableComponents.components[3].images}
+                />
+
+   
+                <ParagraphBlock
+                    title={starToursData.testIteration.title}
+                    paragraphs={starToursData.testIteration.paragraphs}
+                    screenDevice={screenDevice}
+                />
+
+                <ParagraphBlock
+                    title={starToursData.finalResults.title}
+                    paragraphs={[]}
+                    screenDevice={screenDevice}
+                />
+
+
+               <BulletPoints
+                    bulletPoints={starToursData.finalResults.bulletPoints}
+                    screenDevice={screenDevice}
+                />
     
-            
-            <ParagraphBlock
-               title="Overview"
-               paragraphs={overviewParagraphs}
-               screenDevice={screenDevice}
-            />
-           
-            <ParagraphBlock
-               title="Problem"
-               paragraphs={problemParagraphs}
-               screenDevice={screenDevice}
-            />
+            </div>
 
-           
-            <ParagraphBlock
-               title="Solution"
-               paragraphs={solutionParagraphs}
-               screenDevice={screenDevice}
-            />
-            
-            
-            <DemoAnimation 
-                title={animatedImages['title']}
-                subTitle={animatedImages['subtitle']}
-                images={animatedImages['images']}
-                screenDevice={screenDevice}
-            ></DemoAnimation>
-             
-            <ProjectOverview 
-                title={animatedImages['title']}
-                screenDevice={screenDevice}
-            />
-           
-            <ParagraphImg
-                src={STSectionLogo}
-                screenDevice={screenDevice}
-                images={starToursData.sectionImages}
-                alt="Star Tours Interactive View"
-                width="100%"
-                height="189px"
-            />
-             
-            <SectionTitle 
-                title="Star Tours Case Study"
-                screenDevice={screenDevice}
-            />
-           
-            <ParagraphBlock
-               title="Overview"
-               paragraphs={starToursData.overview}
-               screenDevice={screenDevice}
-            />
 
-           
-
-            <ParagraphBlock
-               title="1. Understanding the Problem"
-               paragraphs={starToursData.theProblem}
-               screenDevice={screenDevice}
-            />
             
-             
-            <ParagraphBlock
-               title="2. User Research"
-               paragraphs={starToursData.userResearch}
-               screenDevice={screenDevice}
-            />
-             
-            <BulletPoints
-                  bulletPoints={starToursData.userResearchMethods}
-                  screenDevice={screenDevice}
-            />
-           
-
-            <ParagraphBlock
-               title="3. Reframing the Problem"
-               subTitle="Human Computer Interaction Analysis"
-               paragraphs={starToursData.reframingTheProblem}
-               screenDevice={screenDevice}
-            />
-            
-            <IllustrationDiagram
-                title={starToursData.hci.title}
-                description={starToursData.hci.description}
-                src={STSectionLogo}
-                screenDevice={screenDevice}
-                images={starToursData.hci.sectionImages}
-                alt="Star Tours Interactive View"
-                backgroundColor={starToursData.hci.backgroundColor}
-                width="100%"
-                height="189px"
-            />
-            
-            <ParagraphBlock
-               subTitle={starToursData.afinityDiagram.title}
-               paragraphs={starToursData.afinityDiagram.description}
-               screenDevice={screenDevice}
-            />
-            
-             
-            <ParagraphBlock
-               title={starToursData.ideation.title}
-               subTitle={starToursData.ideation.subTitle}
-               paragraphs={starToursData.ideation.paragraphs}
-               screenDevice={screenDevice}
-            />
-            
-            <IllustrationDiagram
-                title={starToursData.sideMap.title}
-                description={starToursData.sideMap.description}
-                screenDevice={screenDevice}
-                images={starToursData.sideMap.images}
-                backgroundColor={starToursData.sideMap.backgroundColor}
-                alt="Star Tours Interactive View"
-                width="100%"
-                height="189px"
-            />
-           
-            
-            <ParagraphBlock
-               title={starToursData.persona.title}
-               paragraphs={starToursData.persona.paragraphs}
-               screenDevice={screenDevice}
-            />
-            
-            <Persona
-                title={starToursData.persona.personas[0].title}
-                alt={starToursData.persona.personas[0].alt}
-                screenDevice={screenDevice}
-                paragraphs={starToursData.persona.personas[0].paragraphs}
-                images={starToursData.persona.personas[0].images}
-            />
-             
-            <Persona
-                title={starToursData.persona.personas[1].title}
-                alt={starToursData.persona.personas[1].alt}
-                screenDevice={screenDevice}
-                paragraphs={starToursData.persona.personas[1].paragraphs}
-                images={starToursData.persona.personas[1].images}
-            />
-           
-            <ParagraphBlock
-               title={starToursData.wireframes.title}
-               paragraphs={starToursData.wireframes.paragraphs}
-               screenDevice={screenDevice}
-            />
-            
-
-           
-            <WireframeIllustration
-              title={starToursData.wireframes.wireframes[0].title}
-              titleFontColor={starToursData.wireframes.wireframes[0].titleFontColor}
-              alt={starToursData.wireframes.wireframes[0].alt}
-              backgroundColor={starToursData.wireframes.wireframes[0].backgroundColor}
-              images={starToursData.wireframes.wireframes[0].images}
-              screenDevice={screenDevice}
-            />
-
-             
-            <WireframeIllustration
-              title={starToursData.wireframes.wireframes[1].title}
-              titleFontColor={starToursData.wireframes.wireframes[1].titleFontColor}
-              alt={starToursData.wireframes.wireframes[1].alt}
-              backgroundColor="#ECE5E5"
-              images={starToursData.wireframes.wireframes[1].images}
-              screenDevice={screenDevice}
-            />
-    
         
          </>
     )
@@ -449,7 +671,29 @@ function AutomaticSeater()  {
 
 export default AutomaticSeater;
 
+/*
 
+        
+             
+               
+
+            
+
+              
+
+               
+                
+             
+                
+            
+
+             
+               
+             
+
+
+            </div>
+            */
 
 /* 
         <div>
