@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import './IllustrationDiagram.scss';
-import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
+import {SlideshowLightbox, initLightboxJS} from 'lightbox.js-react'
+
+// import { initLightboxJS } from 'lightbox.js-react';
+// import {SlideshowLightbox} from 'lightbox.js-react'
+
+import { ImageGroup, Image } from 'react-fullscreen-image'
 import ZoomInButton from '../Images/ZoomInButton.svg';
 import ZoomInButton2x from '../Images/ZoomInButton@2x.svg';
 import ZoomInButton3x from '../Images/ZoomInButton@3x.svg';
@@ -14,6 +19,8 @@ import ResetZoomButton from '../Images/ResetZoomButton.svg';
 import ResetZoomButton2x from '../Images/ResetZoomButton@2x.svg';
 import ResetZoomButton3x from '../Images/ResetZoomButton@3x.svg';
 
+
+
 function IllustrationDiagram(props) {
     const src = props.src;
     const alt = props.alt;
@@ -24,47 +31,53 @@ function IllustrationDiagram(props) {
     const title = props.title;
     const description = props.description;
     const backgroundColor = props.backgroundColor;
+    //const desktopImage = images[0];
+    useEffect(() => {
+        initLightboxJS("individual");
+    });
+
+      
+    // useEffect(() => {
+    //    initLightboxJS("individual");
+    //  }, []);
+
+    // Note: Need to figure out how to do trigger full screen in iOS devices:
+    // https://stackoverflow.com/questions/12822739/full-screen-api-html5-and-safari-ios-6
+    
+    function viewFullScreen() {
+        document.getElementById(title)?.requestFullscreen()
+    }
+
+    function handleTap () {
+        console.log("you have taped me");
+    }
 
     if ( screenDevice.isDesktopOrLaptop ) {
         return (
             <div className='desktop-illlustration-container'>
                 <div className='illustration-title'>  { title} </div>
-                <TransformWrapper
-                    initialScale={1}
-                    initialPositionX={0}
-                    initialPositionY={0}
-                    >
-                    {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
-                        <React.Fragment>
-                        <div className="tools">
-                            <button onClick={() => zoomIn()}>      
-                                <img src={ZoomInButton3x}  alt="test" />
-                            </button>
-                            <button onClick={() => zoomOut()}>     
-                                <img src={ZoomOutButton3x}  alt="test" />  
-                            </button>
-                            <button onClick={() => resetTransform()} >    
-                            <img src={ResetZoomButton3x}  alt="test" />
-                                </button>
-                        </div>
-                        <TransformComponent>
-                            <img src={images[0] }  alt="test" />
-                        
-                        </TransformComponent>
-                        </React.Fragment>
-                    )}
-                 </TransformWrapper>
 
-                {/* 
-                <img
-                    src = { images[0] }
-                    alt = { alt }
-                    style = {{
-                        width: "90%",
-                        paddingTop: '5px'
-                    }} 
-                />
-                */}
+                <div className='image-container'>
+                    <SlideshowLightbox
+                        iconColor="silver"
+                        theme="lightbox" 
+                        className='container grid grid-cols-3 gap-2 mx-auto'
+                        showMagnificationIcons={true}
+                        fullScreen={true}
+                        imgAnimation="fade"
+                        showThumbnails={false}>
+                        <img 
+                            className='w-full rounded' 
+                            src= { images[0] }
+                            alt = { alt }
+                            style = {{
+                                maxWidth: '60%',
+                                minWidth: '60%',
+                                paddingTop: '100px',
+                
+                            }} />
+                    </SlideshowLightbox> 
+                </div>
                 <span className='text-description'>  { description} </span>
             </div>
            
@@ -73,76 +86,42 @@ function IllustrationDiagram(props) {
         return (
             <div  className='mobile-illlustration-container'>
                 <div className='illustration-title'>  { title} </div>
+                <div className='image-container'>
 
-                <TransformWrapper
-                    initialScale={1}
-                    initialPositionX={0}
-                    initialPositionY={0}
-                    >
-                    {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
-                        <React.Fragment>
-                        <div className="tools">
-                            <button onClick={() => zoomIn()}>      
-                                <img src={ZoomInButton}  alt="test" />
-                            </button>
-                            <button onClick={() => zoomOut()}>     
-                                <img src={ZoomOutButton}  alt="test" />  
-                            </button>
-                            <button onClick={() => resetTransform()} >    
-                            <img src={ResetZoomButton}  alt="test" />
-                                </button>
-                        </div>
-                        <TransformComponent>
-                            <img src={images[2] }  alt="test" />
-                        
-                        </TransformComponent>
-                        </React.Fragment>
-                    )}
-                 </TransformWrapper>
-                <span className='text-description'>  { description} </span>
-              
+                    <SlideshowLightbox className='container grid grid-cols-3 gap-2 mx-auto' showThumbnails={false}>
+                        <img 
+                            className='w-full rounded' 
+                            src= { images[1] }
+                            alt = { alt }
+                            style = {{
+                                maxWidth: '100%',
+                                minWidth: '100%',
+                                paddingTop: '100px',
+                
+                            }} />
+                    </SlideshowLightbox> 
+                </div>
+                <span className='text-description'>  { description} </span>            
              </div>
         )
     } else if ( screenDevice.isTablet ) {
         return (
             <div className='tablet-illlustration-container'>
-                 <div className='text-title'>  { title} </div>
-                 <TransformWrapper
-                    initialScale={1}
-                    initialPositionX={0}
-                    initialPositionY={0}
-                    >
-                    {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
-                        <React.Fragment>
-                        <div className="tools">
-                            <button onClick={() => zoomIn()}>      
-                                <img src={ZoomInButton3x}  alt="test" />
-                            </button>
-                            <button onClick={() => zoomOut()}>     
-                                <img src={ZoomOutButton3x}  alt="test" />  
-                            </button>
-                            <button onClick={() => resetTransform()} >    
-                            <img src={ResetZoomButton3x}  alt="test" />
-                                </button>
-                        </div>
-                        <TransformComponent>
-                            <img src={images[1] }  alt="test" />
-                        
-                        </TransformComponent>
-                        </React.Fragment>
-                    )}
-                 </TransformWrapper>
-
-                 {/*
-
-                <img  
-                    src = { images[1] }
-                    alt = { alt }
-                    style = {{
-                        width: width,
-                        paddingTop: '120px'
-                    }} 
-                /> */}
+                <div className='illustration-title'>  { title} </div>
+                <div className='image-container'>
+                    <SlideshowLightbox className='container grid grid-cols-3 gap-2 mx-auto' showThumbnails={false}>
+                            <img 
+                                className='object-fit_fill' 
+                                src= { images[2] }
+                                alt = { alt }
+                                style = {{
+                                    maxWidth: '100%',
+                                    minWidth: '100%',
+                                    paddingTop: '100px',
+                    
+                                }} />
+                    </SlideshowLightbox>
+                </div>
                 <span className='text-description'>  { description} </span>
                
             </div>

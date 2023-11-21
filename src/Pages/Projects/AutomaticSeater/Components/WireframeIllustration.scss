@@ -5,6 +5,20 @@
     flex-direction: column;
     padding-top: 3rem;
     padding-bottom: 5rem;
+    background-color: bisque;
+    max-width: 2600px;
+    
+    .image-container {
+        width: 80%;
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+
+
+    .wireframe-image {
+       text-align: center;
+
+    }
 
     .wireframe-title {
         padding-bottom: 2rem;
@@ -14,13 +28,24 @@
         color: #000000;
     }
 
-    .zoom-tools {
-        padding-top: 4rem;
-        padding-bottom: 1rem;
-        width: 20%;
+    .zoom-button-container {
         display: flex;
         flex-direction: row;
-        justify-content: space-around
+        justify-content: center;
+        align-items: center;
+    }
+
+    .zoom-tools {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+     
+        .tool-button {
+            padding: 1rem;
+        }
     }
 }
 
@@ -31,6 +56,12 @@
     flex-direction: column;
     padding-top: 3rem;
     padding-bottom: 5rem;
+
+    .image-container {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 2rem;
+    }
 
     .wireframe-title {
         font-family: poppins;
@@ -56,6 +87,12 @@
     flex-direction: column;
     padding-top: 1.5rem;
     padding-bottom: 5rem;
+
+    .image-container {
+        width: 80%;
+        text-align: center;
+        padding-bottom: 2rem;
+    }
 
     .wireframe-title {
         font-family: poppins;

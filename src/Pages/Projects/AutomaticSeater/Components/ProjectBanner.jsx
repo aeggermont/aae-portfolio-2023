@@ -10,30 +10,23 @@ function ProjectBanner(props) {
     const images = props.images;
     const screenDevice = props.screenDevice;
 
-    console.log('>>> screenDevice');
-    console.log(screenDevice);
-    
-    console.log('>>> Images');
-    console.log(images);
-
     if ( screenDevice.isDesktopOrLaptop ) {
         return (
-            <div  className='desktop-banner-container'>
-                <picture className='picture' >
-                    <source media="(min-width: 0px)" srcSet={images[1]} />
-                    <img
-                        className='image' 
-                        src = { images[1] }
-                        alt = { alt }
-                        style = {{
-                            width: '100%'
-                        }} 
-                    />
-                </picture>
+            <div className='desktop-banner-container'>
+                <img
+                    className="object-fit_fill"
+                    src = { images[1] }
+                    alt = { alt }
+                    style = {{
+                        maxWidth: '2600px',
+                        minWidth: '2000px',
+                        paddingTop: '0px',
+        
+                    }} 
+                />
                 <div className='header'>{title}</div>
-                <div className='sub-header'>{title}</div>     
-            </div>
-           
+                <div className='sub-header'>{title}</div>  
+          </div>
         )
     } else if ( screenDevice.isMobile ) {
         return (

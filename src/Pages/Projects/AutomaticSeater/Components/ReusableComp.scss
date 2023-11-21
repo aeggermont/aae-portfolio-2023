@@ -1,0 +1,127 @@
+.desktop-reusablecomp-container {
+
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    // background-color: aqua;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-left: 20%;
+    margin-right: 20%;
+    max-width: 2600px;
+    
+    .reusablecomp-title {
+        font-family: poppins;
+        font-size: 2rem;
+        font-weight: 500;
+        color: #1D2D92;
+        padding-bottom: 3rem;
+       
+        text-align: left;
+    }
+
+    .reusablecomp-content {
+        display: flex;
+        flex-direction: row;
+        // background-color: chartreuse;
+        width: 100%;
+        .reusablecomp-content-img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            // background-color: blue;
+            width: 30%;
+
+        }
+
+        .text-description {
+            width: 70%;
+            //padding-top: 1rem;
+            font-family: poppins;
+            font-size: 22px;
+            font-weight: 400;
+            color: #000000;
+        }    
+    }  
+}
+
+.tablet-reusablecomp-container {
+
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    // background-color: aqua;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-left: 20%;
+    margin-right: 20%;
+    max-width: 1366px;
+    
+    .reusablecomp-title {
+        font-family: poppins;
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #1D2D92;
+        padding-bottom: 3rem;
+       
+        text-align: left;
+    }
+
+    .reusablecomp-content {
+        display: flex;
+        flex-direction: row;
+        // background-color: chartreuse;
+        width: 100%;
+        .reusablecomp-content-img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            // background-color: blue;
+            width: 30%;
+
+        }
+
+        .text-description {
+            width: 70%;
+            //padding-top: 1rem;
+            font-family: poppins;
+            font-size: 22px;
+            font-weight: 400;
+            color: #000000;
+        }    
+    }  
+}
+
+.mobile-reusablecomp-container {
+
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+    margin-left: 10%;
+    margin-right: 10%;
+    
+    .reusablecomp-title {
+        font-family: poppins;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #1D2D92;
+        padding-bottom: 3rem;
+        text-align: center;
+    }
+
+    .text-description {
+        width: 100%;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        font-family: poppins;
+        font-size: 22px;
+        font-weight: 400;
+        color: #000000;
+    }
+}
