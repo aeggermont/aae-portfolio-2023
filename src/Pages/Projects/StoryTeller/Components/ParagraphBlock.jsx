@@ -21,18 +21,6 @@ function ParagraphBlock(props) {
             />
     );
 
-    /*
-    const paragraphsRender = paragraphs.map(
-        paragraph =>
-            <ParagraphText
-                key=
-                text={paragraph}
-                screenDevice={screenDevice}
-            />
-    );*/
-
-    // const paragraphsRender = "foo";
-
     if ( (subTitle !== undefined) && ( title !== undefined ) ) {
         return (
             <div>

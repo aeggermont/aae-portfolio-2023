@@ -13,6 +13,7 @@ import ProjectOverview from './Components/ProjectOverview';
 import Team from './Components/Team';
 import ParagraphBlock from './Components/ParagraphBlock';
 import IllustrationDiagram from './Components/IllustrationDiagram';
+import ParagraphImg from './Components/ParagraphImg';
 
 /* Media Assets */
 import CloudsLayer1 from './Images/clouds-layer-1.png';
@@ -23,6 +24,13 @@ import BulletPoint from './Images/BulletPoint.svg'
 import BulletPoints from './Components/BulletPoints';
 import ResearchMethod from './Images/researchMethod.svg';
 import PersonasMotives from './Images/PersonasMotives.png';
+import TrainingImages from './Images/TrainingImages.png';
+import GenericTaskFlow from './Images/GenericTaskFlow.png';
+import TowerOfTerrorBannerDesktop from './Images/TowerOfTerrorBanner-Desktop.png';
+
+import GazeCommitIllustrationDesktop from './Images/GazeCommitIllustration-Desktop.png';
+
+
 
 function StoryTeller() {
 
@@ -111,6 +119,67 @@ function StoryTeller() {
                 "Values can be used throughout the process of design and development to drive that process",
                 "Ethics: Refers to a system of conduct based on values that are generally proclaimed and promoted within a particular society"
             ]
+        },
+        designSystem : {
+            title: "Design System",
+            paragraphs: [
+                "The Story Teller A.R. project was embraced using a creative design approach for story telling where aspects of Design Thinking were employed along with design fiction.",
+                "Designing for an AR user experience has more tangible and realistic constraints and limitations. The Story Teller was designed  following these concepts:"
+            ],
+            bulletpoints : [
+                { icon: BulletPoint , text: "Environment – Unlike the dedicated space needed for a VR experience, AR experiences can happen almost anywhere. Consider the contexts where your user might be and design for those specifically, whether that’s indoors, outdoors, sitting in one place, or on the move." },
+                { icon: BulletPoint , text: "Safety – Likewise, keep your users’ safety in mind. Be helpful without being distracting, as your user might be walking down a crowded street or in a busy airport." },
+                { icon: BulletPoint , text: "Simplicity – Just because you can design additional elements in a particular scenario doesn’t mean you should. Keep the digital objects to a minimum while still helping the user progress toward their goal." },
+                { icon: BulletPoint , text: "Comfort – Because AR experiences involve the world around your user, design in a way that takes advantage of those limitations. Don’t design in a way that creates either a physical or mental strain for your user." }
+            ]
+        },
+        interactionDesignPrinciples : {
+            subTitle: "Interaction Design Principles",
+            paragraphs: [""],
+            bulletpoints : [
+                { icon: BulletPoint , text: "Interactions should be short-lived, less than 15 seconds while waiting in line to do a ride." },
+                { icon: BulletPoint , text: "After object detection is done in A.R., content can remain anchored to the physical space as A.R overlays for users to continue exploring during 15 seconds. After that, the A.R. overlays are lock into the smart phone screen for guests to explore them and use them to take selfies." },
+                { icon: BulletPoint , text: "All interactions at the park should be non-blocking using translucent backgrounds on screen to avoid slowing down the flow of people walking throughout the attraction." },
+                { icon: BulletPoint , text: "Content visualization should be short-lived when involving object detection of dynamic elements locked in space for real time A.R. visualizations." }
+            ]
+        },
+        userInterModSpecs : {
+            subTitle: "User Interaction  Mode Specifications",
+            paragraphs: [""],
+            bulletpoints : [
+                { icon: BulletPoint , text: "Grounded interaction with a blended environment: When a guest is standing still or in a set in place position, they can use the camera of their mobile AR device (phone or tablet) to point & click on the Tower of Terror attraction and get overlaid visual blended with the environment to explore and learn about the attraction in a non-linear and explorative way. The field of view ranges between 25 to 50 degrees." },
+                { icon: BulletPoint , text: "Gaze and Commit input model to click-through overlaid visuals and AR controls is employed." }
+            ]
+        },
+        GazeCommitIllustration : {
+            title: "Gaze and Commit Input Model",
+            illustrationImages: [ 
+                GazeCommitIllustrationDesktop, GazeCommitIllustrationDesktop, GazeCommitIllustrationDesktop
+            ]
+        },
+        scalablePlatform: {
+            subTitle: "Making a scalable and extendable platform ",
+            paragraphs: [
+                "The grounded interaction with a blended environment is stablished as an interaction pattern that can be used across different attractions and rides in the park.  Machine learning models are published and downloaded on demand with trained data specific to the attraction with enhanced A.R. content for guests to access.",
+                "The underlying Machine Learning model for this the Story Teller app is a convolutional neural network (CNN) called MobileNetV2. CNN is a deep-learning algorithm which can take an image input, break it down into different layers, assign weights and biases to different segments in the image and differentiate from one another. MobileNetV2 was chosen as it is optimized for mobile devices. The process of training the model is repeating this step with hundreds of images until we have high precision and recall. The final model output is formatted for each platform - Core ML for Apple and Onnx for Unity. ",
+                "Apple’s iOS  and ARKit platform was employed as a front end mobile interface for Guests to access augmented reality content embedded in an attraction. Core ML models were employed for the ARKit component."
+            ],
+            trainingDataimages: [
+                TrainingImages,
+                TrainingImages,
+                TrainingImages
+            ]
+        },
+        genericTaskFlow : {
+            title: "Generic Task Flow",
+            images: [GenericTaskFlow, GenericTaskFlow, GenericTaskFlow ],
+            description: "SOme description"
+
+        },
+        towerOfTerrorPilot : {
+            title: "The Hollywood Tower of Terror Story Teller Pilot ",
+            images: [TowerOfTerrorBannerDesktop,TowerOfTerrorBannerDesktop, TowerOfTerrorBannerDesktop],
+            alt: " The Twilight Zone, Tower of Terror"
         }
 
     }
@@ -188,9 +257,84 @@ function StoryTeller() {
                     description={storyTellerData.personasMotives.illustrationDescription}
                     screenDevice={screenDevice}
                     images={storyTellerData.personasMotives.illustrationImage}
-                    alt="Star Tours Interactive View"
+                    alt=""
+                />
+
+                <ParagraphBlock
+                    title={storyTellerData.designSystem.title}
+                    paragraphs={storyTellerData.designSystem.paragraphs}
+                    screenDevice={screenDevice}
                 />
             
+                <BulletPoints
+                    bulletPoints={storyTellerData.designSystem.bulletpoints}
+                    screenDevice={screenDevice}
+                />
+
+                <ParagraphBlock
+                    subTitle={storyTellerData.interactionDesignPrinciples.subTitle}
+                    paragraphs={storyTellerData.interactionDesignPrinciples.paragraphs}
+                    screenDevice={screenDevice}
+                />
+
+                <BulletPoints
+                    bulletPoints={storyTellerData.interactionDesignPrinciples.bulletpoints}
+                    screenDevice={screenDevice}
+                />
+
+                <ParagraphBlock
+                    subTitle={storyTellerData.userInterModSpecs.subTitle}
+                    paragraphs={storyTellerData.userInterModSpecs.paragraphs}
+                    screenDevice={screenDevice}
+                />
+
+                <BulletPoints
+                    bulletPoints={storyTellerData.userInterModSpecs.bulletpoints}
+                    screenDevice={screenDevice}
+                />
+
+                <IllustrationDiagram
+                    title={storyTellerData.GazeCommitIllustration.title}
+                    description=""
+                    screenDevice={screenDevice}
+                    images={storyTellerData.GazeCommitIllustration.illustrationImages}
+                    alt=""
+                />
+
+                <ParagraphBlock
+                    subTitle={storyTellerData.scalablePlatform.subTitle}
+                    paragraphs={storyTellerData.scalablePlatform.paragraphs.slice(0,2)}
+                    screenDevice={screenDevice}
+                />
+
+                <IllustrationDiagram
+                    title=""
+                    description=""
+                    screenDevice={screenDevice}
+                    images={storyTellerData.scalablePlatform.trainingDataimages}
+                    alt=""
+                />
+
+                <ParagraphBlock
+                    subTitle=""
+                    paragraphs={storyTellerData.scalablePlatform.paragraphs.slice(2,3)}
+                    screenDevice={screenDevice}
+                />
+
+
+                <IllustrationDiagram
+                    title={storyTellerData.genericTaskFlow.title}
+                    description={storyTellerData.genericTaskFlow.description}
+                    screenDevice={screenDevice}
+                    images={storyTellerData.genericTaskFlow.images}
+                    alt=""
+                />
+
+                <ParagraphImg
+                     screenDevice={screenDevice}
+                     images={storyTellerData.towerOfTerrorPilot.images}
+                />
+
             </div>
             
             {/*
