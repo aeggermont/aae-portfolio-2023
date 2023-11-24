@@ -5,6 +5,7 @@
     flex-direction: column;
     max-width: 2600px;
     background-color: #F4F4F4;
+    margin-top: 6rem;
     padding-bottom: 4rem;
 
     .illustration-title {
@@ -39,15 +40,15 @@
     align-items: center;
     flex-direction: column;
     background-color: #F4F4F4;
+    margin-top: 3rem;
   
     .image-container {
         width: 80%;
         text-align: center;
-        padding-bottom: 2rem;
     }
 
     .illustration-title {
-        padding-top: 1rem;
+        // padding-top: 1rem;
         font-family: poppins;
         font-size: 1rem;
         font-weight: 500;

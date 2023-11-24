@@ -11,7 +11,7 @@ function IllustrationDiagram(props) {
     const screenDevice = props.screenDevice;
     const title = props.title;
     const description = props.description;
-    //const desktopImage = images[0];
+
     useEffect(() => {
         initLightboxJS("individual");
     });
@@ -68,7 +68,7 @@ function IllustrationDiagram(props) {
                             style = {{
                                 maxWidth: '100%',
                                 minWidth: '100%',
-                                paddingTop: '100px',
+                                paddingTop: '10px',
                 
                             }} />
                     </SlideshowLightbox> 
@@ -89,7 +89,7 @@ function IllustrationDiagram(props) {
                                 style = {{
                                     maxWidth: '80%',
                                     minWidth: '80%',
-                                    paddingTop: '100px',
+                                    paddingTop: '1px',
                     
                                 }} />
                     </SlideshowLightbox>
