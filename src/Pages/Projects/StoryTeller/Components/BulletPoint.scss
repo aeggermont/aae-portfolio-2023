@@ -1,0 +1,58 @@
+.storyteller-desktop-bulletPoint-container {
+    max-width: 2500px;
+    margin: auto;
+
+    .bullet-points {
+        
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding-top: 3rem;
+        padding-left: 20%;
+        padding-right: 20%;
+        align-items: top;
+        justify-content: left;
+
+        .text-paragraph {
+            padding-left: 2rem;
+            font-family: poppins;
+            font-size: 2rem;
+            font-weight: 400;
+            color: #000000; 
+        }
+    }
+}
+
+.storyteller-tablet-bulletPoint-container {
+
+    max-width: 1366px;
+    margin: auto;
+ 
+    width: 80%;
+    padding-top: 12px;
+
+    align-items: top;
+
+    .text-paragraph {
+        padding-left: 1rem;
+        font-family: poppins;
+        font-size: 1rem;
+        font-weight: 400;
+        color: #000000; 
+    }
+}
+
+.storyteller-mobile-bulletPoint-container {
+    max-width: 428px;
+    margin: auto;
+    width: 90%;
+
+    .text-paragraph {
+        padding-left: 1rem;
+        font-family: poppins;
+        font-size: 1rem;
+        font-weight: 400;
+        color: #000000; 
+    }
+
+}

@@ -11,14 +11,18 @@ import OverviewParagraphBlock from './Components/OverviewParagraphBlock';
 import SolutionDemo from './Components/SolutionDemo';
 import ProjectOverview from './Components/ProjectOverview';
 import Team from './Components/Team';
-
+import ParagraphBlock from './Components/ParagraphBlock';
+import IllustrationDiagram from './Components/IllustrationDiagram';
 
 /* Media Assets */
 import CloudsLayer1 from './Images/clouds-layer-1.png';
 import CloudsLayer2 from './Images/clouds-layer-2.png';
 import CloudsLayer3 from './Images/clouds-layer-3.png';
 import CloudsLayer4 from './Images/clouds-layer-4.png';
-
+import BulletPoint from './Images/BulletPoint.svg'
+import BulletPoints from './Components/BulletPoints';
+import ResearchMethod from './Images/researchMethod.svg';
+import PersonasMotives from './Images/PersonasMotives.png';
 
 function StoryTeller() {
 
@@ -66,6 +70,47 @@ function StoryTeller() {
                 { name: 'Jeffrey Li' , role: 'Sr. Software Engineer'},
                 { name: 'Nathan Bruno' , role: 'Sr. Software Engineer'}
             ]
+        },
+        contributions : {
+            title: "My Contributions",
+            paragraphs: [
+                "I was the only designer on the project so everything you see was created by myself. I was involved since the very beginning of the project in everything from defining the brand and personas, user research, creating flows and wireframes, backend integrations all the way to creating final UI designs as well as designing different logos and icons."
+            ]
+        },
+        valueDrivenDesign : {
+            title: "Value Driven Design",
+            paragraphs: [
+                "Effective XR designers not only focus on obtaining the technical requirements of the system for system functionality and efficiency, but are also mindful of user values and needs. They care about the user experience and adopt various methods to extract user values and needs in order to drive the XR design and development processes."
+            ],
+            bulletpoints : [
+                { icon: ResearchMethod , text: "Developer introspection: A useful approach for brainstorming but does not give the user´s perspective." },
+                { icon: ResearchMethod , text: "Open-ended interviews allow to improvise questions and allow the interviewee to respond in any way."},
+                { icon: ResearchMethod , text: "Rapid Ethnography as a method of watching users in a setting where they behave naturally as they use the system."},
+                { icon: ResearchMethod , text: "Code Design workshops"}
+            ]
+        },
+        userResearchInsights : {
+            title: "Key Insights from Park Guests and Cast Members",
+            paragraphs: [
+                "The following are insights collected from user research."
+              
+            ],
+            bulletpoints: [
+                { icon: BulletPoint , text: "Guests usually think “I know nothings about the rides" },
+                { icon: BulletPoint , text: "Ride experiences use paper handouts or blogs, I wish there was a digital version"},
+                { icon: BulletPoint , text: "I am waiting for my next ride and am unsure of what to do while I wait..."},
+                { icon: BulletPoint , text: "Sometimes I don´t  understand what the the ride experiences are really about"},
+                { icon: BulletPoint , text:"I wish I could take better memories home to share"}
+            ]
+        },
+        personasMotives : {
+            title: "Personas & Motives",
+            illustrationImage: [PersonasMotives, PersonasMotives, PersonasMotives],
+            illustrationDescription: "Some explanation",
+            paragraphs: [
+                "Values can be used throughout the process of design and development to drive that process",
+                "Ethics: Refers to a system of conduct based on values that are generally proclaimed and promoted within a particular society"
+            ]
         }
 
     }
@@ -102,6 +147,48 @@ function StoryTeller() {
                     title={storyTellerData.team.title}
                     members={storyTellerData.team.members}
                     screenDevice={screenDevice}
+                />
+
+                <ParagraphBlock
+                    title={storyTellerData.contributions.title}
+                    paragraphs={storyTellerData.contributions.paragraphs}
+                    screenDevice={screenDevice}
+                />
+
+                <ParagraphBlock
+                    title={storyTellerData.valueDrivenDesign.title}
+                    paragraphs={storyTellerData.valueDrivenDesign.paragraphs}
+                    screenDevice={screenDevice}
+                />
+
+                <BulletPoints
+                    bulletPoints={storyTellerData.valueDrivenDesign.bulletpoints}
+                    screenDevice={screenDevice}
+                />
+            
+                <ParagraphBlock
+                    title={storyTellerData.userResearchInsights.title}
+                    paragraphs={storyTellerData.userResearchInsights.paragraphs}
+                    screenDevice={screenDevice}
+                />
+
+                <BulletPoints
+                    bulletPoints={storyTellerData.userResearchInsights.bulletpoints}
+                    screenDevice={screenDevice}
+                />
+
+                <ParagraphBlock
+                    title={storyTellerData.personasMotives.title}
+                    paragraphs={storyTellerData.personasMotives.paragraphs}
+                    screenDevice={screenDevice}
+                />
+
+                <IllustrationDiagram
+                    title=""
+                    description={storyTellerData.personasMotives.illustrationDescription}
+                    screenDevice={screenDevice}
+                    images={storyTellerData.personasMotives.illustrationImage}
+                    alt="Star Tours Interactive View"
                 />
             
             </div>

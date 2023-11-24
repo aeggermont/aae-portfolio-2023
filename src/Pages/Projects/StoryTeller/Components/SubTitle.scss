@@ -1,47 +1,47 @@
-.storyteller-desktop-paragraph-titlecontainer {
-    max-width: 2500px;
-    margin: auto;
-
-    padding-top: 10rem;
+.desktop-subtitle-container {
+    padding-top: 60px;
     padding-bottom: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
 
-    .title-paragraph {
+    .subtitle-paragraph {
         font-family: poppins;
-        font-size: 2.5rem;
+        font-size: 30px;
         font-weight: 600;
         color: #1D2D92;
         padding-top: 20px;
         padding-bottom: 10px;
-        text-align: center;
+        text-align: left;
     }
 
 }
 
-.storyteller-tablet-paragraph-titlecontainer {
+.tablet-subtitle-container {
+    padding-top: 60px;
+    padding-bottom: 15px;
+    margin-left: 15%;
+    margin-right: 15%;
 
-    max-width: 1366px;
-    margin: auto;
-
-    .title-paragraph {
+    .subtitle-paragraph {
         font-family: poppins;
-        font-size: 24px;
+        font-size: 1rem;
         font-weight: 600;
         color: #1D2D92;
         padding-top: 20px;
         padding-bottom: 10px;
-        text-align: center;
+        text-align: left;
     }
 }
 
-.storyteller-mobile-paragraph-titlecontainer {
-    padding-top: 30px;
+.mobile-subtitle-container {
+    padding-top: 1px;
     padding-bottom: 10px;
     margin-left: 5%;
     margin-right: 5%;
 
-    .title-paragraph {
+    .subtitle-paragraph {
         font-family: poppins;
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-weight: 600;
         color: #1D2D92;
         padding-top: 20px;
