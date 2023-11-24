@@ -1,0 +1,150 @@
+.storyteller-team-container-desktop  {
+    max-width: 2500px;
+    margin: auto;
+    
+
+    .team-title {
+        font-family: poppins;
+        font-size: 3rem;
+        font-weight: 600;
+        color: #1D2D92;
+        padding-top: 20px;
+        padding-bottom: 30px;
+        text-align: center;
+      
+    }
+
+
+    .team-content {      
+        margin-left: 25%;
+        margin-right: 25%;
+
+        
+        .team-member {
+            display: flex;
+            flex-direction: row;
+            align-content: start;
+            justify-content: flex-start;
+            width: 100%;
+          
+            .member-name {
+                width: 50%;
+                font-family: poppins;
+                font-size: 1.5rem;
+                font-weight: 400;
+                color: #050505;
+            }
+
+            .member-role {
+                width: 50%;
+                font-family: poppins;
+                font-size: 1.5rem;
+                font-weight: 400;
+                color: #050505;
+                
+            }
+          
+        }
+    }
+  
+
+}
+
+.storyteller-team-container-tablet  {
+    max-width: 1366px;
+    margin: auto;
+
+    .team-title {
+        font-family: poppins;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #1D2D92;
+        text-align: center;
+        padding-bottom: 3rem;
+    }
+
+
+       
+    .team-content {      
+        margin: auto;
+        width: 60%;
+
+        .team-member {
+            display: flex;
+            flex-direction: row;
+            align-content: start;
+            justify-content: space-around;
+            
+            margin: auto;
+          
+            .member-name {
+                font-family: poppins;
+                font-size: 1rem;
+                font-weight: 400;
+                color: #050505;
+                text-align: left;
+            }
+
+            .member-role {
+              
+                font-family: poppins;
+                font-size: 1rem;
+                font-weight: 400;
+                color: #050505;
+                text-align: left;
+                
+            }
+          
+        }
+    }
+
+}
+
+.storyteller-team-container-mobile  {
+    max-width: 428px;
+    margin: auto;
+
+    .team-title {
+        font-family: poppins;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #1D2D92;
+        text-align: center;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+    }
+       
+    .team-content {      
+        margin: auto;
+        width: 90%;
+
+        .team-member {
+            display: flex;
+            flex-direction: row;
+            align-content: start;
+            justify-content: space-around;
+            
+            margin: auto;
+          
+            .member-name {
+                font-family: poppins;
+                font-size: .8rem;
+                font-weight: 400;
+                color: #050505;
+                text-align: left;
+            }
+
+            .member-role {
+              
+                font-family: poppins;
+                font-size: .8rem;
+                font-weight: 400;
+                color: #050505;
+                text-align: left;
+                
+            }
+        }
+    }
+}
+
+
