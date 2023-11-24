@@ -23,8 +23,8 @@ import Project9 from './Components/my-work/projects/project-9/Project9';
 import Project10 from './Components/my-work/projects/project-10/Project10';
 
 /* Project Pages */
-
 import AutomaticSeater from './Pages/Projects/AutomaticSeater/AutomaticSeater';
+import StoryTeller from './Pages/Projects/StoryTeller/StoryTeller';
 
 import { ParallaxProvider } from 'react-scroll-parallax';
 
@@ -59,7 +59,7 @@ function App() {
 
             <Route 
               path="/mywork/projects/project-1" 
-              element={<Project1 />}/> 
+              element={<StoryTeller />}/> 
       
             <Route 
               path="/mywork/projects/project-2" 

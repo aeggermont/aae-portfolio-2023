@@ -1,0 +1,111 @@
+
+
+.storyteller-desktop-paragraph-container {
+    max-width: 2500px;
+    margin: auto;
+    .storyteller-desktop-content-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        max-width: 37%;
+        margin-left: 8rem;        
+        .storyteller-desktop-paragraph-title {
+            font-family: poppins;
+            font-size: 3rem;
+            font-weight: 600;
+            color: #102764;
+        }
+
+        .storyteller-desktop-paragraph-text {
+            padding-top: 2rem;
+            font-family: poppins;
+            font-size: 2rem;
+            font-weight: 400;
+            color: #102764;
+        }
+    }
+
+    .storyteller-desktop-content-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        max-width: 37%;
+        margin-right: 8rem;
+        margin-left: auto;
+        padding-top: 6rem;
+        
+        .storyteller-desktop-paragraph-title {
+            font-family: poppins;
+            font-size: 3rem;
+            font-weight: 600;
+            color: #102764;
+        }
+
+        .storyteller-desktop-paragraph-text {
+            padding-top: 2rem;
+            font-family: poppins;
+            font-size: 2rem;
+            font-weight: 400;
+            color: #102764;
+        }
+    }
+}
+
+.storyteller-tablet-paragraph-container {
+    max-width: 1366px;
+    padding-top: 4rem;
+    margin: auto;
+    width: 60%;
+    .storyteller-tablet-content {
+        // background-color: aqua;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .storyteller-tablet-paragraph-title {
+            font-family: poppins;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #102764;
+        }
+
+        .storyteller-tablet-paragraph-text {
+            padding-top: 2rem;
+            font-family: poppins;
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #102764;
+
+        }
+    }
+}
+
+.storyteller-mobile-paragraph-container {
+    max-width: 428px;
+    padding-top: 4rem;
+    margin: auto;
+    width: 80%;
+    .storyteller-mobile-content {
+        // background-color: aqua;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .storyteller-mobile-paragraph-title {
+            font-family: poppins;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #102764;
+            text-align: center;
+        }
+
+        .storyteller-mobile-paragraph-text {
+            padding-top: 2rem;
+            font-family: poppins;
+            font-size: 1rem;
+            font-weight: 400;
+            color: #102764;
+
+        }
+    }
+}
