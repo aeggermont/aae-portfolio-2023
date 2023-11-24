@@ -24,7 +24,7 @@
 
     .title-paragraph {
         font-family: poppins;
-        font-size: 24px;
+        font-size: 1.5rem;
         font-weight: 600;
         color: #1D2D92;
         padding-top: 20px;
@@ -34,10 +34,8 @@
 }
 
 .storyteller-mobile-paragraph-titlecontainer {
-    padding-top: 30px;
-    padding-bottom: 10px;
-    margin-left: 5%;
-    margin-right: 5%;
+    max-width: 428px;
+    margin: auto;
 
     .title-paragraph {
         font-family: poppins;

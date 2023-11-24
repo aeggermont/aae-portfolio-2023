@@ -1,26 +1,22 @@
 .desktop-subtitle-container {
-    padding-top: 60px;
-    padding-bottom: 20px;
-    margin-left: 20%;
-    margin-right: 20%;
+    max-width: 2500px;
+    margin: auto;
 
     .subtitle-paragraph {
         font-family: poppins;
-        font-size: 30px;
+        font-size: 2rem;
         font-weight: 600;
         color: #1D2D92;
         padding-top: 20px;
         padding-bottom: 10px;
-        text-align: left;
+        text-align: center;
     }
 
 }
 
 .tablet-subtitle-container {
-    padding-top: 60px;
-    padding-bottom: 15px;
-    margin-left: 15%;
-    margin-right: 15%;
+    max-width: 1366px;
+    margin: auto;
 
     .subtitle-paragraph {
         font-family: poppins;
@@ -29,15 +25,14 @@
         color: #1D2D92;
         padding-top: 20px;
         padding-bottom: 10px;
-        text-align: left;
+        text-align: center;
     }
 }
 
 .mobile-subtitle-container {
-    padding-top: 1px;
-    padding-bottom: 10px;
-    margin-left: 5%;
-    margin-right: 5%;
+    max-width: 428px;
+    margin: auto;
+
 
     .subtitle-paragraph {
         font-family: poppins;
