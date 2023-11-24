@@ -9,6 +9,9 @@ import ProjectBanner from './Components/ProjectBanner';
 import AnimationCrowds from './Components/AnimationCrowds';
 import OverviewParagraphBlock from './Components/OverviewParagraphBlock';
 import SolutionDemo from './Components/SolutionDemo';
+import ProjectOverview from './Components/ProjectOverview';
+import Team from './Components/Team';
+
 
 /* Media Assets */
 import CloudsLayer1 from './Images/clouds-layer-1.png';
@@ -52,6 +55,17 @@ function StoryTeller() {
             paragraphs: [
                 "An A.R. platform to make the physical environment of an attraction itself for guests while they wait in long lines. The experience can be used to create memories and learn more about the attractions and the craft and art Disney Imaginers used."
             ]
+        },
+        team: {
+            title: "The Team",
+            members: [
+                { name: 'Antonio Aranda Eggermont', role: 'Lead Designer & UX Engineer' },
+                { name: 'Erik Thornquist' , role: 'Sr. Software Engineer'},
+                { name: 'Sergio Torres' , role: 'Sr. Software Engineer'},
+                { name: 'Christina Vickers' , role: 'Software Engineer'},
+                { name: 'Jeffrey Li' , role: 'Sr. Software Engineer'},
+                { name: 'Nathan Bruno' , role: 'Sr. Software Engineer'}
+            ]
         }
 
     }
@@ -59,14 +73,10 @@ function StoryTeller() {
     return (
         <>  
             <div className='project-container'>
-              
- 
+               
                 <ProjectBanner/>
 
                 <AnimationCrowds />
-
-                     {/*            
-                */}
 
                 <OverviewParagraphBlock
                     title1={storyTellerData.designChallenge.title}
@@ -81,6 +91,16 @@ function StoryTeller() {
                     title={storyTellerData.solution.title}
                     paragraphs={storyTellerData.solution.paragraphs}
                     description={storyTellerData.solution.description}
+                    screenDevice={screenDevice}
+                />
+
+                <ProjectOverview 
+                     screenDevice={screenDevice}
+                />
+
+                <Team
+                    title={storyTellerData.team.title}
+                    members={storyTellerData.team.members}
                     screenDevice={screenDevice}
                 />
             
