@@ -40,12 +40,23 @@ function StoryTeller() {
     const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
     const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' })
 
+    const xs = useMediaQuery({ query: '(max-width: 767px)' });
+    const sm = useMediaQuery({ query: 'only screen and (min-width: 576px) and (max-width: 767px)' });
+    const md = useMediaQuery({ query: 'only screen and (min-width: 768px) and (max-width: 991px)' });
+    const lg = useMediaQuery({ query: 'only screen and (min-width: 992px) and (max-width: 1200px)' });
+    const laptop = useMediaQuery({ query: 'only screen and (min-width: 1200px)' });
+
     const screenDevice = {
         isDesktopOrLaptop: isDesktopOrLaptop,
         isTablet: isTablet,
         isMobile: isMobile,
         isPortrait: isPortrait,
-        isRetina: isRetina
+        isRetina: isRetina,
+        sm: sm,
+        xs: xs,
+        md: md,
+        lg: lg,
+        laptop: laptop
     }
 
     const storyTellerData = {
@@ -184,10 +195,55 @@ function StoryTeller() {
 
     }
 
-    return (
-        <>  
+    if ( xs || sm) {
+        return (
             <div className='project-container'>
+                <h1> SCREENS : XS/SM </h1>
+                <OverviewParagraphBlock
+                    title1={storyTellerData.designChallenge.title}
+                    paragraph1={storyTellerData.designChallenge.paragraphs}
+                    title2={storyTellerData.theProblem.title}
+                    paragraph2={storyTellerData.theProblem.paragraphs}
+                    title3={storyTellerData.solution.title}
+                    paragraph3={storyTellerData.solution.paragraphs}
+                    screenDevice={screenDevice}
+                
+                />
+            </div> )
+    } else if ( md || lg) {
+        return (
+            <div className='project-container'>
+                <h1> SCREEN : MD </h1>
+                <OverviewParagraphBlock
+                    title1={storyTellerData.designChallenge.title}
+                    paragraph1={storyTellerData.designChallenge.paragraphs}
+                    title2={storyTellerData.theProblem.title}
+                    paragraph2={storyTellerData.theProblem.paragraphs}
+                    title3={storyTellerData.solution.title}
+                    paragraph3={storyTellerData.solution.paragraphs}
+                    screenDevice={screenDevice}
+                
+                />
+            </div> )
+    } else if (  laptop ) {
+        return (
+            <div className='project-container'>
+                <h1> SCREEN : LG/LAPTOP </h1>
+                <OverviewParagraphBlock
+                    title1={storyTellerData.designChallenge.title}
+                    paragraph1={storyTellerData.designChallenge.paragraphs}
+                    title2={storyTellerData.theProblem.title}
+                    paragraph2={storyTellerData.theProblem.paragraphs}
+                    title3={storyTellerData.solution.title}
+                    paragraph3={storyTellerData.solution.paragraphs}
+                    screenDevice={screenDevice}
+                
+                />
+            </div> )
+    }
+
                
+                {/*
                 <ProjectBanner/>
 
                 <AnimationCrowds />
@@ -336,7 +392,7 @@ function StoryTeller() {
                 />
 
             </div>
-            
+             */}
             {/*
             <div className='container-body'>
                     <ParallaxBanner
@@ -363,8 +419,6 @@ function StoryTeller() {
             </div>
             */}
           
-        </>
-    )
 }
 
 export default StoryTeller;
