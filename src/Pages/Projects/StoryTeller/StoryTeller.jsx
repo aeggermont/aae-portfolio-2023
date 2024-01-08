@@ -11,7 +11,9 @@ import OverviewParagraphBlock from './Components/OverviewParagraphBlock';
 import SolutionDemo from './Components/SolutionDemo';
 import ProjectOverview from './Components/ProjectOverview';
 import Team from './Components/Team';
+import SectionImg from './Components/SectionImg';
 import ParagraphBlock from './Components/ParagraphBlock';
+
 import IllustrationDiagram from './Components/IllustrationDiagram';
 import ParagraphImg from './Components/ParagraphImg';
 
@@ -27,9 +29,13 @@ import PersonasMotives from './Images/PersonasMotives.png';
 import TrainingImages from './Images/TrainingImages.png';
 import GenericTaskFlow from './Images/GenericTaskFlow.png';
 import TowerOfTerrorBannerDesktop from './Images/TowerOfTerrorBanner-Desktop.png';
-
 import GazeCommitIllustrationDesktop from './Images/GazeCommitIllustration-Desktop.png';
-
+import SectionImgTowerOfTerrorDesktop from './Images/SectionImgTowerOfTerror-Desktop.png';
+import SectionImgTowerOfTerrorLgMd from './Images/SectionImgTowerOfTerror-LgMd.png';
+import SectionImgTowerOfTerrorSmSx from './Images/SectionImgTowerOfTerror-SmSx.png';
+import HollywoodTowerofTerrorARImgDesktop from './Images/HollywoodTowerofTerrorARImg-Desktop.png';
+import HollywoodTowerofTerrorARImgLgMd from './Images/HollywoodTowerofTerrorARImg-LgMd.png';
+import HollywoodTowerofTerrorARImgSmSx from './Images/HollywoodTowerofTerrorARImg-SmSx.png';
 
 
 function StoryTeller() {
@@ -89,6 +95,36 @@ function StoryTeller() {
                 { name: 'Jeffrey Li' , role: 'Sr. Software Engineer'},
                 { name: 'Nathan Bruno' , role: 'Sr. Software Engineer'}
             ]
+        },
+        caseStudy : {
+            caseStudySectionImages : [
+                SectionImgTowerOfTerrorDesktop,
+                SectionImgTowerOfTerrorLgMd,
+                SectionImgTowerOfTerrorSmSx ],
+            overview: {
+                title: 'The Hollywood Tower of Terror Case Study',
+                paragraphs: [
+                    'The tower of terror is an attraction based on the Twilight Zone television series aired from 1959 to 1964. It is a major attraction at most Disney theme parks and due to its popularity waiting lines could last for up to 130 minutes.  Due to long waiting times, this attraction was chosen as a case study to develop the augmented reality Magic Tours prototype.  ',
+                    'The A.R. Magic Tour can be used by guests waiting inline to get more specifics about story of Tower of Terror. Augmented Reality can be used to embody in the environment elements from the ride and the story behind the attraction for guests to interact with and take selfies.'
+                ]
+            },
+            overviewImages: [
+                HollywoodTowerofTerrorARImgDesktop,
+                HollywoodTowerofTerrorARImgLgMd,
+                HollywoodTowerofTerrorARImgSmSx
+            ],
+            overviewImagesAlt: 'Guest viewing Tower of Terror Overview while walking by.',
+         
+            overviewImagesDesc: {
+                paragraphs: [
+                    'The primary focus of the A.R. experience is a narrative first approach, where guests learn about the attraction as they approach Tower of Terror and wait in line. While they wait inline, guests can get more facts about the attraction and learn some of the history and behind the scenes design concepts.'
+                ]
+            },
+            learningAboutAttrac: {
+                title: 'Learning about the attraction while waiting in line ',
+                paragraphs:
+                [ 'The theme of Tower of Terror is escalating horror. The whole thing should start lightly, and then draw the guest into the tension and fear that pervade the attraction. They should feel that mounting fear throughout the entire experience. Notifications are randomly sent to enhance the fear experience and also to educate guests about the attraction.']
+            }
         },
         contributions : {
             title: "My Contributions",
@@ -209,11 +245,47 @@ function StoryTeller() {
                     screenDevice={screenDevice}
                 
                 />
+
+                <SolutionDemo
+                    screenDevice={screenDevice}
+                />
+
+                <ProjectOverview 
+                     screenDevice={screenDevice}
+                />
+
+                <Team
+                    title={storyTellerData.team.title}
+                    members={storyTellerData.team.members}
+                    screenDevice={screenDevice}
+                />
+                <SectionImg 
+                    imagesSrc={storyTellerData.caseStudy.caseStudySectionImages}
+                    screenDevice={screenDevice}
+                />
+                <ParagraphBlock
+                    title={storyTellerData.caseStudy.overview.title}
+                    paragraphs={storyTellerData.caseStudy.overview.paragraphs}
+                    screenDevice={screenDevice}
+                />
+
+                <ParagraphImg 
+                    imagesSrc={storyTellerData.caseStudy.overviewImages}
+                    alt={storyTellerData.caseStudy.overviewImagesAlt}
+                    screenDevice={screenDevice}
+                />
+
+                <ParagraphBlock
+                    title=''       
+                    paragraphs={storyTellerData.caseStudy.overviewImagesDesc.paragraphs}
+                    screenDevice={screenDevice}
+                />
+                
             </div> )
     } else if ( md || lg) {
         return (
             <div className='project-container'>
-                <h1> SCREEN : MD </h1>
+                <h1> SCREEN : MD/LG </h1>
                 <OverviewParagraphBlock
                     title1={storyTellerData.designChallenge.title}
                     paragraph1={storyTellerData.designChallenge.paragraphs}
@@ -224,11 +296,45 @@ function StoryTeller() {
                     screenDevice={screenDevice}
                 
                 />
+                <SolutionDemo
+                    screenDevice={screenDevice}
+                />
+
+                <ProjectOverview 
+                     screenDevice={screenDevice}
+                />
+                 <Team
+                    title={storyTellerData.team.title}
+                    members={storyTellerData.team.members}
+                    screenDevice={screenDevice}
+                />
+                <SectionImg 
+                    imagesSrc={storyTellerData.caseStudy.caseStudySectionImages}
+                    screenDevice={screenDevice}
+                />
+
+                <ParagraphBlock
+                    title={storyTellerData.caseStudy.overview.title}
+                    paragraphs={storyTellerData.caseStudy.overview.paragraphs}
+                    screenDevice={screenDevice}
+                />
+
+                <ParagraphImg 
+                    imagesSrc={storyTellerData.caseStudy.overviewImages}
+                    alt={storyTellerData.caseStudy.overviewImagesAlt}
+                    screenDevice={screenDevice}
+                />
+
+                <ParagraphBlock
+                    title=''       
+                    paragraphs={storyTellerData.caseStudy.overviewImagesDesc.paragraphs}
+                    screenDevice={screenDevice}
+                />
             </div> )
     } else if (  laptop ) {
         return (
             <div className='project-container'>
-                <h1> SCREEN : LG/LAPTOP </h1>
+                <h1> SCREEN : LAPTOP </h1>
                 <OverviewParagraphBlock
                     title1={storyTellerData.designChallenge.title}
                     paragraph1={storyTellerData.designChallenge.paragraphs}
@@ -238,6 +344,42 @@ function StoryTeller() {
                     paragraph3={storyTellerData.solution.paragraphs}
                     screenDevice={screenDevice}
                 
+                />
+
+                <SolutionDemo
+                    screenDevice={screenDevice}
+                />
+
+                <ProjectOverview 
+                     screenDevice={screenDevice}
+                />
+
+                <Team
+                    title={storyTellerData.team.title}
+                    members={storyTellerData.team.members}
+                    screenDevice={screenDevice}
+                />
+
+                <SectionImg 
+                    imagesSrc={storyTellerData.caseStudy.caseStudySectionImages}
+                    screenDevice={screenDevice}
+                />
+
+                <ParagraphBlock
+                    title={storyTellerData.caseStudy.overview.title}
+                    paragraphs={storyTellerData.caseStudy.overview.paragraphs}
+                    screenDevice={screenDevice}
+                />
+
+                <ParagraphImg 
+                    imagesSrc={storyTellerData.caseStudy.overviewImages}
+                    alt={storyTellerData.caseStudy.overviewImagesAlt}
+                    screenDevice={screenDevice}
+                />
+
+                <ParagraphBlock
+                    paragraphs={storyTellerData.caseStudy.overviewImagesDesc.paragraphs}
+                    screenDevice={screenDevice}
                 />
             </div> )
     }
@@ -247,15 +389,6 @@ function StoryTeller() {
                 <ProjectBanner/>
 
                 <AnimationCrowds />
-
-                <OverviewParagraphBlock
-                    title1={storyTellerData.designChallenge.title}
-                    paragraph1={storyTellerData.designChallenge.paragraphs}
-                    title2={storyTellerData.theProblem.title}
-                    paragraph2={storyTellerData.theProblem.paragraphs}
-                    screenDevice={screenDevice}
-                
-                />
 
                 <SolutionDemo
                     title={storyTellerData.solution.title}
