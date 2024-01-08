@@ -4,54 +4,51 @@ import PropTypes from 'prop-types';
 function ParagraphImg(props) {
     const alt = props.alt;
     const width = props.width;
-    const height = props.height;
-    const images = props.images;
+    const imagesSrc = props.imagesSrc;
     const screenDevice = props.screenDevice;
+    const title = props.title;
+    const description = props.description;
 
     console.log('>>> screenDevice');
     console.log(screenDevice);
     
-    console.log('>>> Images');
-    console.log(images);
-
-    if ( screenDevice.isDesktopOrLaptop ) {
+    if ( screenDevice.laptop ) {
         return (
-            <div className='storyteller-desktopimagesection-container'>
+            <div className='storyteller-laptopParagraphImg'>
                 <img
-                    
-                    src = { images[1] }
+                    src = { imagesSrc[0] }
                     alt = { alt }
                     style = {{
-                        width: "100%",
+                        width: "80%",
+                        alignSelf: 'center',
                         paddingTop: '200px'
                     }} 
                 />
             </div>
            
         )
-    } else if ( screenDevice.isMobile ) {
+    } else if (  screenDevice.lg || screenDevice.md ) {
         return (
-            <div  className='storyteller-mobileimagesection-container'>
+            <div  className='storyteller-lgmdParagraphImg'>
                 <img
-                   
-                    src = { images[0] }
+                    src = { imagesSrc[1] }
                     alt = { alt }
                     style = {{
-                        width: width,
+                        width: "80%",
                         paddingTop: '100px'
                     }} 
                 />
               
              </div>
         )
-    } else if ( screenDevice.isTablet ) {
+    } else if ( screenDevice.xs || screenDevice.sm ) {
         return (
-            <div className='storyteller-tabletimagesection-container'>
+            <div className='storyteller-xssmParagraphImg'>
                 <img  
-                    src = { images[2] }
+                    src = { imagesSrc[2] }
                     alt = { alt }
                     style = {{
-                        width: "100%",
+                        width: "90%",
                         paddingTop: '120px'
                     }} 
                 />
@@ -65,9 +62,10 @@ function ParagraphImg(props) {
 export default ParagraphImg;
 
 ParagraphImg.prototype = {
+    title:  PropTypes.string,
+    description: PropTypes.string,
     alt: PropTypes.string.isRequired,
     width: PropTypes.string.isRequired,
-    height: PropTypes.string.isRequired,
-    images: PropTypes.array.isRequired,
+    imagesSrc: PropTypes.array.isRequired,
     screenDevice: PropTypes.object.isRequired
 }

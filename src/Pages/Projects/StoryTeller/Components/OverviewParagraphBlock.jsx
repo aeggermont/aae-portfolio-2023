@@ -17,7 +17,9 @@ function OverviewParagraphBlock ( props ) {
 
     if (  screenDevice.laptop) {
         return (
-            < div style={{  backgroundImage: `url(${WaitingPeopleDesktop})` }}> 
+            <div style={{  backgroundImage: `url(${WaitingPeopleDesktop})`, 
+                           backgroundRepeat: 'no-repeat',
+                           backgroundSize: 'auto'}}> 
                 <div className='storyteller-laptoplg-paragraph-container'>
                     <div className='storyteller-laptoplg-content-left'>
                         <div className='storyteller-laptoplg-paragraph-title'>{title1}</div>
@@ -42,7 +44,9 @@ function OverviewParagraphBlock ( props ) {
     } else if ( screenDevice.lg || screenDevice.md ) {
 
         return (
-            < div style={{  backgroundImage: `url(${WaitingPeopleLgMd})` }}> 
+            < div style={{  backgroundImage: `url(${WaitingPeopleLgMd})`,
+                            backgroundRepeat: 'no-repeat'
+                            }}> 
                 <div className='storyteller-mdlg-paragraph-container'>
                     <div className='storyteller-mdlg-content'>
                         <div className='storyteller-mdlg-paragraph-title'>{title1}</div>
@@ -69,7 +73,9 @@ function OverviewParagraphBlock ( props ) {
     } else if (  screenDevice.xs || screenDevice.sm ) {
 
         return (
-            < div style={{  backgroundImage: `url(${WaitingPeopleSMSX})` }}> 
+            < div style={{  backgroundImage: `url(${WaitingPeopleSMSX})`,
+                            backgroundRepeat: 'no-repeat',
+                            backgroundSize: 'auto'}}> 
                 <div className='storyteller-mobile-paragraph-container'>
                     <div className='storyteller-mobile-content'>
                         <div className='storyteller-mobile-paragraph-title'>{title1}</div>

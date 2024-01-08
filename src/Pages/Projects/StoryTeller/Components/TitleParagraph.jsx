@@ -7,26 +7,26 @@ function TitleParagraph(props)  {
     const screenDevice = props.screenDevice; 
 
 
-    if ( screenDevice.isDesktopOrLaptop ) {
+    if ( screenDevice.laptop ) {
         return (
             <>  
-                <div className='storyteller-desktop-paragraph-titlecontainer'>
+                <div className='storyteller-laptop-paragraph-title'>
                     <div className='title-paragraph'> { title }</div>
                 </div>
             </>
         )
-    } else if ( screenDevice.isTablet ) {
+    } else if ( screenDevice.lg || screenDevice.md ) {
         return (
             <>
-                <div className='storyteller-tablet-paragraph-titlecontainer'>
+                <div className='storyteller-lgmd-paragraph-title'>
                     <div className='title-paragraph'> { title }</div>
                 </div>
             </>
         )
-    } else if ( screenDevice.isMobile ) {
+    } else if (  screenDevice.xs || screenDevice.sm ) {
         return (
             <>
-                <div className='storyteller-mobile-paragraph-titlecontainer'>
+                <div className='storyteller-xsxm-paragraph-title'>
                     <div className='title-paragraph'> { title }</div>
                 </div>
             </>

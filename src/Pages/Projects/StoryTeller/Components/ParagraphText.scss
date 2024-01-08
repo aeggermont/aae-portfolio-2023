@@ -1,44 +1,40 @@
 
-.desktop-paragraph-container {
+.storyteller-laptop-paragraph-text {
     margin: auto;
-    max-width: 2600px;
-
+    width: 85%;
+    padding-top: 3rem;
     .text-paragraph {
-        width: 75%;
+        
         margin: auto;
         font-family: poppins;
         font-size: 2rem;
         font-weight: 400;
-        color: #000000;
-        //text-align: left;
+        color: #010A24;
     }    
 }
 
-.tablet-paragraph-container {
+.storyteller-lgmd-paragraph-text {
     margin: auto;
-    max-width: 1366px;
-
+    width: 85%;
+    padding-top: 2rem;
     .text-paragraph {
-        width: 80%;
-        margin: auto;
         font-family: poppins;
         font-size: 18px;
         font-weight: 400;
-        color: #000000;
+        color: #010A24;
     }
     
 }
 
-.mobile-paragraph-container {
-    margin-left: 5%;
-    margin-right: 5%;
-    // background-color: blue;
-
+.storyteller-xsxm-paragraph-text {
+    margin: auto;
+    width: 80%;
+    padding-top: 2rem;
     .text-paragraph {
         font-family: poppins;
         font-size: 1rem;
         font-weight: 400;
-        color: #000000;
+        color: #010A24;
     }
     
 }   
