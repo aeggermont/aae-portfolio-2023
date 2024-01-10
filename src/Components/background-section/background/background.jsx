@@ -12,7 +12,8 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
-
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
 
 /*
     Useful links: https://mui.com/material-ui/api/typography/
@@ -23,11 +24,9 @@ const styles = {
     fullHeightCard: {
         height: "100%",
         },
-    }
-
-function openBackgroundDialog() {
-
 }
+
+
 
 export default function BackgroundCard(props) {
     const [open, setOpen] = React.useState(false);
@@ -44,21 +43,35 @@ export default function BackgroundCard(props) {
       setOpen(false);
     };
 
-    console.log('<<< BackgroundCard ');
-    console.log(dimensions.width);
-    console.log(description);
-
     return (
-        <div>       
+        <div >       
             <Dialog
                 open={open}
                 onClose={handleClose}
                 aria-labelledby="alert-dialog-title"
                 aria-describedby="alert-dialog-description"
             >
-                <DialogTitle id="alert-dialog-title">
-                    {title}
-                </DialogTitle>
+                <div  style={{ 
+                    display:'flex',
+                    justifyContent:'center',
+                    flexDirection:'row',
+                    alignItems: 'center' }}>
+                    <CardMedia
+                        sx={{
+                            objectFit: "contain",
+                            padding: "1em 1em 1em 1em", 
+                            width: { xs: "80px", sm: "90px", md: "110px", lg: "120px"},
+                            height: { xs: "80px", sm: "90px", md: "110px", lg: "120px" }}}
+                        component="img"
+                        image={img}
+                        alt={title}
+                    />
+                    <DialogTitle id="alert-dialog-title">
+                        {title}
+                    </DialogTitle>
+                </div>
+     
+   
                 <DialogContent dividers>
                     <DialogContentText id="alert-dialog-description">
                         {description}
@@ -86,29 +99,27 @@ export default function BackgroundCard(props) {
                 boxShadow={1}
                 
                 >
-                <CardActionArea>
-                    <div style={{ display:'flex', justifyContent:'center' }}>
-                    <CardMedia
-                        sx={{
-                            objectFit: "contain",
-                            padding: "1em 1em 1em 1em", 
-                            width: { xs: "80px", sm: "90px", md: "110px", lg: "120px"},
-                            height: { xs: "80px", sm: "90px", md: "110px", lg: "120px" }}}
-                        component="img"
-                        image={img}
-                        alt={title}
-                    />
-                    </div>
-                    <CardContent>
-                        <div className='background-title'>
-                            <span className='background-title-label'> {title} </span>
+                <div onClick={handleClickOpen}>
+                    <CardActionArea>
+                        <div  style={{ display:'flex', justifyContent:'center' }}>
+                            <CardMedia
+                                sx={{
+                                    objectFit: "contain",
+                                    padding: "1em 1em 1em 1em", 
+                                    width: { xs: "80px", sm: "90px", md: "110px", lg: "120px"},
+                                    height: { xs: "80px", sm: "90px", md: "110px", lg: "120px" }}}
+                                component="img"
+                                image={img}
+                                alt={title}
+                            />
                         </div>
-                    </CardContent>
-                    <CardActions>
-                        <Button onClick={handleClickOpen} size="small">Learn More</Button>
-                    </CardActions>
-                </CardActionArea>
-        
+                        <CardContent>
+                            <div className='background-title'>
+                                <span className='background-title-label'> {title} </span>
+                            </div>
+                        </CardContent>
+                    </CardActionArea>
+                </div>
             </Card>
         </div>
     )
@@ -121,15 +132,3 @@ BackgroundCard.prototype = {
     dimensions: PropTypes.object.isRequired,
     desciption: PropTypes.array.isRequired
 }
-
-/*
-
-  sx={{
-                        display:'flex',
-                        justifyContent:'center',
-                        padding: "1em 1em 1em 1em", 
-                        objectFit: "contain",
-                        width: { xs: "80px", sm: "90px", md: "110px", lg: "120px"},
-                        height: { xs: "80px", sm: "90px", md: "110px", lg: "120px" },
-                    }}
-                    */
