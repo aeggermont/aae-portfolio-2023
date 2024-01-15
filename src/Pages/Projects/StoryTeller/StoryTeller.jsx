@@ -36,6 +36,25 @@ import SectionImgTowerOfTerrorSmSx from './Images/SectionImgTowerOfTerror-SmSx.p
 import HollywoodTowerofTerrorARImgDesktop from './Images/HollywoodTowerofTerrorARImg-Desktop.png';
 import HollywoodTowerofTerrorARImgLgMd from './Images/HollywoodTowerofTerrorARImg-LgMd.png';
 import HollywoodTowerofTerrorARImgSmSx from './Images/HollywoodTowerofTerrorARImg-SmSx.png';
+import NotificationsMapDesktop from  './Images/NotificationsMap-Desktop.png';
+import NotificationsMapMdLg from './Images/NotificationsMap-MdLg.png';
+
+import NotificationsIllustration1SmSx from './Images/NotificationsIllustration1-SmSx.png';
+import NotificationsIllustration2SmSx from './Images/NotificationsIllustration2-SmSx.png';
+import NotificationsIllustration3SmSx from './Images/NotificationsIllustration3-SmSx.png';
+
+import SampleNotificationsIllustrationMdLg from './Images/SampleNotificationsIllustration-MdLg.svg';
+import SampleNotificationsIllustrationDesktop from './Images/SampleNotificationsIllustrationDesktop.svg';
+
+import LearningAbouttheAttractionDesktop from './Images/LearningAbouttheAttraction-Desktop.png';
+import LearningAbouttheAttractionMdLg from './Images/LearningAbouttheAttraction-MdLg.png';
+import LearningAbouttheAttractionSmSx from './Images/LearningAbouttheAttraction-SmSx.png';
+
+import TakingSelfieDesktop from './Images/TakingSelfie-Desktop.png';
+import TakingSelfieMdLgfrom from './Images/TakingSelfie-MdLg.png';
+
+import CollectingArtifactsMdLg from './Images/CollectingArtifacts-MdLg.png';
+import CollectingArtifactsDesktop from './Images/CollectingArtifacts-Desktop.png';
 
 
 function StoryTeller() {
@@ -124,6 +143,88 @@ function StoryTeller() {
                 title: 'Learning about the attraction while waiting in line ',
                 paragraphs:
                 [ 'The theme of Tower of Terror is escalating horror. The whole thing should start lightly, and then draw the guest into the tension and fear that pervade the attraction. They should feel that mounting fear throughout the entire experience. Notifications are randomly sent to enhance the fear experience and also to educate guests about the attraction.']
+            },
+            notificationsAttrac: {
+                title: 'Sample Notifications',
+                images: [
+                    NotificationsMapDesktop,
+                    NotificationsMapMdLg,
+                    NotificationsMapMdLg
+                ],
+                description: 'Beacon sensors are positioned along the waiting queue area to send notifications for A.R. content to near by guests waiting in line.',
+                paragraphs: [
+                    'The following are sample notifications that are sent once the guest has entered the waiting queue area.'
+                ],
+                sampleNotifications1SmSX : {
+                    images: [
+                        NotificationsIllustration1SmSx
+                    ],
+                    alt: 'Sample Notification'
+                },
+
+                sampleNotifications2SmSX : {
+                    images: [
+                        NotificationsIllustration2SmSx
+                    ],
+                    alt: 'Sample Notification'
+                },
+
+                sampleNotifications3SmSX : {
+                    images: [
+                        NotificationsIllustration3SmSx
+                    ],
+                    alt: 'Sample Notification'
+                },
+
+                sampleNotificationsMdLg : {
+                    images: [
+                        SampleNotificationsIllustrationMdLg      
+                    ],
+                    alt: 'Sample Notification'
+                },
+                sampleNotificationsDesktop : {
+                    images: [
+                        SampleNotificationsIllustrationDesktop
+                    ],
+                    alt: 'Sample Notification'
+                },
+            },
+            magicExperiences : {
+                title: "A.R. Magic Experiences",
+                paragraphs: [ 'The A.R. experience is enhanced with features such as discovering facts about the attraction Guests are visiting. Guests can learn more about storyline behind the ride and art and craft Disney Imaginers used during the design and building of the facility.  Other features include taking selfies with augmented A.R. content in the background, and collecting artifacts found while viewing A.R. content. '],
+                experiences :  [
+                    {  
+                        title: 'Discovering Facts about the Attraction',
+                        alt: 'Discovering Facts about the Attraction',
+                        description: 'Guests can use their phone’s camera to scan the attraction facility’s environment to discover  facts about the story. A notification can trigger tje guest to open the app to scan the environment.',
+                        images : [
+                            LearningAbouttheAttractionDesktop,
+                            LearningAbouttheAttractionMdLg,
+                            LearningAbouttheAttractionSmSx
+                        ]
+                    },
+                    {
+                        title: 'Taking a Selfie',
+                        alt: 'Taking a Selfie',
+                        description: 'Once A.R. content is discovered, selfies can be taken and shared as memories in social networks.',
+                        images : [ 
+                            TakingSelfieDesktop,
+                            TakingSelfieMdLgfrom
+                        ]
+                    },
+                    {
+                        title: 'Collecting Artifacts',
+                        alt: 'Collecting Artifacts',
+                        description: 'Discovered artifacts about the attraction’s story can be collected. These artifacts can be retrieved and shared with other guests, or viewed as memories after visiting the park. ',
+                        images : [
+                            CollectingArtifactsDesktop,
+                            CollectingArtifactsMdLg,
+                            LearningAbouttheAttractionSmSx
+                        ]   
+                    }
+                
+
+                ]
             }
         },
         contributions : {
@@ -280,7 +381,58 @@ function StoryTeller() {
                     paragraphs={storyTellerData.caseStudy.overviewImagesDesc.paragraphs}
                     screenDevice={screenDevice}
                 />
-                
+
+                <ParagraphBlock
+                    title={storyTellerData.caseStudy.learningAboutAttrac.title}
+                    paragraphs={storyTellerData.caseStudy.learningAboutAttrac.paragraphs}
+                    screenDevice={screenDevice}
+                />
+
+                <ParagraphImg 
+                    imagesSrc={storyTellerData.caseStudy.notificationsAttrac.images}
+                    alt={storyTellerData.caseStudy.notificationsAttrac.description}
+                    screenDevice={screenDevice}
+                />
+
+                <ParagraphBlock
+                    title={storyTellerData.caseStudy.notificationsAttrac.title}
+                    paragraphs={storyTellerData.caseStudy.notificationsAttrac.paragraphs}
+                    screenDevice={screenDevice}
+                />
+
+                <ParagraphImg 
+                    imagesSrc={ storyTellerData.caseStudy.notificationsAttrac.sampleNotifications1SmSX.images}
+                    alt={ storyTellerData.caseStudy.notificationsAttrac.sampleNotifications1SmSX.alt}
+                    screenDevice={screenDevice}
+                />
+
+                <ParagraphImg 
+                    imagesSrc={ storyTellerData.caseStudy.notificationsAttrac.sampleNotifications2SmSX.images}
+                    alt={ storyTellerData.caseStudy.notificationsAttrac.sampleNotifications2SmSX.alt}
+                    screenDevice={screenDevice}
+                />
+    
+                <ParagraphImg 
+                    imagesSrc={ storyTellerData.caseStudy.notificationsAttrac.sampleNotifications3SmSX.images}
+                    alt={ storyTellerData.caseStudy.notificationsAttrac.sampleNotifications3SmSX.alt}
+                    screenDevice={screenDevice}
+                />
+
+                <ParagraphBlock
+                    title={storyTellerData.caseStudy.magicExperiences.title}
+                    paragraphs={storyTellerData.caseStudy.magicExperiences.paragraphs}
+                    screenDevice={screenDevice}
+                />
+
+                <ParagraphImg
+                    alt={storyTellerData.caseStudy.magicExperiences.experiences[0].alt}
+                    imagesSrc={  storyTellerData.caseStudy.magicExperiences.experiences[0].images}
+                    width= "40%"
+                    title ={ storyTellerData.caseStudy.magicExperiences.experiences[0].title }
+                    description ={ storyTellerData.caseStudy.magicExperiences.experiences[0].description }
+                    screenDevice={screenDevice}
+                />
+
             </div> )
     } else if ( md || lg) {
         return (
@@ -330,6 +482,53 @@ function StoryTeller() {
                     paragraphs={storyTellerData.caseStudy.overviewImagesDesc.paragraphs}
                     screenDevice={screenDevice}
                 />
+
+                <ParagraphBlock
+                    title={storyTellerData.caseStudy.learningAboutAttrac.title}
+                    paragraphs={storyTellerData.caseStudy.learningAboutAttrac.paragraphs}
+                    screenDevice={screenDevice}
+                />
+
+                <ParagraphImg 
+                    imagesSrc={storyTellerData.caseStudy.notificationsAttrac.images}
+                    alt={storyTellerData.caseStudy.notificationsAttrac.description}
+                    screenDevice={screenDevice}
+                />
+
+                <ParagraphBlock
+                    title={storyTellerData.caseStudy.notificationsAttrac.title}
+                    paragraphs={storyTellerData.caseStudy.notificationsAttrac.paragraphs}
+                    screenDevice={screenDevice}
+                />
+
+                <ParagraphImg 
+                    imagesSrc={ storyTellerData.caseStudy.notificationsAttrac.sampleNotificationsMdLg.images}
+                    alt={ storyTellerData.caseStudy.notificationsAttrac.sampleNotificationsMdLg.alt}
+                    screenDevice={screenDevice}
+                />
+
+                <ParagraphBlock
+                    title={storyTellerData.caseStudy.magicExperiences.title}
+                    paragraphs={storyTellerData.caseStudy.magicExperiences.paragraphs}
+                    screenDevice={screenDevice}
+                />
+                <ParagraphImg
+                    alt={storyTellerData.caseStudy.magicExperiences.experiences[0]}
+                    imagesSrc={  storyTellerData.caseStudy.magicExperiences.experiences[0].images}
+                    width = "50%"
+                    title ={ storyTellerData.caseStudy.magicExperiences.experiences[0].title }
+                    description ={ storyTellerData.caseStudy.magicExperiences.experiences[0].description }
+                    screenDevice={screenDevice}
+                />
+
+                <ParagraphImg
+                    alt={storyTellerData.caseStudy.magicExperiences.experiences[0]}
+                    imagesSrc={  storyTellerData.caseStudy.magicExperiences.experiences[0].images}
+                    width = "50%"
+                    title ={ storyTellerData.caseStudy.magicExperiences.experiences[0].title }
+                    description ={ storyTellerData.caseStudy.magicExperiences.experiences[0].description }
+                    screenDevice={screenDevice}
+                />
             </div> )
     } else if (  laptop ) {
         return (
@@ -343,7 +542,6 @@ function StoryTeller() {
                     title3={storyTellerData.solution.title}
                     paragraph3={storyTellerData.solution.paragraphs}
                     screenDevice={screenDevice}
-                
                 />
 
                 <SolutionDemo
@@ -374,6 +572,7 @@ function StoryTeller() {
                 <ParagraphImg 
                     imagesSrc={storyTellerData.caseStudy.overviewImages}
                     alt={storyTellerData.caseStudy.overviewImagesAlt}
+                
                     screenDevice={screenDevice}
                 />
 
@@ -381,6 +580,64 @@ function StoryTeller() {
                     paragraphs={storyTellerData.caseStudy.overviewImagesDesc.paragraphs}
                     screenDevice={screenDevice}
                 />
+
+                <ParagraphBlock
+                    title={storyTellerData.caseStudy.learningAboutAttrac.title}
+                    paragraphs={storyTellerData.caseStudy.learningAboutAttrac.paragraphs}
+                    screenDevice={screenDevice}
+                />
+
+                <ParagraphImg 
+                    imagesSrc={storyTellerData.caseStudy.notificationsAttrac.images}
+                    alt={storyTellerData.caseStudy.notificationsAttrac.description}
+                    screenDevice={screenDevice}
+                />
+
+                <ParagraphBlock
+                    title={storyTellerData.caseStudy.notificationsAttrac.title}
+                    paragraphs={storyTellerData.caseStudy.notificationsAttrac.paragraphs}
+                    screenDevice={screenDevice}
+                />
+                
+                <ParagraphImg
+                    imagesSrc={  storyTellerData.caseStudy.notificationsAttrac.sampleNotificationsDesktop.images}
+                    alt={storyTellerData.caseStudy.notificationsAttrac.sampleNotificationsMdLg.alt}
+                    screenDevice={screenDevice}
+                />
+
+                <ParagraphBlock
+                    title={storyTellerData.caseStudy.magicExperiences.title}
+                    paragraphs={storyTellerData.caseStudy.magicExperiences.paragraphs}
+                    screenDevice={screenDevice}
+                />
+
+                <ParagraphImg
+                    alt={storyTellerData.caseStudy.magicExperiences.experiences[0]}
+                    imagesSrc={  storyTellerData.caseStudy.magicExperiences.experiences[0].images}
+                    width = "50%"
+                    title ={ storyTellerData.caseStudy.magicExperiences.experiences[0].title }
+                    description ={ storyTellerData.caseStudy.magicExperiences.experiences[0].description }
+                    screenDevice={screenDevice}
+                />
+
+                <ParagraphImg
+                    alt={storyTellerData.caseStudy.magicExperiences.experiences[1]}
+                    imagesSrc={  storyTellerData.caseStudy.magicExperiences.experiences[1].images}
+                    width = "50%"
+                    title ={ storyTellerData.caseStudy.magicExperiences.experiences[1].title }
+                    description ={ storyTellerData.caseStudy.magicExperiences.experiences[1].description }
+                    screenDevice={screenDevice}
+                />
+              
+              <ParagraphImg
+                    alt={storyTellerData.caseStudy.magicExperiences.experiences[2]}
+                    imagesSrc={  storyTellerData.caseStudy.magicExperiences.experiences[2].images}
+                    width = "50%"
+                    title ={ storyTellerData.caseStudy.magicExperiences.experiences[2].title }
+                    description ={ storyTellerData.caseStudy.magicExperiences.experiences[2].description }
+                    screenDevice={screenDevice}
+                />
+
             </div> )
     }
 

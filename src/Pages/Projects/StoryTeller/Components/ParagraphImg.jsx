@@ -1,61 +1,132 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './ParagraphImg.scss';
 
 function ParagraphImg(props) {
     const alt = props.alt;
-    const width = props.width;
+    let width = props.width;
     const imagesSrc = props.imagesSrc;
     const screenDevice = props.screenDevice;
     const title = props.title;
     const description = props.description;
 
-    console.log('>>> screenDevice');
+    console.log('>>> ParagraphImg');
     console.log(screenDevice);
-    
-    if ( screenDevice.laptop ) {
+    console.log(imagesSrc);
+    console.log(title);
+    console.log(description);
+
+    if ( imagesSrc.length === 1 ) {
+        if ( screenDevice.laptop ) {
+            return (
+                <div className='storyteller-laptopParagraphImg'>
+                      
+                    <img    
+                        src = { imagesSrc[0] }
+                        alt = { alt }
+                        style = {{
+                            width: "80%",
+                            alignSelf: 'center',
+                            paddingTop: '6rem'
+                        }} 
+                    />
+                    <div className='title'> { title } </div>
+                    <div className='description'> { description }</div>
+                </div>
+            )
+        } else if ( screenDevice.lg || screenDevice.md ) {
+            return (
+                <div  className='storyteller-lgmdParagraphImg'>
+                       
+                    <img
+                        src = { imagesSrc[0] }
+                        alt = { alt }
+                        style = {{
+                            width: "80%",
+                            paddingTop: '3rem'
+                        }} 
+                    />
+                    <div  className='title'> { title } </div>
+                    <div  className='description'> { description }</div>
+                 </div>
+            );
+        } else if ( screenDevice.xs || screenDevice.sm ) {
+            return (
+                <div className='storyteller-xssmParagraphImg'>
+                      
+                    <img  
+                        src = { imagesSrc[0] }
+                        alt = { alt }
+                        style = {{
+                            width: "90%",
+                            paddingTop: '1rem'
+                        }} 
+                    />
+                    <div  className='title'> { title } </div>
+                    <div  className='description'> { description }</div>
+                </div>
+            );
+        }
+    } else if ( screenDevice.laptop ) {
+       
+        if ( width === undefined) {
+            width = "80%";
+        }
         return (
             <div className='storyteller-laptopParagraphImg'>
+                
                 <img
                     src = { imagesSrc[0] }
                     alt = { alt }
                     style = {{
-                        width: "80%",
+                        width: { width },
                         alignSelf: 'center',
-                        paddingTop: '200px'
+                        paddingTop: '6rem'
                     }} 
                 />
+                <div className='title'> { title } </div>
+                <div className='description'> { description }</div>
             </div>
-           
-        )
-    } else if (  screenDevice.lg || screenDevice.md ) {
+        );
+    } else if ( screenDevice.lg || screenDevice.md ) {
+        if ( width === undefined) {
+            width = "80%";
+        }
         return (
             <div  className='storyteller-lgmdParagraphImg'>
+               
                 <img
-                    src = { imagesSrc[1] }
+                    src = { imagesSrc[0] }
                     alt = { alt }
                     style = {{
-                        width: "80%",
-                        paddingTop: '100px'
+                        width: { width },
+                        alignSelf: 'center',
+                        paddingTop: '6rem'
                     }} 
                 />
-              
+                <div className='title'> { title } </div>
+                <div className='description'> { description }</div>
              </div>
-        )
+        );
     } else if ( screenDevice.xs || screenDevice.sm ) {
+        if ( width === undefined) {
+            width = "80%";
+        }
         return (
             <div className='storyteller-xssmParagraphImg'>
+               
                 <img  
                     src = { imagesSrc[2] }
                     alt = { alt }
                     style = {{
-                        width: "90%",
-                        paddingTop: '120px'
+                        width: { width },
+                        paddingTop: '3rem'
                     }} 
                 />
-               
+                <div className='title'> { title } </div>
+                <div className='description'> { description }</div>
             </div>
-            
-        )
+        );
     }
 }
 
