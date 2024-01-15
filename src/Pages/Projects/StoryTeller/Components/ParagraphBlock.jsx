@@ -39,7 +39,9 @@ function ParagraphBlock(props) {
         );
     } else if ( (title === undefined) && ( subTitle === undefined)) {
         return (
-            { paragraphsRender }
+            <>
+              { paragraphsRender }
+            </>
         );
     } else if ((title === undefined) && ( subTitle !== undefined))  {
         return (
