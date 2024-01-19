@@ -26,13 +26,13 @@ function BulletPoints(props)  {
               { bulletPointsRender }
             </>
         )
-    } else if ( screenDevice.isMobile ) {
+    } else if ( screenDevice.xs || screenDevice.sm ) {
         return (
             <>
                 { bulletPointsRender }
             </>
         )
-    } else if ( screenDevice.isTablet ) {
+    } else if (  screenDevice.lg || screenDevice.md ) {
         return (
             <>
                 { bulletPointsRender }
@@ -45,7 +45,7 @@ export default BulletPoints;
 
 BulletPoints.prototype = {
     title: PropTypes.string,
-    text: PropTypes.string.isRequired,
+    text: PropTypes.string,
     bulletPoints: PropTypes.array.isRequired,
     screenDevice: PropTypes.object.isRequired
 }

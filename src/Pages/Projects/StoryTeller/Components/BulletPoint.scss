@@ -1,58 +1,72 @@
-.storyteller-desktop-bulletPoint-container {
-    max-width: 2500px;
+.storyteller-desktop-bulletPoint {
+   
     margin: auto;
-
-    .bullet-points {
+    width: 80%;
         
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        padding-top: 3rem;
-        padding-left: 20%;
-        padding-right: 20%;
-        align-items: top;
-        justify-content: left;
+    display: flex;
+    flex-direction: row;
+    padding-top: 3rem;
+    align-items: top;
+    justify-content: left;
 
-        .text-paragraph {
-            padding-left: 2rem;
-            font-family: poppins;
-            font-size: 2rem;
-            font-weight: 400;
-            color: #000000; 
-        }
+    .bullet-point {
+        padding-top: .5rem;
+        
     }
+
+    .text-paragraph {
+        padding-left: 2rem;
+        font-family: poppins;
+        font-size: 2rem;
+        font-weight: 400;
+        color: #010A24; 
+    }
+    
 }
 
-.storyteller-tablet-bulletPoint-container {
-
-    max-width: 1366px;
+.storyteller-lgmd-bulletPoint {
     margin: auto;
- 
-    width: 80%;
-    padding-top: 12px;
-
+    width: 70%;
+    padding-top: .8rem;
+    display: flex;
+    flex-direction: row;
     align-items: top;
 
+    .bullet-point {
+        padding-top: .5rem;
+        
+    }
+
     .text-paragraph {
         padding-left: 1rem;
         font-family: poppins;
         font-size: 1rem;
         font-weight: 400;
-        color: #000000; 
+        color: #010A24; 
     }
 }
 
-.storyteller-mobile-bulletPoint-container {
-    max-width: 428px;
-    margin: auto;
-    width: 90%;
+.storyteller-xssm-bulletPoint {
 
+    margin: auto;
+    width: 80%;
+
+    display: flex;
+    flex-direction: row;
+    padding-top: 3rem;
+    align-items: top;
+    justify-content: left;
+
+    .bullet-point {
+        padding-top: .1rem;
+        
+    }
     .text-paragraph {
         padding-left: 1rem;
         font-family: poppins;
         font-size: 1rem;
         font-weight: 400;
-        color: #000000; 
+        color: #010A24; 
     }
 
 }

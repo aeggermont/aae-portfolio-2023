@@ -1,61 +1,63 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './BulletPoint.scss';
+import BulletPointDesktop from '../Images/BulletPoint-Desktop.png';
+import BulletPointLgMd from '../Images/BulletPoint-LgMd.png';
+import BulletPointSmSx from '../Images/BulletPoint-SmSx.png';
 
 function BulletPoint(props)  {
     const text = props.text;
     const icon = props.icon;
     const screenDevice = props.screenDevice; 
 
-    if ( screenDevice.isDesktopOrLaptop ) {
+    if ( screenDevice.laptop ) {
         return (
             <>  
-                <div className="storyteller-desktop-bulletPoint-container">
-                    <div className='bullet-points'>
+                <div className="storyteller-desktop-bulletPoint">
+                    <div className='bullet-point'>
                         <img
-                            src = { icon }
+                            src = { BulletPointDesktop }
                             style = {{
                                         width: "26px",
-                                        height: "24px",
-                                    
+                                        height: "24px"
                                     }} />
-                    
-                        <p className='text-paragraph'> { text }</p>    
                     </div>
+                    <p className='text-paragraph'> { text }</p>    
                 </div>              
             </>
         )
 
-        } else if ( screenDevice.isTablet ) {
+        } else if (  screenDevice.lg || screenDevice.md ) {
             return (
                 <>
-                    <div className="bulletPoint-container-tablet">
-                        <img
-                            src = { icon }
-                            style = {{
-                                        width: "15px",
-                                        height: "15px",
-                                        
-                                    }} />
-                    
+                    <div className="storyteller-lgmd-bulletPoint">
+                        <div className='bullet-point'>
+                            <img
+                                src = { BulletPointLgMd }
+                                style = {{
+                                            width: "12px",
+                                            height: "12px",
+                                            
+                                        }} />
+                        </div>
                         <p className='text-paragraph'> { text }</p>    
                     </div>              
                 </>
             )
-        } else if ( screenDevice.isMobile ) {
+        } else if ( screenDevice.xs || screenDevice.sm) {
                 return (
                     <>
-                        <div className="bulletPoint-container-mobile">
-                            <img
-                                src = { icon }
-                                style = {{
-                                            width: "15px",
-                                            height: "15px",
-                                        
-                                        }} />
-                        
+                        <div className="storyteller-xssm-bulletPoint">
+                            <div className='bullet-point'>
+                                <img
+                                    src = { BulletPointSmSx }
+                                    style = {{
+                                                width: "15px",
+                                                height: "15px",
+                                            
+                                            }} />  
+                            </div> 
                             <p className='text-paragraph'> { text }</p>
-                            
                         </div>              
                     </>
                 )
