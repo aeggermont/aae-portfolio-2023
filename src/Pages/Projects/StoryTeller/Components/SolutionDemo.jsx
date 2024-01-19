@@ -19,7 +19,6 @@ function SolutionDemo ( props ) {
             <> 
                <div 
                     className='desktop-solution-demo-container'>
-
                         <div ref={ref1} className='laptop-demo-animation'>
                             <div className='mobile-ar-image'>
                                 <SlideshowLightbox
@@ -53,33 +52,14 @@ function SolutionDemo ( props ) {
         return (
             <> 
                 <div className='solutiondemo-lgmd-container'>
-                      
-                        <div ref={ref1} className='demo-lgmd-content'>
-                            <div className='mobile-ar-image'>
-                                <SlideshowLightbox
-                                    iconColor="silver"
-                                    theme="lightbox" 
-                                    className='container grid grid-cols-3 gap-2 mx-auto'
-                                    showMagnificationIcons={false}
-                                    fullScreen={false}
-                                    imgAnimation="fade"
-                                    showThumbnails={false}>
-                                    <img 
-                                        className='object-fit_fill' 
-                                        src= {ARTowerofTerrorDemo}
-                                        alt = { alt }
-                                        style = {{
-                                            maxWidth: '100%',
-                                            minWidth: '100%',
-                                            paddingTop: '100px',
-                                            paddingLeft: '100px',
-                            
-                                        }} />
-                                </SlideshowLightbox> 
-                            </div>
-                        </div>
-
-                       
+                    <img
+                        
+                        src = { ARTowerofTerrorDemo }
+                        style = {{
+                            paddingTop: '3rem',
+                            width: '80%'
+                        }} 
+                    />
                 </div>
          </>
         )

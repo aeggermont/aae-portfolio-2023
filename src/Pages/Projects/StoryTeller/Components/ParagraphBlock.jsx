@@ -9,8 +9,6 @@ function ParagraphBlock(props) {
     const subTitle = props.subTitle;
     const paragraphs = props.paragraphs;
     const screenDevice = props.screenDevice;
-    console.log(" >>>>  PARAGRAPHS <<<<<<<");
-    console.log(paragraphs);
 
     const paragraphsRender = paragraphs.map(
         (paragraph, index) =>

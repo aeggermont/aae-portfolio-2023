@@ -16,16 +16,19 @@ function ParagraphImg(props) {
     console.log(title);
     console.log(description);
 
+   
     if ( imagesSrc.length === 1 ) {
         if ( screenDevice.laptop ) {
+            if ( width === undefined) {
+                width = "80%";
+            }        
             return (
                 <div className='storyteller-laptopParagraphImg'>
-                      
                     <img    
                         src = { imagesSrc[0] }
                         alt = { alt }
                         style = {{
-                            width: "80%",
+                            width: width,
                             alignSelf: 'center',
                             paddingTop: '6rem'
                         }} 
@@ -35,14 +38,17 @@ function ParagraphImg(props) {
                 </div>
             )
         } else if ( screenDevice.lg || screenDevice.md ) {
+            if ( width === undefined) {
+                width = "80%";
+            }   
             return (
                 <div  className='storyteller-lgmdParagraphImg'>
-                       
                     <img
                         src = { imagesSrc[0] }
                         alt = { alt }
                         style = {{
-                            width: "80%",
+                            width: width,
+                            alignSelf: 'center',
                             paddingTop: '3rem'
                         }} 
                     />
@@ -51,14 +57,16 @@ function ParagraphImg(props) {
                  </div>
             );
         } else if ( screenDevice.xs || screenDevice.sm ) {
+            if ( width === undefined) {
+                width = "90%";
+            } 
             return (
                 <div className='storyteller-xssmParagraphImg'>
-                      
                     <img  
                         src = { imagesSrc[0] }
                         alt = { alt }
                         style = {{
-                            width: "90%",
+                            width: width,
                             paddingTop: '1rem'
                         }} 
                     />
@@ -74,7 +82,6 @@ function ParagraphImg(props) {
         }
         return (
             <div className='storyteller-laptopParagraphImg'>
-                
                 <img
                     src = { imagesSrc[0] }
                     alt = { alt }
@@ -90,16 +97,15 @@ function ParagraphImg(props) {
         );
     } else if ( screenDevice.lg || screenDevice.md ) {
         if ( width === undefined) {
-            width = "80%";
+            width = "100%";
         }
         return (
             <div  className='storyteller-lgmdParagraphImg'>
-               
                 <img
-                    src = { imagesSrc[0] }
+                    src = { imagesSrc[1] }
                     alt = { alt }
                     style = {{
-                        width: { width },
+                        width: width ,
                         alignSelf: 'center',
                         paddingTop: '6rem'
                     }} 
