@@ -17,6 +17,7 @@ import BulletPoints from './Components/BulletPoints.jsx';
 
 import IllustrationDiagram from './Components/IllustrationDiagram';
 import ParagraphImg from './Components/ParagraphImg';
+import IlllustrationGallery from './Components/IlllustrationGallery';
 
 /* Media Assets */
 import CloudsLayer1 from './Images/clouds-layer-1.png';
@@ -671,6 +672,8 @@ function StoryTeller() {
                     screenDevice={screenDevice}
                 />
 
+                <IlllustrationGallery />
+
                 <ParagraphBlock
                     title={storyTellerData.caseStudy.mockupsAndSpecs.title}
                     paragraphs={storyTellerData.caseStudy.mockupsAndSpecs.paragraphs}
@@ -940,6 +943,9 @@ function StoryTeller() {
                     screenDevice={screenDevice}
                 />
 
+
+                <IlllustrationGallery />
+
                 <ParagraphBlock
                     title={storyTellerData.caseStudy.mockupsAndSpecs.title}
                     paragraphs={storyTellerData.caseStudy.mockupsAndSpecs.paragraphs}
@@ -1205,6 +1211,8 @@ function StoryTeller() {
                     paragraphs={storyTellerData.caseStudy.storyboardingARExp.paragraphs}
                     screenDevice={screenDevice}
                 />
+
+                <IlllustrationGallery />
 
                 <ParagraphBlock
                     title={storyTellerData.caseStudy.mockupsAndSpecs.title}
