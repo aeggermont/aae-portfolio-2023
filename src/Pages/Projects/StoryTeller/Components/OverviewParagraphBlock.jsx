@@ -46,7 +46,8 @@ function OverviewParagraphBlock ( props ) {
 
         return (
             < div style={{  backgroundImage: `url(${WaitingPeopleLgMd})`,
-                            backgroundRepeat: 'no-repeat'
+                            backgroundRepeat: 'no-repeat',
+                            backgroundPosition: 'center center',
                             }}> 
                 <div className='storyteller-mdlg-paragraph-container'>
                     <div className='storyteller-mdlg-content'>
