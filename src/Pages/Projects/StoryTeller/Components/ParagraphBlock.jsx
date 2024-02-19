@@ -2,13 +2,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TitleParagraph from './TitleParagraph';
 import ParagraphText from './ParagraphText';
-import SubTitle from './SubTitle';
+import SubTitle1 from './SubTitle1';
+import SubTitle2 from './SubTitle2';
 
 function ParagraphBlock(props) {
     const title = props.title;
-    const subTitle = props.subTitle;
+    const subTitle1 = props.subTitle1;
+    const subTitle2 = props.subTitle2;
     const paragraphs = props.paragraphs;
     const screenDevice = props.screenDevice;
+
+    const titleRender = (title, screenDevice) =>
+        title === undefined ? '' : <TitleParagraph screenDevice={screenDevice} title={title} />;
+
+    const subTitle1Render = (subTitle1, screenDevice) =>
+        subTitle1 === undefined ? '' : <SubTitle1 screenDevice={screenDevice} subTitle={subTitle1} />;
+
+    const subTitle2Render = (subTitle2, screenDevice) =>
+        subTitle2 === undefined ? '' : <SubTitle2 screenDevice={screenDevice} subTitle={subTitle2} />;
 
     const paragraphsRender = paragraphs.map(
         (paragraph, index) =>
@@ -19,6 +30,17 @@ function ParagraphBlock(props) {
             />
     );
 
+    return (
+        <>  
+            { titleRender(title, screenDevice)}
+            { subTitle1Render(subTitle1, screenDevice)}
+            { subTitle2Render(subTitle2, screenDevice)}
+            { paragraphsRender }
+        </>
+        
+    )   
+
+    /*
     if ( (subTitle !== undefined) && ( title !== undefined ) ) {
         return (
             <div>
@@ -67,13 +89,15 @@ function ParagraphBlock(props) {
             </div>
         );
     }
+    */
 }
 
 export default ParagraphBlock;
 
 ParagraphBlock.prototype = {
     title: PropTypes.string,
-    subTitle: PropTypes.string,
+    subTitle1: PropTypes.string,
+    subTitle2: PropTypes.string,
     paragraphs: PropTypes.array,
     screenDevice: PropTypes.object
 }

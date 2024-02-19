@@ -19,6 +19,7 @@ function OverviewParagraphBlock ( props ) {
         return (
             <div style={{  backgroundImage: `url(${WaitingPeopleDesktop})`, 
                            backgroundRepeat: 'no-repeat',
+                           backgroundPosition: 'center center',
                            backgroundSize: 'auto'}}> 
                 <div className='storyteller-laptoplg-paragraph-container'>
                     <div className='storyteller-laptoplg-content-left'>

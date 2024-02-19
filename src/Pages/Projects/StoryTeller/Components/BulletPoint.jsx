@@ -18,8 +18,9 @@ function BulletPoint(props)  {
                         <img
                             src = { BulletPointDesktop }
                             style = {{
-                                        width: "26px",
-                                        height: "24px"
+                                        width: "18px",
+                                        height: "18px",
+                                        opacity: "95%"
                                     }} />
                     </div>
                     <p className='text-paragraph'> { text }</p>    
@@ -52,8 +53,8 @@ function BulletPoint(props)  {
                                 <img
                                     src = { BulletPointSmSx }
                                     style = {{
-                                                width: "15px",
-                                                height: "15px",
+                                                width: "10px",
+                                                height: "10px",
                                             
                                             }} />  
                             </div> 

@@ -9,14 +9,7 @@ function ParagraphImg(props) {
     const screenDevice = props.screenDevice;
     const title = props.title;
     const description = props.description;
-
-    console.log('>>> ParagraphImg');
-    console.log(screenDevice);
-    console.log(imagesSrc);
-    console.log(title);
-    console.log(description);
-
-   
+  
     if ( imagesSrc.length === 1 ) {
         if ( screenDevice.laptop ) {
             if ( width === undefined) {
