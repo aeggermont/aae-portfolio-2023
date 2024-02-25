@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './StoryTeller.scss';
 
-/* Reusable component */
+/* Reusable components */
 
 import OverviewParagraphBlock from './Components/OverviewParagraphBlock';
 import SolutionDemo from './Components/SolutionDemo';
@@ -278,13 +278,13 @@ function StoryTellerDesktopView(props) {
 
             <ParagraphBlock 
                 subTitle1={storyTellerData.caseStudy.designSystem.wireframes.title}
-                paragraphs={[]}
+                paragraphs={storyTellerData.caseStudy.designSystem.wireframes.methods[0].paragraphs}
                 screenDevice={screenDevice}
             />
 
             <ParagraphBlock 
                 subTitle2={storyTellerData.caseStudy.designSystem.wireframes.methods[0].title}
-                paragraphs={storyTellerData.caseStudy.designSystem.wireframes.methods[0].paragraphs}
+                paragraphs={[]}
                 screenDevice={screenDevice}
             />
 
@@ -314,6 +314,7 @@ function StoryTellerDesktopView(props) {
                 screenDevice={screenDevice}
             />
 
+             {/*  Design Thinking */}
             <ParagraphBlock
                 title={storyTellerData.caseStudy.designSystem.designThinking.title}
                 paragraphs={storyTellerData.caseStudy.designSystem.designThinking.paragraphs.slice(0,2)}
@@ -331,6 +332,70 @@ function StoryTellerDesktopView(props) {
                 paragraphs={storyTellerData.caseStudy.designSystem.designThinking.paragraphs.slice(2,4)}
                 screenDevice={screenDevice}
             />
+
+            <ParagraphBlock
+                subTitle2={storyTellerData.caseStudy.designSystem.designThinking.designFunnels.title}
+                paragraphs={storyTellerData.caseStudy.designSystem.designThinking.designFunnels.paragraphs}
+                screenDevice={screenDevice}
+            />
+
+            <ParagraphImg
+                description={storyTellerData.caseStudy.designSystem.designThinking.designFunnels.imagesDesc}
+                alt={ storyTellerData.caseStudy.designSystem.designThinking.designFunnels.alt}
+                imagesSrc={ storyTellerData.caseStudy.designSystem.designThinking.designFunnels.images}
+                screenDevice={screenDevice}
+            />
+
+            <ParagraphBlock
+                title={storyTellerData.caseStudy.designSystem.designThinking.sampleMockups.title }
+                paragraphs={storyTellerData.caseStudy.designSystem.designThinking.sampleMockups.paragraphs}
+                screenDevice={screenDevice}
+            />
+
+            <ParagraphImg
+                description={ storyTellerData.caseStudy.designSystem.designThinking.sampleMockups.mockup1.imageDesc }
+                alt={ storyTellerData.caseStudy.designSystem.designThinking.sampleMockups.mockup1.alt}
+                imagesSrc={ storyTellerData.caseStudy.designSystem.designThinking.sampleMockups.mockup1.images }
+                screenDevice={screenDevice}
+            />
+
+            <ParagraphImg
+                description={ storyTellerData.caseStudy.designSystem.designThinking.sampleMockups.mockup2.imageDesc }
+                alt={ storyTellerData.caseStudy.designSystem.designThinking.sampleMockups.mockup2.alt}
+                imagesSrc={ storyTellerData.caseStudy.designSystem.designThinking.sampleMockups.mockup2.images }
+                screenDevice={screenDevice}
+            />
+
+            <ParagraphImg
+                description={ storyTellerData.caseStudy.designSystem.designThinking.sampleMockups.mockup3.imageDesc }
+                alt={ storyTellerData.caseStudy.designSystem.designThinking.sampleMockups.mockup3.alt}
+                imagesSrc={ storyTellerData.caseStudy.designSystem.designThinking.sampleMockups.mockup3.images }
+                screenDevice={screenDevice}
+            />
+
+            <ParagraphImg
+                description={ storyTellerData.caseStudy.designSystem.designThinking.sampleMockups.mockup4.imageDesc }
+                alt={ storyTellerData.caseStudy.designSystem.designThinking.sampleMockups.mockup4.alt}
+                imagesSrc={ storyTellerData.caseStudy.designSystem.designThinking.sampleMockups.mockup4.images }
+                screenDevice={screenDevice}
+            />
+
+            <ParagraphImg
+                description={ storyTellerData.caseStudy.designSystem.designThinking.sampleMockups.mockup5.imageDesc }
+                alt={ storyTellerData.caseStudy.designSystem.designThinking.sampleMockups.mockup5.alt}
+                imagesSrc={ storyTellerData.caseStudy.designSystem.designThinking.sampleMockups.mockup5.images }
+                screenDevice={screenDevice}
+            />
+
+            <ParagraphImg
+                description={ storyTellerData.caseStudy.designSystem.designThinking.sampleMockups.mockup6.imageDesc }
+                alt={ storyTellerData.caseStudy.designSystem.designThinking.sampleMockups.mockup6.alt}
+                imagesSrc={ storyTellerData.caseStudy.designSystem.designThinking.sampleMockups.mockup6.images }
+                screenDevice={screenDevice}
+            />
+
+
+            {/*  Usability Evaluation */}
 
             <ParagraphBlock
                 title={storyTellerData.caseStudy.designSystem.usabilityTesting.title}

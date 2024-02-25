@@ -15,10 +15,10 @@ import SampleNotificationsIllustrationMdLg from './Images/SampleNotificationsIll
 import SampleNotificationsIllustrationDesktop from './Images/SampleNotificationsIllustrationDesktop.svg';
 import LearningAbouttheAttractionDesktop from './Images/LearningAbouttheAttraction-Desktop.png';
 import LearningAbouttheAttractionMdLg from './Images/LearningAbouttheAttraction-MdLg.png';
-import LearningAbouttheAttractionSmSx from './Images/LearningAbouttheAttraction-SmSx.png';
+import LearningAbouttheAttractionSmSx from './Images/LearningAbouttheAttraction-Desktop.png';
 import TakingSelfieDesktop from './Images/TakingSelfie-Desktop.png';
 import TakingSelfieMdLg from './Images/TakingSelfie-MdLg.png';
-import TakingSelfieSmSx from './Images/TakingSelfie-MdLg.png';
+import TakingSelfieSmSx from './Images/TakingSelfie-Desktop.png';
 import CollectingArtifactsDesktop from './Images/CollectingArtifacts-Desktop.png';
 import CollectingArtifactsMdLg from './Images/CollectingArtifacts-MdLg.png';
 import CollectingArtifactsSmSx from './Images/CollectingArtifacts-Desktop.png';
@@ -38,12 +38,10 @@ import UserResearchJourneySmSx from './Images/UserResearchJourney-SmSx.png';
 import PersonasAndMotivesDesktop from './Images/PersonasAndMotives-Desktop.png';
 import PersonasAndMotivesMdLg from './Images/PersonasAndMotives-MdLg.png';
 import PersonasAndMotivesSmSx from './Images/PersonasAndMotives-SmSx.png';
-
 import UserInteractionModeSpecsDesktop from './Images/UserInteractionModeSpecs-Desktop.png';
  
 
 import MockupsAndSpecsDesktop from './Images/MockupsAndSpecs-Desktop.png';
-
 import MockupsAndSpecsMdLg from './Images/MockupsAndSpecs-MdLg.png';
 import MockupsAndSpecs1MdLg from './Images/MockupsAndSpecs1-MdLg.png';
 import MockupsAndSpecs2MdLg from './Images/MockupsAndSpecs2-MdLg.png';
@@ -61,12 +59,20 @@ import StoryTellerWireFlowSmSx from './Images/StoryTellerWireFlow-Desktop.png';
 
 import GenericUserFlow from './Images/StoryTeller-GenericUser-Desktop.svg';
 
+// Design Thinking Section
+
 import DesignThinkingDesktop from './Images/DesignThinking-Desktop.png';
 import DesignThinkingMdLg from './Images/DesignThinking-MdLg.png';
 import DesignThinkingSmSx from './Images/DesignThinking-SmSx.png';
-
 import TrainingImages from './Images/TrainingImages.png';
 
+import SketchingInteractionDesignDesktop from './Images/SketchingInteractionDesign-Desktop.png';
+import HFMockupSample1Desktop from './Images/HFMockupSample1-Desktop.png';
+import HFMockupSample2Desktop from './Images/HFMockupSample2-Desktop.png';
+import HFMockupSample3Desktop from './Images/HFMockupSample3-Desktop.png';
+import HFMockupSample4Desktop from './Images/HFMockupSample4-Desktop.png';
+import HFMockupSample5Desktop from './Images/HFMockupSample5-Desktop.png';
+import HFMockupSample6Desktop from './Images/HFMockupSample6-Desktop.png';
 
 const StoryTellerData = {
     designChallenge : {
@@ -409,10 +415,10 @@ const StoryTellerData = {
             designThinking : {
                 title: "Development Using Design Thinking",
                 paragraphs: [ 
-                    "Key elements of Design thinking were employed during the design and development phases. The project was developed with non-linear iterations in a open collaborative environment. User research, testing, prototyping and development were continuously overlapping efforts during the project.",
-                    "We followed the principles of Design Thinking to empathize with Cast Members working in the Walt Disney World theme park, Guests who have visited the park to define our user personas and generated empathy mappings. Our literature research helped the team understand  park operations procedures, the ride’s story lines and the creative vision of Disney Imagineers.",
-                    "Our research provided the team with enough background and context to ideate different strategies to adapt digital content in the attractions environment. Development  introspection was a fundamental process we used to incept A.R. and AI/ML capabilities in the pilot project. ",
-                    "The development team brainstormed and tested different technologies and platforms to produce the A.R. experience with computer vision and machine learning backends. Both design and development introspection informed each other as we built different prototypes which were tested with users to get feedback. "
+                    "Our human design centered process provided the team with framework for our design efforts.  framework. Using our collected the research insights and digital prototypes, we then followed  principles of Design Thinking to develop a functional software prototype. ",
+                    "The user research provided the team with enough background and context to empathize with potential Guests and Cast members and to ideate and test different strategies to adapt A.R. content in to the attraction’s physical environment.",
+                    "Our second literature research helped the team understand  park operations procedures,  story lines behind the attraction’s ride, and the creative vision of Disney Imagineers used when designing and building the ride.   ",
+                    "Development  introspection was a fundamental process we used to create functional prototypes incepting A.R. and ML computer vision capabilities.  Developers would examine and experiment with different technologies and platforms to develop a functional mobile app  and train data for ML models based on user research insights and low/high fidelity mockups. "
                 ],
                 alt: 'Iterative design and development process ssing Design Thinking',
                 imageDescriptino: "Iterative design and development process ",
@@ -420,8 +426,83 @@ const StoryTellerData = {
                     DesignThinkingDesktop,
                     DesignThinkingMdLg,
                     DesignThinkingSmSx
-                ]
+                ],
+                designFunnels: {
+                    title: "From Sketching & Ideation to Prototype Testing ",
+                    paragraphs: [ 
+                        "We used interaction sketching and prototyping as a design funnel to keep on track our creative ideation and prototyping efforts.",
+                        "Our design funnels began with ideation iterations and ended with functional software prototypes for usability testing and evaluation. Our ideation iterations included mood boards and  interaction design sketches to explore user journeys and ideas quickly and cheaply.  More refined high fidelity mockups simulations and functional prototypes provided the ability for testing and evaluation in the field with Cast Members to get feedback. ",
+                    ],
+                    alt: "Interaction design and a user journey",
+                    imagesDesc: "Sample sketch exploring an interaction design and a user journey to search and scan  for A.R. content and collectable hidden objects around an attraction. ",
+                    images: [
+                        SketchingInteractionDesignDesktop,
+                        SketchingInteractionDesignDesktop,
+                        SketchingInteractionDesignDesktop
+                    ]
+                },
+                sampleMockups: {
+                    title: "Sample High Fidelity Mockups",
+                    paragraphs: [
+                        "Sample high fidelity mockups  were produced to feature the search and scan for A.R. content and the collectable hidden objects capabilities in the mobile app.  The mockups were design to show case how these features could be visually implemented for the Hollywood Tower of Terror attraction and for other potential attractions. "
+                    ],
+                    mockup1 : {
+                        images : [
+                            HFMockupSample1Desktop,
+                            HFMockupSample1Desktop,
+                            HFMockupSample1Desktop
+                        ],
+                        alt: "Mobile app initial landing screen. ",
+                        imageDesc: "Mobile app initial landing screen."
+                    },
+                    mockup2 : {
+                        images : [
+                            HFMockupSample2Desktop,
+                            HFMockupSample2Desktop,
+                            HFMockupSample2Desktop
+                        ],
+                        alt: "Listing of near by attractions while in the park. ",
+                        imageDesc: "Listing of near by attractions while in the park. The app detects near by attractions with A.R. content available to the Guest’s mobile phone."
+                    },
+                    mockup3 : {
+                        images : [
+                            HFMockupSample3Desktop,
+                            HFMockupSample3Desktop,
+                            HFMockupSample3Desktop
+                        ],
+                        alt: "Displaying collected artifacts by a Guest. ",
+                        imageDesc: "Screen displaying collected artifacts by a Guest. The app tracks and notifies the number artifacts to yet be collected. ",
+                    },
+                    mockup4 : {
+                        images : [
+                            HFMockupSample4Desktop,
+                            HFMockupSample4Desktop,
+                            HFMockupSample4Desktop
+                        ],
+                        alt: "Displaying visuals of artifacts yet to be collected.",
+                        imageDesc: "Screen displaying visuals of artifacts yet to be collected."
+                    },
+                    mockup5 : {
+                        images : [
+                            HFMockupSample5Desktop,
+                            HFMockupSample5Desktop,
+                            HFMockupSample5Desktop
+                        ],
+                        alt: "Searching for A.R. content.",
+                        imageDesc: "Searching for A.R. content over an icon attraction’s artifact."
+                    },
+                    mockup6 : {
+                        images : [
+                            HFMockupSample6Desktop,
+                            HFMockupSample6Desktop,
+                            HFMockupSample6Desktop
+                        ],
+                        alt: "Collected and stored artifacts",
+                        imageDesc: "Successfully collected and stored artifacts screen."
+                    },
+                }
             },
+            
             usabilityTesting : {
                 title: "Usability Evaluation",
                 paragraphs: [
