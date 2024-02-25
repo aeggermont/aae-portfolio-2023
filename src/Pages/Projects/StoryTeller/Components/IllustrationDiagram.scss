@@ -74,7 +74,7 @@
     flex-direction: column;
 
     .image-container {
-        width: 80%;
+        width: 100%;
         text-align: center;
         padding-bottom: 2rem;
     }
@@ -84,16 +84,16 @@
         font-family: poppins;
         font-size: 1rem;
         font-weight: 500;
-        color: #000000;
+        color: #040B35;
     }
 
     .text-description {
         width: 80%;
         padding-top: 1rem;
         font-family: poppins;
-        font-size: 22px;
+        font-size: 1.2rem;
         font-weight: 400;
-        color: #000000;
+        color: #102764;
     }    
 }
 

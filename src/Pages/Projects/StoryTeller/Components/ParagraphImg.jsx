@@ -9,7 +9,10 @@ function ParagraphImg(props) {
     const screenDevice = props.screenDevice;
     const title = props.title;
     const description = props.description;
-  
+
+    const titleRender = (title) =>
+        title === undefined ? '' : <div className='title'> { title } </div>;
+
     if ( imagesSrc.length === 1 ) {
         if ( screenDevice.laptop ) {
             if ( width === undefined) {
@@ -63,7 +66,8 @@ function ParagraphImg(props) {
                             paddingTop: '1rem'
                         }} 
                     />
-                    <div  className='title'> { title } </div>
+                    { titleRender }
+                   
                     <div  className='description'> { description }</div>
                 </div>
             );
@@ -75,16 +79,17 @@ function ParagraphImg(props) {
         }
         return (
             <div className='storyteller-laptopParagraphImg'>
+                <div className='title'> { title } </div>
                 <img
                     src = { imagesSrc[0] }
                     alt = { alt }
                     style = {{
                         width: { width },
                         alignSelf: 'center',
-                        paddingTop: '6rem'
+                        paddingTop: '3rem'
                     }} 
                 />
-                <div className='title'> { title } </div>
+                
                 <div className='description'> { description }</div>
             </div>
         );
@@ -93,6 +98,7 @@ function ParagraphImg(props) {
             width = "100%";
         }
         return (
+            
             <div  className='storyteller-lgmdParagraphImg'>
                 <img
                     src = { imagesSrc[1] }
@@ -100,7 +106,7 @@ function ParagraphImg(props) {
                     style = {{
                         width: width ,
                         alignSelf: 'center',
-                        paddingTop: '6rem'
+                        paddingTop: '2.5rem'
                     }} 
                 />
                 <div className='title'> { title } </div>
@@ -122,7 +128,7 @@ function ParagraphImg(props) {
                         paddingTop: '3rem'
                     }} 
                 />
-                <div className='title'> { title } </div>
+                { titleRender }
                 <div className='description'> { description }</div>
             </div>
         );

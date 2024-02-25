@@ -53,8 +53,8 @@ function BulletPoint(props)  {
                                 <img
                                     src = { BulletPointSmSx }
                                     style = {{
-                                                width: "10px",
-                                                height: "10px",
+                                                width: "8px",
+                                                height: "8px",
                                             
                                             }} />  
                             </div> 
