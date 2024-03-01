@@ -4,6 +4,7 @@ import Header from '../Components/header/header';
 function Index(props) {
     return (
         <>
+            
             <Header/>
             {props.children} 
             {/* 

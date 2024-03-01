@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from 'prop-types';
+import "./Skills.scss";
 
 const skillsContent = [
   {
@@ -35,10 +37,14 @@ const skillsContent = [
   },
 ];
 
-const Skills = () => {
+function Skills (props) {
+  const data = Array.from(props.data);
+
+  console.log('Skills Data:');
+  console.log(data);
   return (
     <>
-      {skillsContent.map((val, i) => (
+      {data.map((val, i) => (
         <div className="progress_inner" key={i}>
           <span className="label">{val.name}</span>
           <div className="background">
@@ -56,3 +62,11 @@ const Skills = () => {
 };
 
 export default Skills;
+
+
+Skills.prototype = {
+  data: PropTypes.Array
+}
+
+
+

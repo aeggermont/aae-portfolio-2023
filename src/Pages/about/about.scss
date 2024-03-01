@@ -3,11 +3,15 @@
     height: auto;
     clear: both;
     float: left;
+   
     padding-bottom: 170px;
     padding-top: 120px;
     @media screen and (max-width: 991px) {
+      background-color: #34495e;
       padding-bottom: 140px;
       padding-top: 90px;
+      margin-left: 20px;
+      margin-right: 20px;
     }
 }
 
@@ -81,6 +85,7 @@
 .aae_about .my_skills {
     width: 100%;
     float: left;
+    margin-top: 3%;
 }
 
 .aae_about .my_skills .title {
@@ -106,8 +111,10 @@
 }
 
 .aae_about .wrapper .progress_inner {
-    width: 50%;
+    width: 30%;
     padding: 0 20px;
+
+
     @media screen and (max-width: 575px) {
       width: 100%;
       padding: 0;
@@ -123,6 +130,8 @@
     clear: both;
     float: left;
   }
+
+  /*
   .progress_inner {
     width: 100%;
     margin-bottom: 31px;
@@ -152,11 +161,11 @@
     height: 100%;
   }
   .progress_inner .background .bar.open {
-    -webkit-animation: wow 2s cubic-bezier(0.165, 0.84, 0.44, 1); /* Safari 4+ */
-    -moz-animation: wow 2s cubic-bezier(0.165, 0.84, 0.44, 1); /* Fx 5+ */
-    animation: wow 2s cubic-bezier(0.165, 0.84, 0.44, 1); /* IE 10+ */
+    -webkit-animation: wow 2s cubic-bezier(0.165, 0.84, 0.44, 1); // Safari 4+ 
+    -moz-animation: wow 2s cubic-bezier(0.165, 0.84, 0.44, 1); // Fx 5+ 
+    animation: wow 2s cubic-bezier(0.165, 0.84, 0.44, 1); // IE 10+ 
     width: 100%;
-  }
+  }*/
   
   @-webkit-keyframes wow {
     0% {

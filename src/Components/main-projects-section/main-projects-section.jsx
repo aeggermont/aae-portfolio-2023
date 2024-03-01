@@ -2,10 +2,9 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import './main-projects-section.scss';
-import Project from '../my-work/project';
-
-/* TODO: Need to remove */
+// import Project from '../my-work/project';
 import LatestProject from './latest-project/latest-project';
+
 /*
 import Project1 from '../../assets/images/DisneyMagicARTouresIncon.png';
 import Project2 from '../../assets/images/R3XThumbnail.png';
@@ -78,6 +77,7 @@ function MainProjectsSection() {
         return <p>Has error!</p>
     }
 
+    /*
     const cardDimensions = function() { 
         let cardDimensions = {};
 
@@ -122,7 +122,7 @@ function MainProjectsSection() {
         };
     
         return cardDimensions;
-    };
+    }; */
 
     /*
     const mainProjectsSecion = [
@@ -142,6 +142,18 @@ function MainProjectsSection() {
             img: Project3
         },
     ] */
+
+    console.log('>>> PROJECTS <<<');
+    Object.keys(projects).map( project => {
+        console.log(projects[project].data());
+        console.log(projects[project].data().title);
+        console.log(projects[project].data().description);
+    });
+
+    const dimensions = {
+        width: '100%',
+        height: '100%'
+    }
 
     return (
         <section className='container'>
@@ -168,7 +180,12 @@ function MainProjectsSection() {
                         {
                            Object.keys(projects).map( project => (
                                 <div className='project'>
-                                    <Project info={projects[project].data()} />
+                                    <LatestProject
+                                        title={projects[project].data().title}
+                                        description={projects[project].data().description}
+                                        thumbnailImg={projects[project].data().thumbnailImg}
+                                        dimensions={dimensions}
+                                    />
                                 </div>
                             ))
                         }

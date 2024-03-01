@@ -89,6 +89,7 @@ function Project (props) {
                                         {title}
                                     </Typography>
                                 </div>
+                                
                             </Box>
                         </Box>    
                     </Card>
