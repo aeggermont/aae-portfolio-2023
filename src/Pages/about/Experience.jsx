@@ -19,8 +19,8 @@ function Experience (props) {
                   src={val.logo}
                   alt="icon"
                   style = {{
-                    width: '5rem',
-                    height: '5rem',
+                    width: '4.5rem',
+                    height: '4.5rem',
                     paddingTop: '1px',
                     borderRadius: '1rem'
                   }}

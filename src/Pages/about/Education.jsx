@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import './Education.scss';
 
+/*
 const educationContent = [
   {
     year: "2022",
@@ -31,41 +32,109 @@ const educationContent = [
     multimedia applications over high speed networking systems.
     `,
   },
-];
+];*/
 
 function Education (props) {
   const data = Array.from(props.data);
   const screenDevice = props.screenDevice;
 
-  console.log("Education DATA ");
-  console.log(data);
-
-  return (
-    <div className="desktop-education-container">
-        {data.map((val, i) => (
-          <div className="education-wrapper">
-            <img 
-              src={val.logo}
-              alt="icon"
-              style = {{
-                width: '5rem',
-                height: '5rem',
-                paddingTop: '1px',
-                borderRadius: '1rem'
-              }}
-            />
-
-            <div className="education-info">
-              <div className="period-background">{val.year} </div>
-              <h5 className="degree-title"> {val.degree} </h5>
-              <span className="school-name">{val.school}</span>
-              <h5 className="location"> {val.location}</h5>
-              <p>{val.details}</p>
+  const smsxView = () => {
+    return (
+      <div className="smsx-education-container">
+          {data.map((val, i) => (
+            <div className="education-wrapper">
+               <div className="logo-period-section">
+                  <img 
+                    src={val.logo}
+                    alt="icon"
+                    style = {{
+                      width: '5rem',
+                      height: '5rem',
+                      paddingTop: '1px',
+                      borderRadius: '1rem'
+                    }}
+                  />
+                  <div className="period-background">{val.year} </div>
+                </div>
+  
+              <div className="education-info">
+                
+                <h5 className="degree-title"> {val.degree} </h5>
+                <span className="school-name">{val.school}</span>
+                <h5 className="location"> {val.location}</h5>
+                <p>{val.details}</p>
+              </div>
             </div>
-          </div>
-        ))}
-    </div>
-  );
+          ))}
+      </div>
+    );
+  };
+
+  const mdlgView = () => {
+    return (
+      <div className="mdlg-education-container">
+          {data.map((val, i) => (
+            <div className="education-wrapper">
+              <img 
+                src={val.logo}
+                alt="icon"
+                style = {{
+                  width: '5rem',
+                  height: '5rem',
+                  paddingTop: '1px',
+                  borderRadius: '1rem'
+                }}
+              />
+  
+              <div className="education-info">
+                <div className="period-background">{val.year} </div>
+                <h5 className="degree-title"> {val.degree} </h5>
+                <span className="school-name">{val.school}</span>
+                <h5 className="location"> {val.location}</h5>
+                <p>{val.details}</p>
+              </div>
+            </div>
+          ))}
+      </div>
+    );
+  };
+
+  const desktopView = () => {
+    return (
+      <div className="desktop-education-container">
+          {data.map((val, i) => (
+            <div className="education-wrapper">
+              <img 
+                src={val.logo}
+                alt="icon"
+                style = {{
+                  width: '5rem',
+                  height: '5rem',
+                  paddingTop: '1px',
+                  borderRadius: '1rem'
+                }}
+              />
+  
+              <div className="education-info">
+                <div className="period-background">{val.year} </div>
+                <h5 className="degree-title"> {val.degree} </h5>
+                <span className="school-name">{val.school}</span>
+                <h5 className="location"> {val.location}</h5>
+                <p>{val.details}</p>
+              </div>
+            </div>
+          ))}
+      </div>
+    );
+  };
+
+  if ( screenDevice.laptop ) { 
+    return desktopView();
+  } else if ( screenDevice.md || screenDevice.lg) { 
+    return mdlgView();
+  } else if ( screenDevice.xs || screenDevice.sm ) {    
+    return smsxView();
+  }
 
 }
 

@@ -24,6 +24,7 @@ $desktop-font-size: 1.5rem;
         font-size: 2rem;
         font-weight: 700;
         line-height: 1;
+        color: #022c38;
     }
 
     .aae-about .info p {
@@ -80,7 +81,7 @@ $desktop-font-size: 1.5rem;
         padding-bottom: 3rem;
 
         h3 {
-            font-size: 1.5rem;
+            font-size: 2rem;
             font-weight: 600;    
         }
 
@@ -99,8 +100,9 @@ $desktop-font-size: 1.5rem;
                 padding-top: 1rem;
             }
 
-            .item .labelcolor {
-                color: aqua;
+            .item span {
+                font-weight: 800;
+                color: #022c38;
             }
         }               
     }
@@ -116,6 +118,7 @@ $desktop-font-size: 1.5rem;
         font-size: 1.8rem;
         font-weight: 600;
         margin-bottom: 15px;
+        color: #022c38;
     }
     
     .aae-about .dodo_progress {
@@ -153,6 +156,7 @@ $desktop-font-size: 1.5rem;
         font-size: 2.2rem;
         font-weight: 700;
         line-height: 1;
+        color: #022c38;
     }
     
     .aae-about .color {
@@ -189,10 +193,12 @@ $desktop-font-size: 1.5rem;
         font-size: 1.2rem;
         font-weight: 500;
         margin-bottom: 2.5rem;
+        color: #022c38;
     }
     
     .aae-about .info h3 span {
         font-weight: 600;
+        color: #022c38;
     }
     
     .aae-about .info p {
@@ -207,7 +213,8 @@ $desktop-font-size: 1.5rem;
 
         h3 {
             font-size: 1.8rem;
-            font-weight: 600;    
+            font-weight: 600;
+            color: #022c38;
         }
 
         .section-info {
@@ -285,6 +292,7 @@ $desktop-font-size: 1.5rem;
         font-size: 3rem;
         font-weight: 700;
         line-height: 1;
+        color: #022c38;
     }
     
     .aae-about .color {
@@ -326,10 +334,12 @@ $desktop-font-size: 1.5rem;
         font-size: 1.5rem;
         font-weight: 500;
         margin-bottom: 2.5rem;
+        color: #022c38;
     }
     
     .aae-about .info h3 span {
         font-weight: 600;
+        color: #022c38;
     }
     
     .aae-about .info p {
@@ -357,8 +367,9 @@ $desktop-font-size: 1.5rem;
                 padding-top: 1.5rem;
             }
 
-            .item .labelcolor {
-                color: aqua;
+            .item span {
+                font-weight: 800;
+                color: #022c38;
             }
         }
 
