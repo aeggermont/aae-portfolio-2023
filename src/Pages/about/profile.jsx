@@ -4,7 +4,7 @@ import './Profile.scss';
 import Experience from "./Experience";
 import Education from "./Education";
 import AboutMeData from "./AboutData";
-import Skills from './Skills';
+import Skills from './skills';
 
 import PropTypes from 'prop-types';
 

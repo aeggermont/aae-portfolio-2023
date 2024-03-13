@@ -6,12 +6,6 @@ function Skills (props) {
   const data = Array.from(props.data);
   const screenDevice = props.screenDevice;
 
-  console.log('Skills Data:');
-  console.log(data);
-  console.log('>>>> screenDevice >>>>');
-  console.log(screenDevice);
-
-
   return (
     <>
       {data.map((val, i) => (
