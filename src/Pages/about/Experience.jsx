@@ -1,74 +1,65 @@
 import React from "react";
+import PropTypes from 'prop-types';
+import './Experience.scss';
+function Experience (props) {
+  const data = Array.from(props.data);
+  const screenDevice = props.screenDevice;
+  
+  console.log("Experience DATA ");
+  console.log(data);
 
-const experienceContent = [
-  {
-    year: "   2017 - Present",
-    position: "Lead Engineer",
-    compnayName: "The Walt Disney Company",
-    details: ` Develops front-end applications and provides technical leadership and mentor ship
-               to the UI/UX team to adopt best software development practices and modern UI frameworks
-               for the implementation of Web base interactive dashboards, Web sites, and Web APIs
-               integrations with back-end databases, Machine Learning systems, and marketing platforms.
-    `,
-  },
-  {
-    year: "2013 - 2017",
-    position: "Senior Software Engineer",
-    compnayName: "The Walt Disney Company",
-    details: `Developed Web applications in content management systems and data access systems,ç
-              tools for data exploration, data visualizations, backend services, and proof of
-              concepts to define requirements for data driven workflows.
-    
-    `,
-  },
-  {
-    year: "2011 - 2012",
-    position: "Senior Applications Developer",
-    compnayName: "Akamai Technologies",
-    details: `Developed web applications and an API for the support of the GNET project which
-              visualizes global traffic patterns among Akamai customers`,
-  },
-  {
-    year: "2008 - 2010",
-    position: "Technical Director",
-    compnayName: "The Walt Disney Company",
-    details: `Developed and engineered media file based workflows for the production of
-              stereoscopic imagery. Projects involved developing applications APIs to 
-              extend and implement features for 3D animation, bitmap manipulation, encoding 
-              of media and integration of queuing systems and management controls of
-              high-performance server enclosures for the rendering of stereoscopic imagery.`,
-  },
-  {
-    year: "2008 - 2010",
-    position: "Technical Director",
-    compnayName: "The Walt Disney Company",
-    details: `Developed and engineered media file based workflows for the production of
-              stereoscopic imagery. Projects involved developing applications APIs to 
-              extend and implement features for 3D animation, bitmap manipulation, encoding 
-              of media and integration of queuing systems and management controls of
-              high-performance server enclosures for the rendering of stereoscopic imagery.`,
-  },
-];
-
-const Experience = () => {
   return (
-    <ul>
-      {experienceContent.map((val, i) => (
-        <li key={i}>
-          <div className="icon">
-            <img src="img/about/briefcase.png" alt="icon" />
-            <i className="fa fa-briefcase"></i>
+    <div className="desktop-experience-container">
+        {data.map((val, i) => (
+          <div className="experience-wrapper">
+            <img 
+              src={val.logo}
+              alt="icon"
+              style = {{
+                width: '5rem',
+                height: '5rem',
+                paddingTop: '1px',
+                borderRadius: '1rem'
+              }}
+            />
+
+            <div className="experience-info">
+              <div className="period-background">{val.year} </div>
+              <h5 className="position-title"> {val.position} <span className="company-name">- {val.compnayName}</span></h5>
+              <h5 className="location"> {val.location}</h5>
+              <p className="open-sans-font">{val.details}</p>
+            </div>
           </div>
-          <span className="time open-sans-font text-uppercase">{val.year}</span>
-          <h5 className="poppins-font text-uppercase">
-            {val.position}
-            <span className="place open-sans-font">{val.compnayName}</span>
-          </h5>
-          <p className="open-sans-font">{val.details}</p>
-        </li>
-      ))}
-    </ul>
+        ))}
+
+
+    </div>
   );
 };
 
 export default Experience;
+
+/*
+
+
+
+        {data.map((val, i) => (
+          <li key={i}>
+            <div className="icon">
+              <img src={val.logo} alt="icon" />
+              <i className="fa fa-briefcase"></i>
+            </div>
+            <span className="period-background">{val.year}</span>
+            <h5 className="poppins-font text-uppercase">
+              {val.position}
+              <span className="place open-sans-font">{val.compnayName}</span>
+            </h5>
+            <p className="open-sans-font">{val.details}</p>
+          </li>
+        ))}
+*/
+
+Experience.prototype = {
+  data: PropTypes.Array,
+  screenDevice: PropTypes.object.isRequired
+}

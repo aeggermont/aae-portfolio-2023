@@ -1,85 +1,127 @@
 import React, { useState } from "react";
-import Skills from '../skills/Skills';
-import './about.scss';
+import './Profile.scss';
+import Skills from './Skills';
+import './AboutMe.scss';
 import Experience from "./Experience";
 import Education from "./Education";
-import AboutData from "./AboutData";
+import AboutMeData from "./AboutData";
+import PropTypes from 'prop-types';
 
-function Profile() {
+function Profile(props) {
     const [isOpen, setIsOpen] = useState(false);
     function toggleModalOne() {
       setIsOpen(!isOpen);
     }
 
-    return (
-       <div className="aae_about" id="about">
-            <div className="container">
-                <div className="about_title">
-                    <h3>About Me</h3>
-                </div>
-                <div className="content">
+    const screenDevice = props.screenDevice;
+    console.log('>>>> screenDevice >>>>');
+    console.log(screenDevice);
 
-                    {/*  Left Side  */}
-                    <div
-                        className="leftpart"
-                        data-aos="fade-right"
-                        data-aos-duration="1200"
-                        data-aos-delay="100">
-                        <div className="info">
-                            <h3>
-                                Hi, I'm <span>Antonio Aranda Eggermont</span>
-                            </h3>
-                            <p>
-                                I am a full stack applications developer and UX engineer with experience in
-                                Web development, AI/ML, data science visualizations, and digital media production. 
+    if ( screenDevice.laptop ) {
+        return (
+            <div className="desktop-about-container"> 
+                <p>Desktop View </p>
+                <div className="aae-about" id="about">
+                    <div className="container">
+                        <div className="about-title">
+                            <h3> {AboutMeData.pageTitle}</h3>
+                        </div>
+                        <div className="content">
+                            <div
+                                data-aos="fade-right"
+                                data-aos-duration="1200"
+                                data-aos-delay="100">
+                                <div className="info">
+                                    <h3>
+                                        {AboutMeData.pageWelcome}
+                                    </h3>
+                                    <p>
+                                        {AboutMeData.pageParagraphs[0]}
+                                        {AboutMeData.pageParagraphs[1]} 
+                                    </p>
+                                </div>
 
-                                My interests are interaction design and prototyping of user experiences and user
-                                interfaces, Human Centered Design, Web applications development, back-end Web services,
-                                content management systems, CDN integrations, and analytics applications. 
+                                <div className="personal-info">
+                                    <div>
+                                        <h3> Personal Info </h3>
+                                    </div>
                                 
-                            </p>
-                        </div>
-                        <div className="my_skills">
-                            <h3 className="title">Engineering Skills</h3>
-                            <p className="desc"></p>
-                            <div className="wrapper">
-                                <div className="dodo_progress">
-                                    <Skills 
-                                        data={AboutData.skills.engineering}
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="my_skills">
-                            <h3 className="title">Design Skills</h3>
-                            <p className="desc"></p>
-                            <div className="wrapper">
-                                <div className="dodo_progress">
-                                    <Skills 
-                                        data={AboutData.skills.design}/>
-                                </div>
-                            </div>
-                        </div>
+                                    <div className="section-info">
+                                        <div className="item"> First Name: &nbsp;&nbsp; Antonio</div> <div className="item"> Last Name: &nbsp;&nbsp; Aranda Eggermont</div>
+                                    </div>
 
-                        {/*
-                        
-  
-                        <div className="row resume-box">
+                                  
+                                    <div className="section-info">
+                                        <div className="item"> Cities of Residence: &nbsp;&nbsp;Seattle, Mexico City</div>  <div className="item">Email: &nbsp;&nbsp; antonio.eggermont@post.harvard.edu</div> 
+                                    </div>
+
+                                    <div className="section-info">
+                                        <div className="item"> Languages: &nbsp;&nbsp;English, Spanish</div>  <div className="item">Nacionalities: &nbsp;&nbsp; USA, Mexico</div> 
+                                    </div>
+                                </div> 
+
+                                <div className="qualifications">
+                                    <h3 className="title">Engineering Skills</h3>
+                                    <p className="desc"></p>
+                                    <div className="wrapper">
+                                        <div className="dodo_progress">
+                                            <Skills 
+                                                data={AboutMeData.skills.engineering}
+                                                screenDevice={screenDevice}
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="qualifications">
+                                    <h3 className="title">Design Skills</h3>
+                                    <p className="desc"></p>
+                                    <div className="wrapper">
+                                        <div className="dodo_progress">
+                                            <Skills 
+                                                data={AboutMeData.skills.design}
+                                                screenDevice={screenDevice}
+                                                />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="qualifications">
+                                    <h3 className="title">Professional Experience</h3>
+                                    <p className="desc"></p>
+                                    <div className="wrapper">
+                                        <div className="dodo_progress">
+                                            <Experience 
+                                                data={AboutMeData.experience}
+                                                screenDevice={screenDevice}
+                                                />
+                                        </div>
+                                    </div>
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        );
+
+    };
+}
+
+export default Profile;
+
+Profile.prototype = {
+    screenDevice: PropTypes.object.isRequired
+}
+
+/** 
+
+<div className="row resume-box">
                             <div className="col-6">
                                 <h3>Experience</h3>
                                 <Experience />
-                            </div>
-                            <div className="col-6">
+                
                               <h3>Education</h3>
                                <Education />
-                            </div>
-                        </div>
-                       */}
-                    </div>
-                </div>           
-            </div>        
-        </div>
-    );
-};
 
-export default Profile;
+*/
