@@ -1,0 +1,126 @@
+.desktop-education-container {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+
+    .education-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding: 2rem;
+        
+
+        .education-info {
+            padding-top: 1rem;
+            padding-left: 3rem;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .education-info .period-background {
+            border-radius: 1rem;
+            background: #EBEBEB;
+            padding: 0.7rem;
+            width: 10rem;
+            height: 2.7rem;
+            text-align: center;
+            font-weight: 700;
+            
+        }
+
+        .education-info .degree-title {
+            padding-top: 2rem;
+            font-size: 1.7rem;
+            font-weight: 800;
+            color: #022c38;
+
+        }
+
+        .education-info .school-name {
+            padding-top: 2rem;
+            padding-left: 0.1rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #022c38;
+
+        }
+        
+        .education-info .location {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #022c38;   
+        }
+
+        .education-info p {
+            font-size: 1.5rem;
+        } 
+
+    }
+}
+
+.lgmd-education-container {
+ 
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+
+    .education-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding: 2rem;
+        
+
+        .education-info {
+            padding-top: 1rem;
+            padding-left: 3rem;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .education-info .period-background {
+            border-radius: 1rem;
+            background: #EBEBEB;
+            padding: 0.7rem;
+            width: 10rem;
+            height: 2.7rem;
+            text-align: center;
+            font-weight: 700;
+            
+        }
+
+        .education-info .degree-title {
+            padding-top: 2rem;
+            font-size: 1.7rem;
+            font-weight: 800;
+            color: #022c38;
+
+        }
+
+        .education-info .school-name {
+            padding-top: 2rem;
+            padding-left: 0.1rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #022c38;
+
+        }
+        
+        .education-info .location {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #022c38;   
+        }
+
+        .education-info p {
+            font-size: 1.5rem;
+        } 
+
+    }
+}
