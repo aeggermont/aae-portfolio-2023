@@ -1,5 +1,261 @@
 $desktop-font-size: 1.5rem;
 
+.smsx-about-container {
+    margin: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    .aae-about {
+        width: 100%;
+       
+        height: auto;
+        clear: both;
+        float: left;
+        padding-bottom: 170px;
+        padding-top: 4rem;
+        background-color: aqua;
+    }
+    
+    .aae-about .about-title {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .about-title h3 {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1;
+    }
+
+    .aae-about .info p {
+        max-width: 100%;
+        font-weight: 400;
+        font-size: 1.1rem;
+    }
+
+    .aae-about .content {
+        width: 100%;
+        height: auto;
+
+        padding-top: 60px;
+    }
+
+    .aae-about .color {
+        border-radius: 6px;
+        padding: 13px 30px;
+        background: #fff;
+        border-color: #000;
+        margin-top: 10px;
+        font-size: 18px;
+        letter-spacing: 0.4px;
+        transition: 0.5s;
+        &:hover {
+          background: #000;
+          color: #fff;
+        }
+    }
+    
+    
+
+
+    .aae-about .info {
+        width: 100%;
+        float: left;
+        margin-bottom: 55px;
+    }
+    
+    .aae-about .info h3 {
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin-bottom: 2.5rem;
+    }
+    
+    .aae-about .info h3 span {
+        font-weight: 600;
+    }
+    
+    
+
+    .aae-about .personal-info {
+        width: 100%;
+        padding-bottom: 3rem;
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;    
+        }
+
+        .section-info {
+            padding-left: 0.5rem;
+            width: 100%;            
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+
+            .item {
+                width: 100%;
+                font-size: 1rem;
+                font-weight: 500;
+                padding-top: 1rem;
+            }
+
+            .item .labelcolor {
+                color: aqua;
+            }
+        }               
+    }
+
+
+    .aae-about .qualifications {
+        width: 100%;
+        float: left;
+        margin-top: 3%;
+    }
+    
+    .aae-about .qualifications h3 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+    
+    .aae-about .dodo_progress {
+        width: 100%;
+        display: flex;
+        padding-top: 40px;
+        flex-wrap: wrap;
+        margin: 0 -20px 10px;
+    }
+    
+    .aae-about .desc {
+        max-width: 100%;
+    }
+
+
+}
+
+.mdlg-about-container {
+
+    .aae-about {
+        width: 100%;
+        height: auto;
+        clear: both;
+        float: left;
+        padding-bottom: 170px;
+        padding-top: 5rem;
+    }
+    
+    .aae-about .about-title {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .about-title h3 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 1;
+    }
+    
+    .aae-about .color {
+        border-radius: 6px;
+        padding: 13px 30px;
+        background: #fff;
+        border-color: #000;
+        margin-top: 10px;
+        font-size: 18px;
+        letter-spacing: 0.4px;
+        transition: 0.5s;
+        &:hover {
+          background: #000;
+          color: #fff;
+        }
+    }
+    
+    .aae-about .content {
+        width: 100%;
+        height: auto;
+        clear: both;
+        display: flex;
+        padding-top: 60px;
+    }
+
+    .aae-about .info {
+        width: 100%;
+        float: left;
+        margin-bottom: 55px;
+        //margin-top: 55px;
+    }
+    
+    .aae-about .info h3 {
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-bottom: 2.5rem;
+    }
+    
+    .aae-about .info h3 span {
+        font-weight: 600;
+    }
+    
+    .aae-about .info p {
+        max-width: 100%;
+        font-weight: 400;
+        font-size: 1.2rem;
+    }
+
+    .aae-about .personal-info {
+        width: 100%;
+        padding-bottom: 3rem;
+
+        h3 {
+            font-size: 1.8rem;
+            font-weight: 600;    
+        }
+
+        .section-info {
+            padding-left: 1rem;
+            width: 100%;            
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+
+            .item {
+                width: 49%;
+                font-size: 1rem;
+                font-weight: 500;
+                padding-top: 1.5rem;
+            }
+
+            .item .labelcolor {
+                color: aqua;
+            }
+        }               
+    }
+
+
+    .aae-about .qualifications {
+        width: 100%;
+        float: left;
+        margin-top: 3%;
+    }
+    
+    .aae-about .qualifications h3 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+    
+    .aae-about .dodo_progress {
+        width: 100%;
+        display: flex;
+        padding-top: 40px;
+        flex-wrap: wrap;
+        margin: 0 -20px 10px;
+    }
+    
+    .aae-about .desc {
+        max-width: 100%;
+    }
+}
 
 .desktop-about-container {
     .aae-about {

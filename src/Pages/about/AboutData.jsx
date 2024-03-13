@@ -4,6 +4,8 @@ import CBSLogo from './images/cbs_interactive_logo.jpeg';
 import DisneyLogo from './images/the_walt_disney_company_logo.jpeg';
 import HarvardLogo from './images/harvard-logo.jpeg';
 import SonyLogo from './images/sony_pictures_imageworks_logo.jpeg';
+import EmersonLogo from './images/emerson_college_logo.jpeg';
+import UWLogo from './images/university_of_washington_logo.jpeg';
 
 const AboutData  =  {
   pageTitle: "About Me",
@@ -173,6 +175,19 @@ const AboutData  =  {
     {
       year: "2022",
       degree: "MS - Human Centered Design",
+      logo: UWLogo,
+      location: "Seattle, WA",
+      school: "UNIVERSITY OF WASHINGTOWN",
+      details: `Research and course work includes Human Centered Design, Design Thinking,
+                User Interaction Design and Prototyping, Visual Communication, VR/AR prototyping,
+                Usability Studies, Digital Fabrication, IoT and Physical Computing, Information Design,
+                Design and Management of Complex Systems.`,
+    },
+    {
+      year: "2019",
+      degree: "GRADUATE CERTIFICATE -  User Centered Design",
+      logo: UWLogo,
+      location: "Seattle, WA",
       school: "UNIVERSITY OF WASHINGTOWN",
       details: `Research and course work includes Human Centered Design, Design Thinking,
                 User Interaction Design and Prototyping, Visual Communication, VR/AR prototyping,
@@ -182,6 +197,8 @@ const AboutData  =  {
     {
       year: "2007",
       degree: "MA - Media Arts",
+      logo: EmersonLogo,
+      location: "Boston, MA",
       school: "EMERSON COLLEGE",
       details: `My course work included television studio production, graduate film production,
                 computer animation using Maya, digital compositing, research methods in media arts,
@@ -189,7 +206,9 @@ const AboutData  =  {
     },
     {
       year: "2003",
-      degree: "GRADUATE CERTIFICATE",
+      degree: "GRADUATE CERTIFICATE APPLIED SCIENCES",
+      logo: HarvardLogo,
+      location: "Cambridge, MA",
       school: "HARVARD UNIVERSITY",
       details: `My course work included introduction to computer science using C and C++, 
       data structures and algorithms, communication systems and technology, Web programming in Perl,

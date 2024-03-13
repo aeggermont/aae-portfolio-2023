@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+import './Education.scss';
 
 const educationContent = [
   {
@@ -31,6 +33,43 @@ const educationContent = [
   },
 ];
 
+function Education (props) {
+  const data = Array.from(props.data);
+  const screenDevice = props.screenDevice;
+
+  console.log("Education DATA ");
+  console.log(data);
+
+  return (
+    <div className="desktop-education-container">
+        {data.map((val, i) => (
+          <div className="education-wrapper">
+            <img 
+              src={val.logo}
+              alt="icon"
+              style = {{
+                width: '5rem',
+                height: '5rem',
+                paddingTop: '1px',
+                borderRadius: '1rem'
+              }}
+            />
+
+            <div className="education-info">
+              <div className="period-background">{val.year} </div>
+              <h5 className="degree-title"> {val.degree} </h5>
+              <span className="school-name">{val.school}</span>
+              <h5 className="location"> {val.location}</h5>
+              <p>{val.details}</p>
+            </div>
+          </div>
+        ))}
+    </div>
+  );
+
+}
+
+/*
 const Education = () => {
   return (
     <ul>
@@ -49,6 +88,11 @@ const Education = () => {
       ))}
     </ul>
   );
-};
+};*/
 
 export default Education;
+
+Education.prototype = {
+  data: PropTypes.Array,
+  screenDevice: PropTypes.object.isRequired
+}
