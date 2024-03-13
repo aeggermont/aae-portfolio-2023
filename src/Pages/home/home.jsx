@@ -22,6 +22,7 @@ function Home() {
             
             <BackgroundSection />
        
+            <MainProjectsSection />
              {/* 
             <Parallax translateY={['-150px', '300px']}>
                 <MainProjectsSection />

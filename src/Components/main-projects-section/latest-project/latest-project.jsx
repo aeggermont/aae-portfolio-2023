@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import CardMedia from '@mui/material/CardMedia';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import './latest-project.scss';
-
+import Box from '@mui/material/Box';
 const styles = {
     fullHeightCard: {
         height: "100%",
@@ -15,9 +15,9 @@ const styles = {
     const img = "";
 
 function LatestProject(props) {
-    const title = props.info.title;
-    const img = props.info.img;
-    const desciption = props.info.desciption;
+    const title = props.title;
+    const thumbnailImg = props.thumbnailImg;
+    const description = props.description;
     const dimensions = props.dimensions;
 
     console.log(' <<< LatestProject >>> ');
@@ -25,9 +25,10 @@ function LatestProject(props) {
     console.log('=======================');
 
     return (
-        <Card sx={{
-            width: dimensions.width, 
-            height: dimensions.height,
+        <Card 
+            sx={{
+                maxWidth: 345,
+                height: 445,
             }}
             raised='true'
             >
@@ -35,7 +36,7 @@ function LatestProject(props) {
                 <CardMedia
                      component="img"
                      className="card-media-img"
-                     image={img}
+                     image={thumbnailImg}
                      sx={{ 
                         padding: "0em 0em 0 0em", 
                         objectFit: "contain",
@@ -44,13 +45,28 @@ function LatestProject(props) {
                         } }}
                 />
                 <CardContent
-                    style={{backgroundColor: "#F3F6F7" }}>
-                    <Typography gutterBottom variant="h5" component="div"  style={{color: "#074C5F" }}>
-                        {title }
+                    style={{ }}>
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            height: '6rem',
+                            alignItems: 'center'
+                            }}>
+                        <Typography gutterBottom variant="h5" component="div"  style={{color: "#074C5F" }}>
+                            {title }
+                        </Typography>
+                    </Box>
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            height: '10rem',
+                            alignItems: 'top'
+                            }}>
+                       <Typography variant="body1" color="text.secondary">
+                        {description}
                     </Typography>
-                    <Typography variant="body1" color="text.secondary">
-                        {desciption}
-                    </Typography>
+                    </Box>
+                    
                 </CardContent>
             </CardActionArea>
         </Card>
@@ -61,7 +77,7 @@ export default LatestProject;
 
 LatestProject.prototype = {
     title : PropTypes.string.isRequired,
-    desciption: PropTypes.string.isRequired,
-    img: PropTypes.object.isRequired,
+    description: PropTypes.string.isRequired,
+    thumbnailImg: PropTypes.object.isRequired,
     dimensions: PropTypes.object.isRequired       
 }

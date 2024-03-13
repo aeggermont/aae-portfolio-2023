@@ -8,7 +8,7 @@ import {
 
 import { Link, Route, Routes, useParams, useLocation } from 'react-router-dom';
 import Home from './Pages/home/home';
-import AboutMe from './Pages/about/about';
+import AboutMe from './Pages/about/AboutMe';
 import MyWork from './Components/my-work/my-work';
 import Contact from './Pages/contact/contact';
 import Project1 from './Components/my-work/projects/project-1/Project1';
