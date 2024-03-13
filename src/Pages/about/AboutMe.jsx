@@ -1,10 +1,7 @@
 import React from 'react';
 import Layout from '../../Layouts';
 import Profile from './Profile';
-import Biography from './biography';
-//import Skills from './Skills';
 import { useMediaQuery } from 'react-responsive';
-import PropTypes from 'prop-types';
 
 function AboutMe() {
     const xs = useMediaQuery({ query: '(max-width: 767px)' });
@@ -33,8 +30,3 @@ function AboutMe() {
 }
 
 export default AboutMe;
-
-/*
-AboutMe.prototype = {
-    screenDevice: PropTypes.object.isRequired
-}*/
