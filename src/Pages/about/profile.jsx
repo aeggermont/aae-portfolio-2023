@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import './Profile.scss';
-//import './AboutMe.scss';
 import Experience from "./Experience";
 import Education from "./Education";
 import AboutMeData from "./AboutData";
 import Skills from './skills';
-
 import PropTypes from 'prop-types';
 
 function Profile(props) {
