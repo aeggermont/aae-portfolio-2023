@@ -441,6 +441,28 @@ const StoryTellerData = {
                         SketchingInteractionDesignDesktop
                     ]
                 },
+                prototypeVideos: {
+                    title: 'Testing and Evaluating Functional Software Prototypes',
+                    paragraphs: [
+                        "Sample video screenshots taken from mobile device with installed functional prototypes developed in iOS ARKit  to search and scan  for A.R. content and collectable hidden objects around an attraction. "
+                    ],
+                    videos: [
+                        {
+                            title: '',
+                            width: '900px',
+                            height: '1080px',
+                            description: '',
+                            srcVideo: 'https://player.vimeo.com/video/916526451?autoplay=1&loop=1&autopause=0&background=1'
+                        },
+                        {
+                            title: '',
+                            width: '900px',
+                            height: '1080px',
+                            description: '',
+                            srcVideo: 'https://player.vimeo.com/video/916775754?autoplay=1&loop=1&autopause=0&background=1'
+                        }
+                    ],
+                },
                 sampleMockups: {
                     title: "Sample High Fidelity Mockups",
                     paragraphs: [

@@ -14,6 +14,7 @@ import ParagraphImg from './Components/ParagraphImg';
 import BulletPoints from './Components/BulletPoints.jsx';
 import IlllustrationGallery from './Components/IlllustrationGallery';
 import IllustrationDiagram from './Components/IllustrationDiagram';
+import SectionVideo from './Components/SectionVideo';
 
 /* Assets */
 import DesignSystemBackgroundMdLg from './Images/DesignSystemBackground-MdLg.png';
@@ -373,6 +374,10 @@ function StoryTellerMdLgView(props) {
                 screenDevice={screenDevice}
             />
 
+
+            <SectionVideo
+                screenDevice={screenDevice}
+            />
              {/*  Usability Evaluation */}                
 
             <ParagraphBlock

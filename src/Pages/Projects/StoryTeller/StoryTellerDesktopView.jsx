@@ -14,6 +14,7 @@ import ParagraphImg from './Components/ParagraphImg';
 import BulletPoints from './Components/BulletPoints.jsx';
 import IlllustrationGallery from './Components/IlllustrationGallery';
 import IllustrationDiagram from './Components/IllustrationDiagram';
+import SectionVideo from './Components/SectionVideo';
 
 /* Assets */
 import DesignSystemBackground from './Images/DesignSystemBackground.png';
@@ -394,7 +395,27 @@ function StoryTellerDesktopView(props) {
                 screenDevice={screenDevice}
             />
 
+            <ParagraphBlock
+                title={storyTellerData.caseStudy.designSystem.designThinking.prototypeVideos.title }
+                paragraphs={storyTellerData.caseStudy.designSystem.designThinking.prototypeVideos.paragraphs}
+                screenDevice={screenDevice}
+            />
 
+            <SectionVideo
+                screenDevice={screenDevice}
+                width={storyTellerData.caseStudy.designSystem.designThinking.prototypeVideos.videos[0].width}
+                height={storyTellerData.caseStudy.designSystem.designThinking.prototypeVideos.videos[0].height}
+                description={storyTellerData.caseStudy.designSystem.designThinking.prototypeVideos.videos[0].description}
+                srcUrl={storyTellerData.caseStudy.designSystem.designThinking.prototypeVideos.videos[0].srcVideo}
+            />
+
+            <SectionVideo
+                screenDevice={screenDevice}
+                width={storyTellerData.caseStudy.designSystem.designThinking.prototypeVideos.videos[1].width}
+                height={storyTellerData.caseStudy.designSystem.designThinking.prototypeVideos.videos[1].height}
+                description={storyTellerData.caseStudy.designSystem.designThinking.prototypeVideos.videos[1].description}
+                srcUrl={storyTellerData.caseStudy.designSystem.designThinking.prototypeVideos.videos[1].srcVideo}
+            />
             {/*  Usability Evaluation */}
 
             <ParagraphBlock
