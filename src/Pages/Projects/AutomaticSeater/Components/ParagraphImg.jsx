@@ -6,53 +6,53 @@ function ParagraphImg(props) {
     const alt = props.alt;
     const width = props.width;
     const height = props.height;
-    const images = props.images;
+    const imagesSrc = props.imagesSrc;
     const screenDevice = props.screenDevice;
 
     console.log('>>> screenDevice');
     console.log(screenDevice);
     
     console.log('>>> Images');
-    console.log(images);
+    console.log(imagesSrc);
 
-    if ( screenDevice.isDesktopOrLaptop ) {
+    if ( screenDevice.laptop) {
         return (
             <div className='desktop-imagesection-container'>
+                 <h1> Hey</h1>
                 <img
-                    
-                    src = { images[1] }
+                    src = { imagesSrc[0] }
                     alt = { alt }
                     style = {{
-                        width: width,
+                        width: '50%',
                         paddingTop: '200px'
                     }} 
                 />
             </div>
            
         )
-    } else if ( screenDevice.isMobile ) {
+    } else if (  screenDevice.lg || screenDevice.md ) {
         return (
             <div  className='mobile-imagesection-container'>
+                <h1> Hey</h1>
                 <img
-                   
-                    src = { images[0] }
+                    src = { imagesSrc[1] }
                     alt = { alt }
                     style = {{
-                        width: width,
+                        width: '30%',
                         paddingTop: '100px'
                     }} 
                 />
               
              </div>
         )
-    } else if ( screenDevice.isTablet ) {
+    } else if (  screenDevice.xs || screenDevice.sm) {
         return (
             <div className='tablet-imagesection-container'>
                 <img  
-                    src = { images[2] }
+                    src = { imagesSrc[2] }
                     alt = { alt }
                     style = {{
-                        width: width,
+                        width: '50%',
                         paddingTop: '120px'
                     }} 
                 />
@@ -66,10 +66,7 @@ function ParagraphImg(props) {
 export default ParagraphImg;
 
 ParagraphImg.prototype = {
-    src: PropTypes.object.isRequired,
     alt: PropTypes.string.isRequired,
-    width: PropTypes.string.isRequired,
-    height: PropTypes.string.isRequired,
-    images: PropTypes.array.isRequired,
+    imagesSrc: PropTypes.array.isRequired,
     screenDevice: PropTypes.object.isRequired
 }

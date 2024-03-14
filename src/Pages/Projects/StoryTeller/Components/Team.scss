@@ -1,59 +1,71 @@
 .storyteller-team-container-desktop  {
-    max-width: 2500px;
-    margin: auto;
-    
 
+    margin: auto;
+    width: 80%;
+    
     .team-title {
         font-family: poppins;
         font-size: 3rem;
         font-weight: 600;
-        color: #1D2D92;
-        padding-top: 20px;
-        padding-bottom: 30px;
+        color: #010A24;
         text-align: center;
-      
+        padding-bottom: 3rem;
     }
 
+    .row_team {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: top;
 
-    .team-content {      
-        margin-left: 25%;
-        margin-right: 25%;
-
-        
-        .team-member {
-            display: flex;
-            flex-direction: row;
-            align-content: start;
-            justify-content: flex-start;
-            width: 100%;
-          
-            .member-name {
-                width: 50%;
+        .column-content {
+            width: 40%;
+            padding-bottom: 2rem;
+            .member-name-left {
+                padding-right: 1rem;
+                text-align: right;
+                padding-top: 1rem;
                 font-family: poppins;
-                font-size: 1.5rem;
+                font-size: 2rem;
+                font-weight: 600;
+                color: #010A24;
+            }
+            .member-title-left {
+                padding-right: 1rem;
+                text-align: right;
+                font-family: poppins;
+                font-size: 2rem;
                 font-weight: 400;
-                color: #050505;
+                color: #010A24;
             }
 
-            .member-role {
-                width: 50%;
+            .member-name-right {
+                padding-left: 1rem;
+                text-align: left;
+                padding-top: 1rem;
                 font-family: poppins;
-                font-size: 1.5rem;
-                font-weight: 400;
-                color: #050505;
-                
+                font-size: 2rem;
+                font-weight: 600;
+                color: #010A24;
             }
-          
+
+            .member-title-right {
+                padding-left: 1rem;
+                text-align: left;
+                font-family: poppins;
+                font-size: 2rem;
+                font-weight: 400;
+                color: #010A24;
+            }
         }
     }
-  
-
 }
 
-.storyteller-team-container-tablet  {
-    max-width: 1366px;
-    margin: auto;
 
+.storyteller-team-container-mdlg  {
+    margin: auto;
+    width: 80%;
+    
     .team-title {
         font-family: poppins;
         font-size: 1.5rem;
@@ -63,38 +75,84 @@
         padding-bottom: 3rem;
     }
 
+    .row_team {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: top;
 
-       
-    .team-content {      
-        margin: auto;
-        width: 60%;
-
-        .team-member {
-            display: flex;
-            flex-direction: row;
-            align-content: start;
-            justify-content: space-around;
-            
-            margin: auto;
-          
-            .member-name {
+        .column-content {
+            width: 40%;
+            .member-name-left {
+                padding-right: 1rem;
+                text-align: right;
+                padding-top: 1.1rem;
                 font-family: poppins;
                 font-size: 1rem;
-                font-weight: 400;
-                color: #050505;
-                text-align: left;
+                font-weight: 600;
+                color: #1D2D92;
             }
-
-            .member-role {
+            .member-title-left {
+                padding-right: 1rem;
+                text-align: right;
               
                 font-family: poppins;
                 font-size: 1rem;
                 font-weight: 400;
-                color: #050505;
-                text-align: left;
-                
+                color: #000000;
             }
-          
+
+            .member-name-right {
+                padding-left: 1rem;
+                text-align: left;
+                padding-top: 1rem;
+                font-family: poppins;
+                font-size: 1.1rem;
+                font-weight: 600;
+                color: #1D2D92;
+            }
+
+            .member-title-right {
+                padding-left: 1rem;
+                text-align: left;
+             
+                font-family: poppins;
+                font-size: 1rem;
+                font-weight: 400;
+                color: #000000;
+            }
+        }
+    }
+
+    .team-content {      
+        margin: auto;
+        // width: 60%;
+
+        .row_team {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: top;
+            
+            .column-content {
+                width: 50%;
+                .member-name {
+                    font-family: poppins;
+                    font-size: 1rem;
+                    font-weight: 400;
+                    color: #050505;
+                    text-align: left;
+                }
+    
+                .member-role { 
+                    font-family: poppins;
+                    font-size: 1rem;
+                    font-weight: 400;
+                    color: #050505;
+                    text-align: left;
+                    
+                }
+            }
         }
     }
 
@@ -146,5 +204,3 @@
         }
     }
 }
-
-

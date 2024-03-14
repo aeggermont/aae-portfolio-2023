@@ -1,15 +1,14 @@
-.storyteller-desktop-paragraph-titlecontainer {
-    max-width: 2500px;
+.storyteller-laptop-paragraph-title {
     margin: auto;
-
     padding-top: 10rem;
     padding-bottom: 20px;
+    width: 80%;
 
     .title-paragraph {
         font-family: poppins;
-        font-size: 2.5rem;
+        font-size: 3rem;
         font-weight: 600;
-        color: #1D2D92;
+        color: #040B35;
         padding-top: 20px;
         padding-bottom: 10px;
         text-align: center;
@@ -17,31 +16,29 @@
 
 }
 
-.storyteller-tablet-paragraph-titlecontainer {
-
-    max-width: 1366px;
+.storyteller-lgmd-paragraph-title {
     margin: auto;
-
+    width: 60%;
     .title-paragraph {
         font-family: poppins;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         font-weight: 600;
-        color: #1D2D92;
+        color: #040B35;
         padding-top: 20px;
         padding-bottom: 10px;
         text-align: center;
     }
 }
 
-.storyteller-mobile-paragraph-titlecontainer {
-    max-width: 428px;
+.storyteller-xsxm-paragraph-title {
     margin: auto;
+    width: 80%;
 
     .title-paragraph {
         font-family: poppins;
         font-size: 1.5rem;
         font-weight: 600;
-        color: #1D2D92;
+        color: #040B35;
         padding-top: 20px;
         padding-bottom: 10px;
         text-align: center;

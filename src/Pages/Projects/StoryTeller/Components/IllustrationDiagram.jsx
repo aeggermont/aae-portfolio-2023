@@ -24,7 +24,7 @@ function IllustrationDiagram(props) {
         console.log("you have taped me");
     }
 
-    if ( screenDevice.isDesktopOrLaptop ) {
+    if ( screenDevice.laptop ) {
         return (
             <div className='desktop-illlustration-container'>
                 <div className='illustration-title'>  { title} </div>
@@ -54,7 +54,7 @@ function IllustrationDiagram(props) {
             </div>
            
         )
-    } else if ( screenDevice.isMobile ) {
+    } else if ( screenDevice.xs || screenDevice.sm  ) {
         return (
             <div  className='mobile-illlustration-container'>
                 <div className='illustration-title'>  { title} </div>
@@ -76,7 +76,7 @@ function IllustrationDiagram(props) {
                 <span className='text-description'>  { description} </span>            
              </div>
         )
-    } else if ( screenDevice.isTablet ) {
+    } else if (  screenDevice.lg || screenDevice.md ) {
         return (
             <div className='tablet-illlustration-container'>
                 <div className='illustration-title'>  { title} </div>

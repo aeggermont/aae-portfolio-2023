@@ -6,7 +6,7 @@ function SubTitle(props) {
     const subTitle = props.subTitle;
     const screenDevice = props.screenDevice; 
 
-    if ( screenDevice.isDesktopOrLaptop ) {
+    if ( screenDevice.laptop ) {
         return (
             <>  
                 <div className='desktop-subtitle-container'>
@@ -14,18 +14,18 @@ function SubTitle(props) {
                 </div>
             </>
         )
-    } else if ( screenDevice.isMobile ) {
+    } else if ( screenDevice.xs || screenDevice.sm ) {
         return (
             <>
-                <div className='mobile-subtitle-container '>
+                <div className='xssm-subtitle-container'>
                     <div className='subtitle-paragraph'> { subTitle }</div>
                 </div>
             </>
         )
-    } else if ( screenDevice.isTablet ) {
+    } else if (screenDevice.lg || screenDevice.md) {
         return (
             <>
-                <div className='tablet-subtitle-container '>
+                <div className='lgmd-subtitle-container'>
                     <div className='subtitle-paragraph'> { subTitle }</div>
                 </div>
             </>
