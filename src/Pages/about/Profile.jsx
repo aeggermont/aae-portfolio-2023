@@ -110,10 +110,12 @@ function Profile(props) {
                                    
                                 </div>
                                 <div className="personal-info">
-                                    <div><h3> Personal Info </h3></div>
-                                    <div className="section-info"><div className="item"> First Name: &nbsp; Antonio</div> <div className="item"> Last Name: &nbsp; Aranda Eggermont</div></div>
-                                    <div className="section-info"><div className="item"> Cities of Residence: &nbsp;Seattle, Mexico City</div>  <div className="item">Email: &nbsp; Antonio.Eggermont@post.harvard.edu</div></div>
-                                    <div className="section-info"><div className="item"> Languages: &nbsp;English, Spanish</div>  <div className="item">Nacionalities: &nbsp; USA, Mexico</div></div>
+                                    <h3> Personal Info </h3>
+                                    <div className="section-info-container">
+                                        <div className="section-info"><div className="item"> <span>First Name: &nbsp;</span> Antonio</div> <div className="item"> <span>Last Name: &nbsp; </span>Aranda Eggermont</div></div>
+                                        <div className="section-info"><div className="item"> <span>Cities of Residence: &nbsp;</span>Seattle, Mexico City</div>  <div className="item"><span>Email: &nbsp; </span> Antonio.Eggermont@post.harvard.edu</div></div>
+                                        <div className="section-info"><div className="item"> <span>Languages: &nbsp;</span>English, Spanish</div>  <div className="item"><span>Nacionalities: &nbsp; </span> USA, Mexico</div></div>
+                                    </div>
                                 </div> 
                                 <div className="qualifications">
                                     <h3>Engineering Skills</h3>
@@ -172,7 +174,7 @@ function Profile(props) {
         return (
             <div className="desktop-about-container"> 
                 <p>Desktop View </p>
-                <div className="aae-about" id="about">
+                <div className="aae-about">
                     <div className="container">
                         <div className="about-title"><h3> {AboutMeData.pageTitle}</h3></div>
                         <div className="content">
@@ -188,12 +190,13 @@ function Profile(props) {
                                     </p>
                                 </div>
                                 <div className="personal-info">
-                                    <div><h3> Personal Info </h3></div>
-                                    <div className="section-info"><div className="item"> <span>First Name: &nbsp;&nbsp; </span>Antonio</div> <div className="item"> <span>Last Name: &nbsp;&nbsp; </span>Aranda Eggermont</div></div>
-                                    <div className="section-info"><div className="item"> <span>Cities of Residence: &nbsp;&nbsp;</span>Seattle, Mexico City</div>  <div className="item"><span>Email: &nbsp;&nbsp; </span>antonio.eggermont@post.harvard.edu</div></div>
-                                    <div className="section-info"><div className="item"> <span>Languages: &nbsp;&nbsp;</span>English, Spanish</div>  <div className="item"><span>Nacionalities: &nbsp;&nbsp; </span>USA, Mexico</div></div>
+                                    <h3> Personal Info </h3>
+                                    <div className="section-info-container">
+                                        <div className="section-info"><div className="item"> <span>First Name: &nbsp;&nbsp; </span>Antonio</div> <div className="item"> <span>Last Name: &nbsp;&nbsp; </span>Aranda Eggermont</div></div>
+                                        <div className="section-info"><div className="item"> <span>Cities of Residence: &nbsp;&nbsp;</span>Seattle, Mexico City</div>  <div className="item"><span>Email: &nbsp;&nbsp; </span>antonio.eggermont@post.harvard.edu</div></div>
+                                        <div className="section-info"><div className="item"> <span>Languages: &nbsp;&nbsp;</span>English, Spanish</div>  <div className="item"><span>Nacionalities: &nbsp;&nbsp; </span>USA, Mexico</div></div>
+                                    </div>
                                 </div> 
-
                                 <div className="qualifications">
                                     <h3 className="title">Engineering Skills</h3>
                                     <p className="desc"></p>
