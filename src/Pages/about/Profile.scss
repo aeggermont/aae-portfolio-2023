@@ -115,6 +115,7 @@ $desktop-font-size: 1.5rem;
     }
     
     .aae-about .qualifications h3 {
+        text-align: center;
         font-size: 1.8rem;
         font-weight: 600;
         margin-bottom: 15px;
@@ -191,7 +192,7 @@ $desktop-font-size: 1.5rem;
     
     .aae-about .info h3 {
         font-size: 1.2rem;
-        font-weight: 500;
+        font-weight: 600;
         margin-bottom: 2.5rem;
         color: #022c38;
     }
@@ -207,15 +208,53 @@ $desktop-font-size: 1.5rem;
         font-size: 1.2rem;
     }
 
+    .personal-info {    
+        padding-bottom: 3rem;
+        h3 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #022c38;
+            text-align: center; 
+        }
+
+        .section-info-container {
+            width: 100%;
+            .section-info {
+                padding-left: 1rem;
+                //width: 100%;            
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content:  flex-start;
+
+                .item {
+                    padding-left: 1%;
+                    width: 48%;
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                    padding-top: 1.5rem;
+                }
+
+                .item span {
+                    font-weight: 800;
+                    color: #022c38;
+                }
+            }
+        }
+    }
+
+    /*
     .aae-about .personal-info {
         width: 100%;
         padding-bottom: 3rem;
 
         h3 {
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: 600;
             color: #022c38;
+            text-align: center;
         }
+
 
         .section-info {
             padding-left: 1rem;
@@ -236,7 +275,7 @@ $desktop-font-size: 1.5rem;
                 color: aqua;
             }
         }               
-    }
+    }*/
 
 
     .aae-about .qualifications {
@@ -246,9 +285,11 @@ $desktop-font-size: 1.5rem;
     }
     
     .aae-about .qualifications h3 {
-        font-size: 1.8rem;
+        font-size: 2rem;
         font-weight: 600;
         margin-bottom: 15px;
+        text-align: center;
+        color: #022c38;
     }
     
     .aae-about .dodo_progress {
@@ -272,15 +313,6 @@ $desktop-font-size: 1.5rem;
         float: left;
         padding-bottom: 170px;
         padding-top: 120px;
-
-        /*
-        @media screen and (max-width: 991px) {
-          background-color: #34495e;
-          padding-bottom: 140px;
-          padding-top: 90px;
-          margin-left: 20px;
-          margin-right: 20px;
-        }*/
     }
     
     .aae-about .about-title {
@@ -304,11 +336,7 @@ $desktop-font-size: 1.5rem;
         font-size: 18px;
         letter-spacing: 0.4px;
         transition: 0.5s;
-        /*
-        @media screen and (max-width: 991px) {
-          padding: 12px 20px;
-          font-size: 16px;
-        }*/
+
         &:hover {
           background: #000;
           color: #fff;
@@ -327,7 +355,6 @@ $desktop-font-size: 1.5rem;
         width: 100%;
         float: left;
         margin-bottom: 55px;
-        //margin-top: 55px;
     }
     
     .aae-about .info h3 {
@@ -348,38 +375,48 @@ $desktop-font-size: 1.5rem;
         font-size: 1.5rem;
     }
 
-    .aae-about .personal-info {
-        width: 90%;
+  
+    .personal-info {    
         padding-bottom: 3rem;
-
-        .section-info {
-            padding-left: 3rem;
-            width: 100%;            
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            justify-content: flex-start;
-
-            .item {
-                width: 40%;
-                font-size: 1.3rem;
-                font-weight: 500;
-                padding-top: 1.5rem;
-            }
-
-            .item span {
-                font-weight: 800;
-                color: #022c38;
-            }
+        h3 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #022c38;
+            text-align: center; 
         }
 
-       
-        
-    }
-    .aae-about .personal-info h3 {
-        font-size: 2rem;
-        font-weight: 800;
-        
+        .section-info-container {
+            width: 100%;
+            .section-info {
+                padding-left: 3rem;
+                width: 100%;            
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: center;
+
+                .item {
+                    padding-left: 5%;
+                    width: 40%;
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                    padding-top: 1.5rem;
+                }
+
+                .item2 {
+                    padding-left: 5%;
+                    width: 40%;
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                    padding-top: 1.5rem;
+                }
+
+                .item span {
+                    font-weight: 800;
+                    color: #022c38;
+                }
+            }
+        }
     }
 
     .aae-about .qualifications {
@@ -389,9 +426,11 @@ $desktop-font-size: 1.5rem;
     }
     
     .aae-about .qualifications .title {
-        font-size: 2rem;
+        font-size: 2.2rem;
         font-weight: 800;
         margin-bottom: 15px;
+        text-align: center;
+        color: #022c38;
     }
     
     .aae-about .dodo_progress {
@@ -400,11 +439,6 @@ $desktop-font-size: 1.5rem;
         padding-top: 40px;
         flex-wrap: wrap;
         margin: 0 -20px 10px;
-      
-        /*
-        @media screen and (max-width: 575px) {
-          margin: 0;
-        }*/
     }
     
     .aae-about .desc {
