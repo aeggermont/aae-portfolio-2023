@@ -78,19 +78,19 @@
 @media #{$md}, #{$lg} {
 	.main-baner-area {
 		//background-color: green;
-		text-align: center;
-		
+        margin: 2rem;
 		.sphere-shape {
 			position: absolute;
-			top: 13%;
+			top: 20%;
 			float: left;
-			width: 380px;
-			height: 380px;
+			width: 200px;
+			height: 200px;
 			margin-left: -70px;
 			shape-outside: circle(50% at 30%);
 			clip-path: circle(50% at 30%);
 			background-image: linear-gradient( #FCD561, #A0B6CC);
 			opacity: 30%;
+            z-index: -1;
 		}	
 
 		.aae-banner {
@@ -105,8 +105,8 @@
 	
 			.banner-photo { 
 				display: block;
-				margin-top: 130px;
-				width: 490px;
+				margin-top: 8rem;
+                width: 450px;
 			}
 	
 			#banner-image-dimension {
@@ -115,127 +115,39 @@
 			}
 	
 			.heading-info {
-				//background-color: #9bc850;
 				display: block;
 				position: relative;
 				text-align: left;
-				width: 50%;
-				margin-top: 20%;
+				width: 55%;
+				margin-top: 15%;
 				z-index: 3;
 
-
-			
 				.heading-primary-intro {
 					display: block;
-					font-size: 18px;
-					margin-bottom: 1rem;
-					
+					font-size: 1.3rem;
+					margin-bottom: 2rem;	
 				}
 				
 				.heading-primary-main {
 					display: block;
-					font-size: 33px;
+					font-size: 1.5rem;
 					font-weight: 800;
 					margin-bottom: 35px;
 					color: #074C5F;
 				}
 	
 				.heading-primary-sub {
-					//padding: 35px;
 					text-align: left;
 					display: block;
-					font-size: 18px;
+					font-size: 1.2rem;
 					width: 85%;				
 				}
-			}
-		}
-		
-	}	
-}
 
-
-// High Resolution Tablets - Ipad portrait position 
-@media #{$lg}{
-	.main-baner-area {	
-		margin-top: 100px;
-		top: 10%;
-		position: relative;
-
-		.contact-area {
-			top: -20%;
-			position: relative;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			margin-top: 120px;
-		}
-		
-		.sphere-shape {
-			position: absolute;
-			top: 23%;
-			float: left;
-			width: 280px;
-			height: 280px;
-			margin-left: -70px;
-			shape-outside: circle(50% at 30%);
-			clip-path: circle(50% at 30%);
-			background-image: linear-gradient( #FCD561, #A0B6CC);
-			opacity: 30%;
-		}	
-
-		.aae-banner {
-			position: absolute;	
-	
-			display: flex;
-			flex-direction: row-reverse;
-			width: 100%;
-			position: relative;
-			align-content: space-evenly;
-			margin-left: 25px;
-			
-	
-			.banner-photo { 
-				display: block;
-				margin-top: 30px;
-				width: 490px;
-			}
-	
-			#banner-image-dimension {
-				width: 100%;
-				height: auto;
-			}
-	
-			.heading-info {
-				//background-color: #9bc850;
-				display: block;
-				//position: relative;
-				text-align: left;
-				width: 50%;
-				margin-top: 5%;
-				margin-bottom: 1rem;
-				z-index: 3;
-
-				.heading-primary-intro {
+                .contact-area {
 					display: block;
-					font-size: 18px;
-					margin-bottom: 1px;
-					
-				}
-				
-				.heading-primary-main {
-					display: block;
-					font-size: 33px;
-					font-weight: 800;
-					margin-bottom: 35px;
-					color: #074C5F;
-				}
-	
-				.heading-primary-sub {
-					//padding: 35px;
-					text-align: left;
-					display: block;
-					font-size: 18px;
-					width: 85%;				
+                    margin: 5rem;
+                    width: 150%;	
+                    text-align: center;
 				}
 			}
 		}
@@ -245,27 +157,20 @@
 
 
 // Desktop size
-@media #{$laptop}{
+@media #{$desktop}{
 	.main-baner-area {
+        position: relative;
+        top: 50%;
 		text-align: center;
-		margin-top: 100px;
-		top: 12%;
-		background-color: aqua;
+		//top: 50%;
+        margin-top: 4rem;
 		
-		.contact-area {
-			top: -10%;
-			position: relative;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			margin-top: 120px;
-		}
+		//abackground-color: aqua;
 		
 	
-		
 		.aae-banner {
-			position: relative;	
-			top: 10%;
+			//position: relative;	
+			//top: 15%;
 			display: flex;
 			flex-direction: row-reverse;
 			//width: 90%;
@@ -282,7 +187,7 @@
 
 			.banner-photo { 
 				display: block;
-				margin-top: 5rem;
+				margin-top: 8rem;
 				width: 490px;
 			}
 
@@ -295,16 +200,16 @@
 				margin-bottom: 1rem;
 				// width: 70%;
 				display: block;
-				min-width: 500px;
-				max-width: 500px;
+				min-width: 650px;
+				max-width: 650px;
 				z-index: 9;
-
 				float: left;
+                margin-top: 10rem;
 			
 				.sphere-shape {
 					position: absolute;
-					top: 5%;
-					left: 1%;
+					top: 12%;
+					left: 10%;
 					///float: left;
 					width: 380px;
 					height: 380px;
@@ -312,7 +217,7 @@
 					z-index: -1;
 					clip-path: circle(30% at 30%);
 					background-image: linear-gradient( #FCD561, #A0B6CC);
-					opacity: 100%;
+					opacity: 30%;
 				}
 
 				.heading-primary-intro {
@@ -329,11 +234,13 @@
 					font-size: 2.2rem;
 					font-weight: 800;
 					margin-bottom: 2rem;
+                    margin-right: 3rem;
 					color: #074C5F;
 				}
 	
 				.heading-primary-sub {
 					padding: 5px;
+                  
 					text-align: left;
 					display: block;
 					font-size: 1.5rem;
@@ -341,12 +248,21 @@
 					color: #03252e;
 				}
 
-				
+				.contact-area {
+                    margin: 2rem;
+                    // background-color: #FCD561;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                    
 			}
 		}
 	}
 }
 
+/*
 
 @media #{$desktop} {
 	.main-baner-area {
@@ -443,3 +359,4 @@
 		}
 	}
 }
+*/

@@ -1,11 +1,7 @@
 import React from 'react';
-import shapeImg from "../Images/shape_1.png";
 import bannerPhoto from "../Images/AE-Front-Page-Photo.png";
 import "./LandingPage.scss";
 import fsReference from '../../../firebase';
-import Box from '@mui/material/Box';
-import Fab from '@mui/material/Fab';
-import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { useEffect, useState } from 'react';
@@ -51,13 +47,10 @@ function LandingPage() {
     
     return(
         <section className="main-baner-area">
-           
                 <div className="aae-banner">
-                    
                     <div class="banner-photo">
                         <img  src={bannerPhoto} id="banner-image-dimension" alt="Antonio Aranda Eggermont" />   
                     </div>
-                    {/* */}
                     <div className="heading-info">
                         <div className="sphere-shape"></div> 
                         <span className="heading-primary-intro"> { headers['header_1'] }</span>
@@ -74,7 +67,6 @@ function LandingPage() {
                         
                     </div>
                 </div>
-               
         </section>
     );
 }
