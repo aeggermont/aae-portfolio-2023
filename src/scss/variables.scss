@@ -1,6 +1,8 @@
 $font1: 'Poppins', sans-serif;
 $font2: 'Montserrat', sans-serif;
 
+$defaultFont: 'Poppins', sans-serif;
+
 $sidebar_text_color: #fff;
 $sidebar_font-size: 26px;
 $white: #fff;
@@ -47,10 +49,3 @@ $header1-font-color: #011114;
     font-size: 24px;
     font-family: $font1;
 }
-
-
-// $laptop: 'only screen and (min-width: 1200px)';
-// $lg : 'only screen and (min-width: 992px) and (max-width: 1200px)';
-// $md:'only screen and (min-width: 768px) and (max-width: 991px)';
-// $xs:'(max-width: 767px)';
-// $sm: 'only screen and (min-width: 576px) and (max-width: 767px)';
