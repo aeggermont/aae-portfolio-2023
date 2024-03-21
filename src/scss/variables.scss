@@ -12,12 +12,13 @@ $mobile_hamburger_color: #074C5F;
 $theme_color: #feb000;
 
 // Responsive Variables
+$xs:'(max-width: 767px)';
 $sm: 'only screen and (min-width: 576px) and (max-width: 767px)';
 $md:'only screen and (min-width: 768px) and (max-width: 991px)';
 $lg : 'only screen and (min-width: 992px) and (max-width: 1200px)';
 $laptop: 'only screen and (min-width: 1200px)';
-$desktop: 'only screen and (min-width: 1370px) and (max-width: 1605px)';
-$xs:'(max-width: 767px)';
+$desktop: 'only screen and (min-width: 1200px)';
+
 
 // Global Fonts
 

@@ -1,6 +1,8 @@
 import React from 'react';
 import Layout from '../../Layouts';
-import LandingPage from '../../Components/landing_page/landing_page';
+//import LandingPage from '../../Components/landing_page/landing_page';
+import LandingPage from './Components/LandingPage';
+
 import BackgroundSection from '../../Components/background-section/background-section';
 import MainProjectsSection from '../../Components/main-projects-section/main-projects-section';
 import Testimonials from '../../Components/testimonials/Testimonials';
@@ -22,7 +24,11 @@ function Home() {
             
             <BackgroundSection />
        
+
+       
             <MainProjectsSection />
+
+            <Contact />
              {/* 
             <Parallax translateY={['-150px', '300px']}>
                 <MainProjectsSection />
