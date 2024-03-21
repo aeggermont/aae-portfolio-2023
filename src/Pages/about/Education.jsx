@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+
 import './Education.scss';
 
 /*
@@ -37,6 +40,10 @@ const educationContent = [
 function Education (props) {
   const data = Array.from(props.data);
   const screenDevice = props.screenDevice;
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
 
   const smsxView = () => {
     return (
@@ -103,7 +110,10 @@ function Education (props) {
     return (
       <div className="desktop-education-container">
           {data.map((val, i) => (
-            <div className="education-wrapper">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="700"
+              className="education-wrapper">
               <img 
                 src={val.logo}
                 alt="icon"

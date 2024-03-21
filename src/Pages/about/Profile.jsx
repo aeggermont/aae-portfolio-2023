@@ -1,13 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './Profile.scss';
 import Experience from "./Experience";
 import Education from "./Education";
 import AboutMeData from "./AboutData";
 import Skills from './skills';
 import PropTypes from 'prop-types';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 
 function Profile(props) {
     const [isOpen, setIsOpen] = useState(false);
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+      }, []);
+
     function toggleModalOne() {
       setIsOpen(!isOpen);
     }
@@ -22,10 +29,7 @@ function Profile(props) {
                     <div className="container">
                         <div className="about-title"><h3> {AboutMeData.pageTitle}</h3></div>
                         <div className="content">
-                            <div
-                                data-aos="fade-right"
-                                data-aos-duration="1200"
-                                data-aos-delay="100">
+                            <div>
                                 <div className="info">
                                     <h3> {AboutMeData.pageWelcome} </h3>
                                     <p> {AboutMeData.pageParagraphs[0]} </p>
@@ -176,20 +180,27 @@ function Profile(props) {
                 <p>Desktop View </p>
                 <div className="aae-about">
                     <div className="container">
-                        <div className="about-title"><h3> {AboutMeData.pageTitle}</h3></div>
+                        <div 
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                            className="about-title"><h3> {AboutMeData.pageWelcome} </h3></div>
                         <div className="content">
-                            <div
-                                data-aos="fade-right"
-                                data-aos-duration="1200"
-                                data-aos-delay="100">
-                                <div className="info">
-                                    <h3> {AboutMeData.pageWelcome} </h3>
+                            <div>
+                                <div 
+                                    data-aos="fade-up"
+                                    data-aos-delay="50"
+                                    data-aos-duration="500"
+                                    className="info">
+                                 
                                     <p>
                                         {AboutMeData.pageParagraphs[0]}
                                         {AboutMeData.pageParagraphs[1]} 
                                     </p>
                                 </div>
-                                <div className="personal-info">
+                                <div 
+                                    data-aos="fade-up"
+                                    data-aos-duration="1000"
+                                    className="personal-info">
                                     <h3> Personal Info </h3>
                                     <div className="section-info-container">
                                         <div className="section-info"><div className="item"> <span>First Name: &nbsp;&nbsp; </span>Antonio</div> <div className="item"> <span>Last Name: &nbsp;&nbsp; </span>Aranda Eggermont</div></div>
@@ -197,7 +208,10 @@ function Profile(props) {
                                         <div className="section-info"><div className="item"> <span>Languages: &nbsp;&nbsp;</span>English, Spanish</div>  <div className="item"><span>Nacionalities: &nbsp;&nbsp; </span>USA, Mexico</div></div>
                                     </div>
                                 </div> 
-                                <div className="qualifications">
+                                <div 
+                                    data-aos="fade-up"
+                                    data-aos-duration="700"
+                                    className="qualifications">
                                     <h3 className="title">Engineering Skills</h3>
                                     <p className="desc"></p>
                                     <div className="wrapper">
@@ -208,7 +222,10 @@ function Profile(props) {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="qualifications">
+                                <div 
+                                    data-aos="zoom-in"
+                                    data-aos-duration="700"
+                                    className="qualifications">
                                     <h3 className="title">Design Skills</h3>
                                     <p className="desc"></p>
                                     <div className="wrapper">
@@ -220,7 +237,11 @@ function Profile(props) {
                                     </div>
                                 </div>
 
-                                <div className="qualifications">
+                                <div 
+                                    data-aos="zoom-in"
+                                    data-aos-duration="1000"
+                                    data-aos-delay="00"
+                                    className="qualifications">
                                     <h3 className="title">Professional Experience</h3>
                                     <p className="desc"></p>
                                     <div className="wrapper">
@@ -232,7 +253,10 @@ function Profile(props) {
                                     </div>
                                 </div>
 
-                                <div className="qualifications">
+                                <div
+                                    data-aos="zoom-in"
+                                    data-aos-duration="1000"
+                                    className="qualifications">
                                     <h3 className="title">Education</h3>
                                     <p className="desc"></p>
                                     <div className="wrapper">

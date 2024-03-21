@@ -9,7 +9,7 @@ import UWLogo from './images/university_of_washington_logo.jpeg';
 
 const AboutData  =  {
   pageTitle: "About Me",
-  pageWelcome: "Hi, I'm Antonio Aranda Eggermont",
+  pageWelcome: "Hello, I'm Antonio",
   pageParagraphs: [
     " I am a full stack applications developer and UX engineer with experience in Web development, AI/ML, data science visualizations, and digital media production. ",
     " My interests are interaction design and prototyping of user experiences and user interfaces, Human Centered Design, Web applications development, back-end Web services, content management systems, CDN integrations, and analytics applications. "

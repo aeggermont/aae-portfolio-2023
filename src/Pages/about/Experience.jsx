@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from 'prop-types';
 import './Experience.scss';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+
 function Experience (props) {
   const data = Array.from(props.data);
   const screenDevice = props.screenDevice;
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   
   console.log("Experience DATA ");
   console.log(data);
@@ -74,7 +81,10 @@ function Experience (props) {
     return (
       <div className="desktop-experience-container">
           {data.map((val, i) => (
-            <div className="experience-wrapper">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="700"
+              className="experience-wrapper">
               <img 
                 src={val.logo}
                 alt="icon"

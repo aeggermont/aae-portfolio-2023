@@ -1,0 +1,42 @@
+@import "../../../scss/variables.scss";
+
+@media #{$xs},  #{$sm} {
+    .background-title {
+        text-align: center;   
+        .background-title-label {
+            margin-bottom: 30px;
+            font-weight: 600;
+            font-size: 1rem;
+            color: #074C5F;
+            font-family: $defaultFont;
+        }
+    }
+}
+
+@media #{$md}, #{$lg}  {
+    .background-title {
+        text-align: center;   
+        .background-title-label {
+            margin-bottom: 30px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #074C5F;
+            font-family: $defaultFont;
+            
+        }
+    }
+}
+
+@media #{$laptop} {
+    .background-title {
+        text-align: center;   
+        .background-title-label {
+            margin-bottom: 30px;
+            font-weight: 600;
+            font-size: 20px;
+            color: #074C5F;
+            font-family: $defaultFont;
+            
+        }
+    }
+}
