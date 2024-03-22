@@ -6,7 +6,7 @@ import BackgroundSection from './Components/BackgroundSection';
 import LandingPage from './Components/LandingPage';
 import MainProjectsSection from './Components/MainProjects';
 import Testimonials from '../../Components/testimonials/Testimonials';
-import Contact from '../../Components/contact/Contact';
+import Contact from './Components/Contact';
 import WriteMe from '../../Components/write-me/Writeme';
 
 
@@ -43,8 +43,7 @@ function Home() {
             
             <BackgroundSection screenDevice={screenDevice} />
             <MainProjectsSection screenDevice={screenDevice} />
-
-            <Contact />
+            <Contact screenDevice={screenDevice}/>
              {/* 
             <Parallax translateY={['-150px', '300px']}>
                 <MainProjectsSection />
