@@ -29,6 +29,7 @@
     "react-icons": "^3.11.0",
     "react-image-magnify": "^2.7.4",
     "react-modal": "^3.13.1",
+    "react-multi-carousel": "^2.8.4",
     "react-pdf": "^6.2.2",
     "react-read-pdf": "^2.0.9",
     "react-render-pdf": "^1.0.4",
