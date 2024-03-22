@@ -1,0 +1,29 @@
+@import "../../scss/variables.scss";
+
+.contact-write-section {
+    display: flex;
+    align-content: space-evenly;
+    flex-flow: row wrap;
+
+    @media #{$xs}{
+        flex-direction: column;
+    }
+
+    @media #{$sm}{
+        flex-direction: column;
+    }
+
+    @media #{$md} {
+        flex-direction: row;
+    }
+
+    @media #{$lg} {
+        flex-direction: row;
+    
+    }
+
+    @media #{$laptop} {
+        flex-direction: row;
+    }
+
+}

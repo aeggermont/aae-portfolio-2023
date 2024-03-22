@@ -1,0 +1,69 @@
+@import "../../../scss/variables.scss";
+
+
+@media #{$xs}, #{$sm} {
+   .latest-projects-section {
+      // background-color: blue;
+      margin-top: 100px;
+      margin-left: 15px;
+      margin-bottom: 30px;
+
+      .section-title {
+          margin-bottom: 40px;
+      }
+
+      .section-title-label {
+          margin-bottom: 30px;
+          font-weight: 800;
+          font-size: 24px;
+          color: #074C5F;
+          font-family: $defaultFont;
+       }
+   }
+}
+
+
+
+@media #{$md}, #{$lg}{
+   .latest-projects-section {
+      // background-color: blue;
+      margin-top: 60px;
+      margin-left: 15px;
+      margin-bottom: 30px;
+
+      .section-title {
+          margin-bottom: 30px;
+      }
+
+      .section-title-label {
+          margin-bottom: 30px;
+          font-weight: 800;
+          font-size: 24px;
+          color: #074C5F;
+          font-family: $defaultFont;
+       }
+   }
+}
+
+
+@media #{$laptop}{
+  
+   .latest-projects-section {
+      // background-color: blue;
+      margin-top: 80px;
+      margin-left: 5rem;
+      margin-bottom: 30px;
+
+      .section-title {
+          margin-bottom: 40px;
+      }
+
+      .section-title-label {
+          margin-bottom: 30px;
+          font-weight: 800;
+          font-size: 2.3rem;
+          color: #074C5F;
+          font-family: $defaultFont;
+       }
+   }
+}

@@ -2,17 +2,13 @@ import React from 'react';
 import Layout from '../../Layouts';
 import { Parallax } from 'react-scroll-parallax';
 import { useMediaQuery } from 'react-responsive';
-
 import BackgroundSection from './Components/BackgroundSection';
 import LandingPage from './Components/LandingPage';
-import MainProjectsSection from '../../Components/main-projects-section/main-projects-section';
+import MainProjectsSection from './Components/MainProjects';
 import Testimonials from '../../Components/testimonials/Testimonials';
-import Contact from '../../Components/contact/Contact';
+import Contact from './Components/Contact';
 import WriteMe from '../../Components/write-me/Writeme';
 
-
-// import LandingPage from '../../Components/landing_page/landing_page';
-// import BackgroundSection from '../../Components/background-section/background-section';
 
 function Home() {
 
@@ -45,13 +41,9 @@ function Home() {
             
             <LandingPage/>
             
-            <BackgroundSection screenDevice = {screenDevice} />
-       
-
-       
-            <MainProjectsSection />
-
-            <Contact />
+            <BackgroundSection screenDevice={screenDevice} />
+            <MainProjectsSection screenDevice={screenDevice} />
+            <Contact screenDevice={screenDevice}/>
              {/* 
             <Parallax translateY={['-150px', '300px']}>
                 <MainProjectsSection />

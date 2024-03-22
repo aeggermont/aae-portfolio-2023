@@ -1,0 +1,253 @@
+@import "../../../scss/variables.scss";
+
+@media #{$xs}, #{$sm} {
+    .contact-section {
+        padding-top: 3rem;
+        margin-left: 2rem;
+        //margin-bottom: 50px;
+    
+        .section-title {
+           margin-bottom: 30px;
+        }
+  
+        .contact-form-container {
+           width: 100%;
+           display: flex;
+           flex-direction: column;
+           align-items:flex-start;
+           align-content: flex-start; 
+ 
+            span {
+                margin-bottom: 30px;
+                font-weight: 800;
+                font-size: 1.5rem;
+                color: #074C5F;
+                font-family: $defaultFont;
+            }
+
+            p {
+                width: 90%;
+                padding-left: 1rem;
+                font-weight: 400;
+                font-size: 1rem;
+                color: #074C5F;
+                font-family: $defaultFont;
+            }
+           
+            .form-field {
+                 padding: 1rem;
+                 padding-left: 1rem;
+            }
+ 
+            .form-field-submit {
+                 padding: 1rem;
+                 padding-left: 1rem;
+                 text-align: center;
+             }
+ 
+             .contactme-container {
+                 width: 100%;
+                 padding-top: 2rem;
+                 display: flex;
+                 flex-direction: column;
+ 
+                 span {
+                     margin-bottom: 1rem;
+                     font-weight: 800;
+                     font-size: 1.5rem;
+                     color: #074C5F;
+                     font-family: $defaultFont;
+                     padding-bottom: 1rem;
+                 }
+ 
+                 .contact-item {
+                     font-weight: 500;
+                     font-size: 1rem;
+                     color: #074C5F;
+                     font-family: $defaultFont;
+                     padding-left: 0.5rem;
+                 }
+ 
+                 .contact-row {
+                     padding-bottom: 1.2rem;
+                     padding-left: 2rem;
+                 }
+             }
+        }
+    }
+}
+
+@media #{$md}, #{$lg}{
+    .contact-section {
+        padding-top: 1rem;
+        margin-left: 1rem;    
+        .section-title {
+           margin-bottom: 30px;
+        }
+  
+        .contact-form-container {
+           width: 100%;
+           display: flex;
+           flex-direction: row;
+ 
+             .writeme-container {
+                 width: 50%;
+                 display: flex;
+                 flex-direction: column;
+                 align-items:flex-start;
+                 align-content: flex-start; 
+
+                 span {
+                     margin-bottom: 30px;
+                     font-weight: 800;
+                     font-size: 2rem;
+                     color: #074C5F;
+                     font-family: $defaultFont;
+                     padding-bottom: 1rem;
+                 }
+ 
+                 p {
+                     width: 90%;
+                     padding-left: 1rem;
+                     font-weight: 400;
+                     font-size: 1.2rem;
+                     color: #074C5F;
+                     font-family: $defaultFont;
+                 }
+             }
+ 
+             .writeme-container .form-field {
+                 padding: 1rem;
+                 padding-left: 1rem;
+             }
+ 
+             .writeme-container .form-field-submit {
+                 padding: 1rem;
+                 padding-left: 1rem;
+                 text-align: center;
+             }
+ 
+             .contactme-container {
+                 width: 50%;
+                 padding-left: 2rem;
+                 display: flex;
+                 flex-direction: column;
+ 
+                 span {
+                     margin-bottom: 30px;
+                     font-weight: 800;
+                     font-size: 2.2rem;
+                     color: #074C5F;
+                     font-family: $defaultFont;
+                     padding-bottom: 1rem;
+                 }
+ 
+                 .contact-item {
+                     font-weight: 500;
+                     font-size: 1rem;
+                     color: #074C5F;
+                     font-family: $defaultFont;
+                     padding-left: 0.5rem;
+                 }
+
+                 .contact-item-linkedin {
+                    font-weight: 500;
+                    font-size: 1rem;
+                    color: #074C5F;
+                    font-family: $defaultFont;
+                    padding-left: 0.5rem;
+                 }
+ 
+                 .contact-row {
+                     padding-bottom: 1.2rem;
+                     padding-left: 2rem;
+
+                 }
+             }
+        }
+    }
+}
+
+@media #{$desktop}{
+    .contact-section {
+       padding-top: 8rem;
+       margin-left: 5rem;
+       margin-bottom: 50px;
+   
+       .section-title {
+          margin-bottom: 30px;
+       }
+ 
+       .contact-form-container {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+
+            .writeme-container {
+                width: 60%;
+                display: flex;
+                flex-direction: column;
+                align-items:flex-start;
+                align-content: flex-start; 
+                
+                span {
+                    margin-bottom: 30px;
+                    font-weight: 800;
+                    font-size: 2rem;
+                    color: #074C5F;
+                    font-family: $defaultFont;
+                    padding-bottom: 2rem;
+                }
+
+                p {
+                    width: 90%;
+                    padding-left: 2rem;
+                    font-weight: 400;
+                    font-size: 1.5rem;
+                    color: #074C5F;
+                    font-family: $defaultFont;
+                }
+            }
+
+            .writeme-container .form-field {
+                padding: 1rem;
+                padding-left: 2rem;
+            }
+
+            .writeme-container .form-field-submit {
+                padding: 1rem;
+                padding-left: 2rem;
+                text-align: center;
+            }
+
+            .contactme-container {
+                width: 40%;
+                padding-left: 2rem;
+                display: flex;
+                flex-direction: column;
+
+                span {
+                    margin-bottom: 30px;
+                    font-weight: 800;
+                    font-size: 2.2rem;
+                    color: #074C5F;
+                    font-family: $defaultFont;
+                    padding-bottom: 2rem;
+                }
+
+                .contact-item {
+                    font-weight: 500;
+                    font-size: 1rem;
+                    color: #074C5F;
+                    font-family: $defaultFont;
+                    padding-left: 1rem;
+                }
+
+                .contact-row {
+                    padding-bottom: 1.2rem;
+                    padding-left: 2rem;
+                }
+            }
+       }
+   }
+}
