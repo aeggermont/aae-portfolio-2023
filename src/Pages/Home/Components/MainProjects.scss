@@ -1,0 +1,90 @@
+@import "../../../scss/variables.scss";
+
+
+.react-multi-carousel-track  {
+    padding-bottom: 60px !important;
+
+}
+
+@media #{$sm}, #{$xs} {
+    .latest-projects-section {
+       padding-left: 5%;
+       padding-right: 5%;
+       margin-bottom: 30px;
+       width: 390px;
+       .carousel-container {
+            margin-left: 1rem;
+            padding-top: 0.5rem;
+        }
+
+       .section-title {
+           margin-bottom: 40px;
+       }
+ 
+       .section-title-label {
+        text-align: left;
+           margin-bottom: 30px;
+           font-weight: 800;
+           font-size: 24px;
+           color: #074C5F;
+           font-family: $defaultFont;
+        }
+    }
+ }
+ 
+
+ @media #{$lg}, #{$md}{
+    .latest-projects-section {
+        padding: 3rem;
+        .carousel-container {
+            width: 98%;
+            display: flex;
+            margin-left: 1rem;
+            padding-top: 1rem;
+        }
+        
+       .section-title {
+           margin-bottom: 40px;
+
+           .section-title-label {
+            margin-bottom: 30px;
+            font-weight: 800;
+            font-size: 2rem;
+            color: #074C5F;
+            font-family: $defaultFont;
+         }
+       }
+ 
+     
+    }
+ }
+
+ @media #{$desktop}{
+  
+    .latest-projects-section {
+       // background-color: blue;
+       padding-top: 5rem;
+       margin-left: 40px;
+       margin-bottom: 30px;
+        
+       .carousel-container {
+            width: 98%;
+            display: flex;
+            margin-left: 1rem;
+            padding-top: 1rem;
+        }
+    
+       .section-title {
+           margin-bottom: 40px;
+       }
+ 
+       .section-title-label {
+           margin-bottom: 30px;
+           font-weight: 800;
+           font-size: 32px;
+           color: #074C5F;
+           font-size: 2.3rem;
+           font-family: $defaultFont;
+        }
+    }
+ }
