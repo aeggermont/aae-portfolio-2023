@@ -1,5 +1,6 @@
-$desktop-font-size: 2.2rem;
+@import "../../scss/variables.scss";
 
+$desktop-font-size: 2.2rem;
 $desktop-sectiontitle-fontsize: 2.2rem;
 $desktop-sectiontitle-fontweight: 800;
 $desktop-sectiontitle-fontcolor: #022c38;
@@ -46,7 +47,7 @@ $smsx-paragraph-fontweight: 400;
         font-size: 2rem;
         font-weight: 700;
         line-height: 1;
-        color: #022c38;
+        color: #074C5F;
     }
 
     .aae-about .info p {
@@ -76,9 +77,6 @@ $smsx-paragraph-fontweight: 400;
           color: #fff;
         }
     }
-    
-    
-
 
     .aae-about .info {
         width: 100%;
@@ -265,41 +263,6 @@ $smsx-paragraph-fontweight: 400;
         }
     }
 
-    /*
-    .aae-about .personal-info {
-        width: 100%;
-        padding-bottom: 3rem;
-
-        h3 {
-            font-size: 2rem;
-            font-weight: 600;
-            color: #022c38;
-            text-align: center;
-        }
-
-
-        .section-info {
-            padding-left: 1rem;
-            width: 100%;            
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            justify-content: flex-start;
-
-            .item {
-                width: 49%;
-                font-size: 1rem;
-                font-weight: 500;
-                padding-top: 1.5rem;
-            }
-
-            .item .labelcolor {
-                color: aqua;
-            }
-        }               
-    }*/
-
-
     .aae-about .qualifications {
         width: 100%;
         float: left;
@@ -340,6 +303,7 @@ $smsx-paragraph-fontweight: 400;
     .aae-about .about-title {
         width: 100%;
         text-align: center;
+
     }
     
     .about-title h3 {
@@ -347,6 +311,16 @@ $smsx-paragraph-fontweight: 400;
         font-weight: 700;
         line-height: 1;
         color: #022c38;
+        font-family: $defaultFont;
+    }
+
+    .aae-about .welcome {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1;
+        color: #022c38;
+        font-family: $defaultFont;
+       
     }
     
     .aae-about .color {
@@ -365,11 +339,22 @@ $smsx-paragraph-fontweight: 400;
         }
     }
     
+    .aae-about .intro-container {
+        display: flex;
+        flex-direction: row;
+        padding-top: 10rem;
+        
+        .intro-desc {
+            padding-left: 3rem;
+        }
+
+    }
+
     .aae-about .content {
         width: 100%;
         height: auto;
         clear: both;
-        display: flex;
+        //display: flex;
         padding-top: 60px;
     }
 
@@ -377,6 +362,7 @@ $smsx-paragraph-fontweight: 400;
         width: 100%;
         float: left;
         margin-bottom: 55px;
+        padding-top: 3rem;
     }
     
     .aae-about .info h3 {
@@ -384,51 +370,57 @@ $smsx-paragraph-fontweight: 400;
         font-weight: 500;
         margin-bottom: 2.5rem;
         color: #022c38;
+        font-family: $defaultFont;
     }
     
-    .aae-about .info h3 span {
+    .aae-about .info span {
         font-weight: 600;
+        font-family: $defaultFont;
         color: #022c38;
+        font-size: 1.5rem;
     }
     
     .aae-about .info p {
         max-width: 90%;
         font-weight: 500;
-        font-size: 1.5rem;
+        font-family: $defaultFont;
+        font-size: 1.6rem;
     }
 
   
     .personal-info {    
         padding-bottom: 3rem;
+        padding-left: 2rem;
         h3 {
             font-size: 2.5rem;
             font-weight: 800;
             color: #022c38;
-            text-align: center; 
+            text-align: left; 
         }
 
         .section-info-container {
             width: 100%;
+            padding-top: 4rem;
             .section-info {
                 padding-left: 3rem;
                 width: 100%;            
                 display: flex;
                 flex-direction: row;
                 flex-wrap: nowrap;
-                justify-content: center;
+                justify-content: left;
 
                 .item {
                     padding-left: 5%;
-                    width: 40%;
-                    font-size: 1.3rem;
+                    width: 45%;
+                    font-size: 1.5rem;
                     font-weight: 500;
                     padding-top: 1.5rem;
                 }
 
                 .item2 {
                     padding-left: 5%;
-                    width: 40%;
-                    font-size: 1.3rem;
+                    width: 48%;
+                    font-size: 1.5rem;
                     font-weight: 500;
                     padding-top: 1.5rem;
                 }
@@ -445,13 +437,15 @@ $smsx-paragraph-fontweight: 400;
         width: 100%;
         float: left;
         margin-top: 3%;
+        padding-left: 2rem;
+        padding-top: 5rem;
     }
     
     .aae-about .qualifications .title {
         font-size: 2.2rem;
         font-weight: 800;
         margin-bottom: 15px;
-        text-align: center;
+        text-align: left;
         color: #022c38;
     }
     
@@ -459,6 +453,7 @@ $smsx-paragraph-fontweight: 400;
         width: 100%;
         display: flex;
         padding-top: 40px;
+        padding-left: 2rem;
         flex-wrap: wrap;
         margin: 0 -20px 10px;
     }

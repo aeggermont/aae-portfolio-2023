@@ -9,7 +9,7 @@ import {
 import { Link, Route, Routes, useParams, useLocation } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import AboutMe from './Pages/About/AboutMe';
-import MyWork from './Components/my-work/my-work';
+import MyWork from './Pages/MyWork/MyWork';
 import Contact from './Pages/contact/contact';
 import Project1 from './Components/my-work/projects/project-1/Project1';
 import Project2 from './Components/my-work/projects/project-2/Project2';
