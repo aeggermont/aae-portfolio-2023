@@ -6,13 +6,17 @@ import HarvardLogo from './images/harvard-logo.jpeg';
 import SonyLogo from './images/sony_pictures_imageworks_logo.jpeg';
 import EmersonLogo from './images/emerson_college_logo.jpeg';
 import UWLogo from './images/university_of_washington_logo.jpeg';
+import AAEPhoto from './images/AAEPhoto.jpeg';
 
 const AboutData  =  {
   pageTitle: "About Me",
   pageWelcome: "Hello, I'm Antonio",
+  profilePhoto: AAEPhoto,
   pageParagraphs: [
-    " I am a full stack applications developer and UX engineer with experience in Web development, AI/ML, data science visualizations, and digital media production. ",
-    " My interests are interaction design and prototyping of user experiences and user interfaces, Human Centered Design, Web applications development, back-end Web services, content management systems, CDN integrations, and analytics applications. "
+    "I am a full stack designer and application software developer with a multidisciplinary background. I design and engineer experiences from inception to completion, and adopt emerging technologies through Human - Centered Design methodologies.",
+    "My multidisciplinary background has allowed me to lead and contribute in projects and products that range from frontend development, UX/UI design and engineering, ML driven apps,  architecting of backend services,  and content management systems. ",
+    "My professional experience has been in working in the technology and entertainment industries as well as in higher education.  My portfolio of work includes design and development of interactive applications for  business intelligence and Web publishing, augmented reality, AI/ML data driven applications, and automation of processes with interactive applications. ",
+    "I have always been a creative engineer and designer. I have a passion for learning new trends in innovative design and emerging technologies for the building of human empathetic applications."
   ],
   skills: {
     design: [
