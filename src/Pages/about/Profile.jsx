@@ -203,7 +203,7 @@ function Profile(props) {
                                     style = {{
                                         width: '24rem',
                                         height: '24rem',
-                                        paddingTop: '1px',
+                                        marginTop: '3rem',
                                         borderRadius: '1rem'
                                     }}
                                 />
@@ -214,9 +214,10 @@ function Profile(props) {
                                         className="info">
                                         {
                                             AboutMeData.pageParagraphs.map ( paragraph => (
-                                                <p data-aos="fade-up"
-                                                    data-aos-delay="50"
-                                                    data-aos-duration="500"
+                                                <p 
+                                                   data-aos="fade-up"
+                                                   data-aos-delay="50"
+                                                   data-aos-duration="500"
                                                 > {paragraph} </p>
                                             ))
                                         }
