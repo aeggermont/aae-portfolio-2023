@@ -34,6 +34,7 @@ function Contact(props) {
     if (  screenDevice.desktop ) {
         return (
             <section className='container'>
+                <a href="#hey"> </a>
                 <div className='contact-section'>
                     <div className='contact-form-container'>
                         <div className='writeme-container'>

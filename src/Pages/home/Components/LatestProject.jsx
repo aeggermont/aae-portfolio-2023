@@ -45,8 +45,8 @@ function LatestProject(props) {
                         justifyContent: 'center',
                         alignContent: 'center',
                         textAlign: 'center',
-                        fontSize: { xs: "1.1rem", sm: "1.2rem", md: "1.5rem", lg: "1.5rem"},
-                        fontWeight: { xs: "550", sm: "500", md: "500", lg: "500"},
+                        fontSize: { xs: "1.1rem", sm: "1.2rem", md: "1.3rem", lg: "1.3rem"},
+                        fontWeight: { xs: "550", sm: "500", md: "600", lg: "600"},
                         fontFamily: "Poppins , sans-serif",
                         color: "#011114"
                         }}>
@@ -58,7 +58,7 @@ function LatestProject(props) {
                         display: 'flex',
                         height: { xs: "10rem", sm: "10rem", md: "10rem", lg: "14rem"},
                         alignItems: 'top',
-                        fontSize: { xs: "1rem", sm: "1rem", md: "1.1rem", lg: "1.1rem"},
+                        fontSize: { xs: "1rem", sm: "1rem", md: "1rem", lg: "1rem"},
                         fontWeight: { xs: "400", sm: "400", md: "400", lg: "400"},
                         fontFamily: "Poppins , sans-serif",
                         }}>

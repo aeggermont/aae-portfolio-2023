@@ -297,7 +297,7 @@ $smsx-paragraph-fontweight: 400;
         clear: both;
         float: left;
         padding-bottom: 170px;
-        padding-top: 120px;
+        padding-top: 5rem;
     }
     
     .aae-about .about-title {
@@ -315,7 +315,7 @@ $smsx-paragraph-fontweight: 400;
     }
 
     .aae-about .welcome {
-        font-size: 1.6rem;
+        font-size: 1.2rem;
         font-weight: 600;
         line-height: 1;
         color: #022c38;
@@ -342,9 +342,10 @@ $smsx-paragraph-fontweight: 400;
     .aae-about .intro-container {
         display: flex;
         flex-direction: row;
-        padding-top: 10rem;
+        padding-top: 4rem;
         
         .intro-desc {
+            padding-top: 0rem;
             padding-left: 3rem;
         }
 
@@ -362,7 +363,7 @@ $smsx-paragraph-fontweight: 400;
         width: 100%;
         float: left;
         margin-bottom: 55px;
-        padding-top: 3rem;
+        padding-top: 1.2rem;
     }
     
     .aae-about .info h3 {
@@ -382,9 +383,9 @@ $smsx-paragraph-fontweight: 400;
     
     .aae-about .info p {
         max-width: 90%;
-        font-weight: 500;
+        font-weight: 400;
         font-family: $defaultFont;
-        font-size: 1.6rem;
+        font-size: 1.2rem;
     }
 
   
@@ -400,7 +401,7 @@ $smsx-paragraph-fontweight: 400;
 
         .section-info-container {
             width: 100%;
-            padding-top: 4rem;
+            padding-top: 2rem;
             .section-info {
                 padding-left: 3rem;
                 width: 100%;            
@@ -412,17 +413,17 @@ $smsx-paragraph-fontweight: 400;
                 .item {
                     padding-left: 5%;
                     width: 45%;
-                    font-size: 1.5rem;
+                    font-size: 1.2rem;
                     font-weight: 500;
-                    padding-top: 1.5rem;
+                    padding-top: 1rem;
                 }
 
                 .item2 {
                     padding-left: 5%;
                     width: 48%;
-                    font-size: 1.5rem;
+                    font-size: 1.2rem;
                     font-weight: 500;
-                    padding-top: 1.5rem;
+                    padding-top: 1rem;
                 }
 
                 .item span {

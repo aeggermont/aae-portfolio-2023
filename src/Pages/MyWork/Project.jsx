@@ -95,15 +95,15 @@ function Project (props) {
                     <div className="flip-card-front">
                         <Card 
                             sx={{ 
-                                width: 385,
-                                height: 261,
+                                width: 345,
+                                height: 221,
                                 '--Card-padding': '0px', 
                             }}> 
                                 <CardMedia
                                     sx={{
                                         objectFit: 'cover',
-                                        width: 385,
-                                        height: 261
+                                        width: 345,
+                                        height: 221
                                     }}
                                     component="img"
                                     image={thumbnailImg}
@@ -122,7 +122,7 @@ function Project (props) {
                                             m: 1,
                                             width: '100%',
                                           },
-                                        bgcolor: 'rgba(0, 0, 0, 0.30)',
+                                        bgcolor: 'rgba(0, 0, 0, 0.20)',
                                         color: 'white',
                                         padding: '10px' }}>
                                     <div>
@@ -137,8 +137,8 @@ function Project (props) {
                     <div className="flip-card-back">
                         <Card
                             sx={{ 
-                                width: 385,
-                                height: 261,
+                                width: 345,
+                                height: 221,
                                 backgroundColor:  'rgba(0, 0, 0, 0.05)',
                                 '--Card-padding': '0px', 
                             }}>
@@ -156,7 +156,7 @@ function Project (props) {
                                         <Typography 
                                             sx={{  
                                                 fontFamily: "'Poppins', sans-serif",
-                                                fontSize: '1.1rem',
+                                                fontSize: '0.9rem',
                                                 fontWeight: '400'
                                             }}
                                         variant="body2" color="text.secondary">
