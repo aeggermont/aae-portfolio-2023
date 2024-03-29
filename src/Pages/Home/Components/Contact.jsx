@@ -44,7 +44,7 @@ function Contact(props) {
                                 <div className='form-field'>
                                     <TextField
                                     sx={{
-                                        width: '450px',
+                                        width: '32rem',
                                     }}
                                     required
                                     id="outlined-required"
@@ -58,7 +58,7 @@ function Contact(props) {
                                 <TextField
                                         required
                                         sx={{
-                                            width: '450px',
+                                            width: '32rem',
                                         }}
                                         id="outlined-required"
                                         label="Your email"
@@ -75,7 +75,7 @@ function Contact(props) {
                                             rows={4}
                                             
                                             sx={{
-                                                width: '450px',
+                                                width: '32rem',
                                             }}
                                             id="outlined-required"
                                             label="Your message"
@@ -111,7 +111,7 @@ function Contact(props) {
                             <form  onSubmit={handleSubmit}>
                                 <div className='form-field'>
                                     <TextField
-                                    sx={{ width: '300px' }}
+                                    sx={{ width: '21rem' }}
                                     required
                                     id="outlined-required"
                                     label="Your name"
@@ -123,7 +123,7 @@ function Contact(props) {
                                 <div className='form-field'>
                                 <TextField
                                         required
-                                        sx={{ width: '300px'}}
+                                        sx={{ width: '21rem'}}
                                         id="outlined-required"
                                         label="Your email"
                                         type="email"
@@ -137,7 +137,7 @@ function Contact(props) {
                                             required
                                             multiline
                                             rows={4}
-                                            sx={{ width: '300px'}}
+                                            sx={{ width: '21rem'}}
                                             id="outlined-required"
                                             label="Your message"
                                             defaultValue=""
@@ -169,12 +169,13 @@ function Contact(props) {
             <section className='container'>
                 <div className='contact-section'>
                     <div className='contact-form-container'>
-                        <span> Write Me </span>
+                        <div className='section-title'> <span> Write Me </span></div>
+                        
                         <p> I´m always open to discussing exploring new projects, developments, and partnerships.</p>               
                         <form  onSubmit={handleSubmit}>
                             <div className='form-field'>
                                 <TextField
-                                sx={{ width: '300px' }}
+                                sx={{ width: '20rem' }}
                                 required
                                 id="outlined-required"
                                 label="Your name"
@@ -186,7 +187,7 @@ function Contact(props) {
                             <div className='form-field'>
                             <TextField
                                     required
-                                    sx={{ width: '300px'}}
+                                    sx={{ width: '20rem'}}
                                     id="outlined-required"
                                     label="Your email"
                                     type="email"
@@ -200,7 +201,7 @@ function Contact(props) {
                                         required
                                         multiline
                                         rows={4}
-                                        sx={{ width: '300px'}}
+                                        sx={{ width: '20rem'}}
                                         id="outlined-required"
                                         label="Your message"
                                         defaultValue=""
@@ -213,7 +214,7 @@ function Contact(props) {
                             </div>
                         </form>
                         <div className='contactme-container'>
-                            <span>Contact Me</span>
+                            <div className='section-title'> <span>Contact Me</span> </div>
                             <div className='contact-row'> <PhoneIphoneIcon sx={{ color: '#02232c' }} style={{ fontSize: 25 }} /> <span className='contact-item'> USA: +206 556 8918</span> </div>
                             <div className='contact-row'> <PhoneIphoneIcon sx={{ color: '#02232c' }} style={{ fontSize: 25 }} /> <span className='contact-item'> Mexico: +52 55 36 71 57 12</span> </div>
                             <div className='contact-row'> <AlternateEmailIcon sx={{ color: '#02232c' }} style={{ fontSize: 25 }}/> <span className='contact-item'> aaeggermont@outlook.com</span> </div>

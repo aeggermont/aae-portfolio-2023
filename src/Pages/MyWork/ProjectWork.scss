@@ -17,6 +17,7 @@
             font-weight: 700;
             line-height: 1;
             color: #074C5F;
+            font-family: $defaultFont;
         }
 
         .portfolio-main-summary {
@@ -30,17 +31,23 @@
 
 @media #{$lg},  #{$md} {
     .portfolio-header-area {
+        width: 100%;
+        height: auto;
 		position: relative;	
-		margin-top: 100px;
-        padding-left: 30px;
-        padding-right: 30px;
+		padding-top: 7rem;
+        padding-bottom: 11rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
        
         .portfolio-main-header {
-            margin-top: 150px;
+          
             text-align: center;
             display: block;
-			font-size: 36px;
+			font-size: 2.2rem;
+            color: #022c38;
+            font-weight: 700;
             margin-bottom: 50px;
+            font-family: $defaultFont;
 
         }
 
@@ -61,16 +68,16 @@
         align-items: center;
         align-content: center;
         justify-content: center;
-        
-        // background-color: chartreuse;
-       
+        padding-top: 9rem;
+
         .portfolio-main-header {
             display: flex;
-            margin-top: 150px;
+            font-family: $defaultFont;
             text-align: center;
-			font-size: 36px;
+			font-size: 3rem;
+            font-weight: 700;
+            color: #022c38;
             margin-bottom: 50px;
-            max-width: 1075px;
         }
 
         .portfolio-main-summary {
@@ -82,6 +89,7 @@
             justify-content: center;
             text-align: left;
 			font-size: 24px;
+            font-family: $defaultFont;
         }
     }
 }
@@ -119,8 +127,7 @@
             justify-content: center;
 
             .project {
-                padding: 20px;
-
+                padding: 10px;
             }
         }
     }
