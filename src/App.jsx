@@ -10,7 +10,7 @@ import { Link, Route, Routes, useParams, useLocation } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import AboutMe from './Pages/About/AboutMe';
 import MyWork from './Pages/MyWork/MyWork';
-import Contact from './Pages/contact/contact';
+import ContactPage from './Pages/Contact/ContactPage';
 import Project1 from './Components/my-work/projects/project-1/Project1';
 import Project2 from './Components/my-work/projects/project-2/Project2';
 import Project3 from './Components/my-work/projects/project-3/Project3';
@@ -51,7 +51,7 @@ function App() {
             
             <Route 
               path="/contact" 
-              element={<Contact />}/> 
+              element={<ContactPage />}/> 
 
             <Route
               path="/mywork/projects/project-4"
