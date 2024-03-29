@@ -14,15 +14,17 @@
            width: 100%;
            display: flex;
            flex-direction: column;
-           align-items:flex-start;
            align-content: flex-start; 
  
-            span {
-                margin-bottom: 30px;
-                font-weight: 800;
-                font-size: 1.5rem;
-                color: #074C5F;
-                font-family: $defaultFont;
+            .section-title {
+                text-align: center;                
+                span {
+                    margin-bottom: 30px;
+                    font-weight: 800;
+                    font-size: 1.7rem;
+                    color: #074C5F;
+                    font-family: $defaultFont;
+                }
             }
 
             p {
@@ -33,7 +35,7 @@
                 color: #074C5F;
                 font-family: $defaultFont;
             }
-           
+
             .form-field {
                  padding: 1rem;
                  padding-left: 1rem;
@@ -43,36 +45,40 @@
                  padding: 1rem;
                  padding-left: 1rem;
                  text-align: center;
-             }
+            }
  
-             .contactme-container {
-                 width: 100%;
-                 padding-top: 2rem;
-                 display: flex;
-                 flex-direction: column;
- 
-                 span {
-                     margin-bottom: 1rem;
-                     font-weight: 800;
-                     font-size: 1.5rem;
-                     color: #074C5F;
-                     font-family: $defaultFont;
-                     padding-bottom: 1rem;
-                 }
- 
-                 .contact-item {
-                     font-weight: 500;
-                     font-size: 1rem;
-                     color: #074C5F;
-                     font-family: $defaultFont;
-                     padding-left: 0.5rem;
-                 }
- 
-                 .contact-row {
-                     padding-bottom: 1.2rem;
-                     padding-left: 2rem;
-                 }
-             }
+            .contactme-container {
+                width: 100%;
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+                display: flex;
+                flex-direction: column;
+
+            .section-title {
+                text-align: center;
+                span {
+                    margin-bottom: 1rem;
+                    font-weight: 800;
+                    font-size: 1.7rem;
+                    color: #074C5F;
+                    font-family: $defaultFont;
+                    padding-bottom: 1rem;
+                }
+            }
+
+                .contact-item {
+                    font-weight: 500;
+                    font-size: 1rem;
+                    color: #074C5F;
+                    font-family: $defaultFont;
+                    padding-left: 0.5rem;
+                }
+
+                .contact-row {
+                    padding-bottom: 1.2rem;
+                    padding-left: 2rem;
+                }
+            }
         }
     }
 }
@@ -80,7 +86,7 @@
 @media #{$md}, #{$lg}{
     .contact-section {
         padding-top: 1rem;
-        margin-left: 1rem;    
+        margin-left: 0rem;    
         .section-title {
            margin-bottom: 30px;
         }
@@ -100,7 +106,7 @@
                  span {
                      margin-bottom: 30px;
                      font-weight: 800;
-                     font-size: 2.2rem;
+                     font-size: 2rem;
                      color: #074C5F;
                      font-family: $defaultFont;
                      padding-bottom: 1rem;
@@ -136,7 +142,7 @@
                  span {
                      margin-bottom: 30px;
                      font-weight: 800;
-                     font-size: 2.2rem;
+                     font-size: 2rem;
                      color: #074C5F;
                      font-family: $defaultFont;
                      padding-bottom: 1rem;

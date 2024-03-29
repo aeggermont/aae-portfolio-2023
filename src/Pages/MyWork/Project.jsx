@@ -182,8 +182,12 @@ function Project (props) {
     }
   
     if ( screenDevice.desktop ) {
-        return mdlgDesktopView();
         
+        return mdlgDesktopView();
+
+    } else if (  screenDevice.md || screenDevice.lg ) {
+
+        return mdlgDesktopView();
     } else if (  screenDevice.xs || screenDevice.sm  ) {
 
         return smsxView();
