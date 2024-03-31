@@ -4,6 +4,7 @@ import "./header.scss";
 import { FaTimes} from "react-icons/fa";
 import siteLogo from  "../../assets/logos/AAELogo.png";
 
+
 function Header() {
     const [toggleMobileMenu, setToggleMobileMenu] = useState(false);
 
@@ -23,7 +24,7 @@ function Header() {
                             <div className="row align-items-center">
                                 <div className="col-6">
                                     <div className="brand_logo">
-                                       <img src={siteLogo}  alt="site logo"/>
+                                       <img src={siteLogo}  alt="Antonio Aranda Eggermont"/>
                                     </div>
                                 </div>
                                 <div className="col-6">
