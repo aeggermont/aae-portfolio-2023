@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import "./Footer.scss";
 import IconButton from '@mui/material/IconButton';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { NavLink } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 import siteLogo from  "../../assets/logos/AAELogo.png";
@@ -23,7 +24,7 @@ function Footer(props) {
     return (
         <div className="container" >
 
-            <div className="footer-container"  style={{ backgroundImage: `url("images/footer-background.svg")`, backgroundRepeat: 'no-repeat' }}>
+            <div className="footer-container" >
                 <div className="logo-section "> 
                     <img src={siteLogo}  alt="Antonio Aranda Eggermont"/>
                     {/*
@@ -36,13 +37,13 @@ function Footer(props) {
                         </IconButton>
                     </div>     */}
                 </div>
-                <div className="copyright-section"> <span> Antonio Aranda Eggermont - All RIghts Serserved </span></div>
+                <div className="copyright-section"> <span> Antonio Aranda Eggermont - All Rights Serserved </span></div>
                 <div className="navigation-section">                 
                     <div className="navigation-title"> Navigation</div>
-                    <span> Home</span>
-                    <span> About Me</span>
-                    <span> My Work</span>
-                    <span> Contact Me</span>
+                    <span> <NavLink exact={true} className={(navData) => (navData.isActive ? "active_link" : 'none')} to="/"> Home </NavLink></span>
+                    <span> <NavLink exact={true} activeClassName="active_link" to="/aboutme"> About Me  </NavLink></span>
+                    <span> <NavLink exact={true} activeClassName="active_link" to="/mywork"> My Work </NavLink></span>
+                    <span> <NavLink exact={true} activeClassName="active_link" to="/contact"> Contact </NavLink></span>
                 </div>
             </div>
         </div>
