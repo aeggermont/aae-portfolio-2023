@@ -42,8 +42,8 @@ function Header() {
                             <div className="close_icon" onClick={closeMenu}>
                                 <a href="#" className="close_btn"><i><FaTimes/></i></a>
                             </div>
-                            <ul className="sidebar-menu">
-                                <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/"> Home </NavLink></li>
+                            <ul className="sidebar-menu">∫∫
+                                <li className="menu-item"><NavLink exact={true} className={(navData) => (navData.isActive ? "active_link" : 'none')} to="/"> Home </NavLink></li>
                                 <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/aboutme"> About Me  </NavLink></li>
                                 <li>
                                         <ul className="sub-menu">
@@ -68,10 +68,10 @@ function Header() {
                                     <div className="primary_menu" id="menu">
                                         <nav className="main_menu">
                                             <ul>
-                                                <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/"> Home </NavLink></li>
-                                                <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/aboutme"> About Me  </NavLink></li>
-                                                <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/mywork"> My Work </NavLink></li>
-                                                <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/contact"> Contact </NavLink></li>
+                                                <li className="menu-item"><NavLink exact={true} className={(navData) => (navData.isActive ? "active_link" : 'none')} to="/"> Home </NavLink></li>
+                                                <li className="menu-item"><NavLink exact={true} className={(navData) => (navData.isActive ? "active_link" : 'none')} to="/aboutme"> About Me  </NavLink></li>
+                                                <li className="menu-item"><NavLink exact={true} className={(navData) => (navData.isActive ? "active_link" : 'none')} to="/mywork"> My Work </NavLink></li>
+                                                <li className="menu-item"><NavLink exact={true} className={(navData) => (navData.isActive ? "active_link" : 'none')} to="/contact"> Contact </NavLink></li>
                                             </ul>
                                         </nav>
                                     </div>
