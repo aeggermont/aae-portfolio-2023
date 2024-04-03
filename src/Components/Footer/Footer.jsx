@@ -6,14 +6,15 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { NavLink } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
-import siteLogo from  "../../assets/logos/AAELogo.png";
+import siteLogo from  "../../assets/logos/AAELogoFooter.png";
+
 import FooterImg from './Footer.png';
 
 function Footer(props) {
     useEffect(() => {
         AOS.init();
         AOS.refresh();
-    }, []);
+    }, []); 
 
     const screenDevice = props.screenDevice;
     
@@ -21,33 +22,50 @@ function Footer(props) {
         window.location.href = 'https://www.linkedin.com/in/antonio-aranda-eggermont-23aa7b8/';
     };
 
-    return (
-        <div className="container" >
-
-            <div className="footer-container" >
-                <div className="logo-section "> 
-                    <img src={siteLogo}  alt="Antonio Aranda Eggermont"/>
-                    {/*
-                    
-
-                    <div class="contact-area">
-                        <IconButton color="primary" aria-label="upload picture" component="label" onClick={handleLinkedIn}>
-                            <input hidden accept="image/*" type="file" />
-                            <LinkedInIcon />
-                        </IconButton>
-                    </div>     */}
-                </div>
-                <div className="copyright-section"> <span> Antonio Aranda Eggermont - All Rights Serserved </span></div>
-                <div className="navigation-section">                 
-                    <div className="navigation-title"> Navigation</div>
-                    <span> <NavLink exact={true} className={(navData) => (navData.isActive ? "active_link" : 'none')} to="/"> Home </NavLink></span>
-                    <span> <NavLink exact={true} activeClassName="active_link" to="/aboutme"> About Me  </NavLink></span>
-                    <span> <NavLink exact={true} activeClassName="active_link" to="/mywork"> My Work </NavLink></span>
-                    <span> <NavLink exact={true} activeClassName="active_link" to="/contact"> Contact </NavLink></span>
+    if ( screenDevice.xs || screenDevice.sm ) {
+        return (
+            <div style={{ paddingTop: "5rem" }}  className="container" >
+                <div className="footer-container" >
+                    <div className="navigation-section">                 
+                        <div className="navigation-title"> Navigation</div>
+                        <span> <NavLink exact={true} className={(navData) => (navData.isActive ? "active_link" : 'none')} to="/"> Home </NavLink></span>
+                        <span> <NavLink exact={true} activeClassName="active_link" to="/aboutme"> About Me  </NavLink></span>
+                        <span> <NavLink exact={true} activeClassName="active_link" to="/mywork"> My Work </NavLink></span>
+                        <span> <NavLink exact={true} activeClassName="active_link" to="/contact"> Contact </NavLink></span>
+                    </div>
+                    <div className="logo-section "> 
+                        <img src={siteLogo}  alt="Antonio Aranda Eggermont"/>
+                    </div>
+                    <div className="copyright-section"> <span> Antonio Aranda Eggermont - All Rights Serserved </span></div>
                 </div>
             </div>
-        </div>
-    );
+        );
+    } else {
+        return (
+            <div className="container" >
+                <div className="footer-container" >
+                    <div className="logo-section "> 
+                        <img src={siteLogo}  alt="Antonio Aranda Eggermont"/>
+                        {/*
+                        <div class="contact-area">
+                            <IconButton color="primary" aria-label="upload picture" component="label" onClick={handleLinkedIn}>
+                                <input hidden accept="image/*" type="file" />
+                                <LinkedInIcon />
+                            </IconButton>
+                        </div>     */}
+                    </div>
+                    <div className="copyright-section"> <span> Antonio Aranda Eggermont - All Rights Serserved </span></div>
+                    <div className="navigation-section">                 
+                        <div className="navigation-title"> Navigation</div>
+                        <span> <NavLink exact={true} className={(navData) => (navData.isActive ? "active_link" : 'none')} to="/"> Home </NavLink></span>
+                        <span> <NavLink exact={true} activeClassName="active_link" to="/aboutme"> About Me  </NavLink></span>
+                        <span> <NavLink exact={true} activeClassName="active_link" to="/mywork"> My Work </NavLink></span>
+                        <span> <NavLink exact={true} activeClassName="active_link" to="/contact"> Contact </NavLink></span>
+                    </div>
+                </div>
+            </div>
+        );
+    }
 }
 
 export default Footer;
