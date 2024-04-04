@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../../Layouts';
-import Profile from './Components/Profile';
+import Profile from './Profile';
 import { useMediaQuery } from 'react-responsive';
 
 function AboutMe() {
