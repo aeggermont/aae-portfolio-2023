@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import './Profile.scss';
-import Experience from "./Experience";
-import Education from "./Education";
-import AboutMeData from "../AboutData";
-import Skills from './skills';
+import Experience from "./Components/Experience";
+import Education from "./Components/Education";
+import AboutMeData from "./AboutData";
+import Skills from './Components/skills';
 import PropTypes from 'prop-types';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
