@@ -45,12 +45,7 @@ function Header() {
                             <ul className="sidebar-menu">∫∫
                                 <li className="menu-item"><NavLink exact={true} className={(navData) => (navData.isActive ? "active_link" : 'none')} to="/"> Home </NavLink></li>
                                 <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/aboutme"> About Me  </NavLink></li>
-                                <li>
-                                        <ul className="sub-menu">
-                                        <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/mywork"> My Work </NavLink></li>
-                                        <li className="menu-item"><a>Skills </a></li>
-                                    </ul>
-                                </li>
+                                <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/mywork"> My Work </NavLink></li>
                                 <li className="menu-item"><NavLink exact={true} activeClassName="active_link" to="/contact"> Contact </NavLink></li>
                             </ul>
                         </div>
