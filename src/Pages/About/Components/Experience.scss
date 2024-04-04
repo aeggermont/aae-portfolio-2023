@@ -1,4 +1,6 @@
-.desktop-education-container {
+@import "../../../scss/variables.scss";
+
+.desktop-experience-container {
     width: 100%;
     height: auto;
     clear: both;
@@ -6,21 +8,20 @@
     padding-bottom: 2rem;
     padding-left: 2rem;
 
-    .education-wrapper {
+    .experience-wrapper {
         width: 100%;
         display: flex;
         flex-direction: row;
         padding: 2rem;
         
-
-        .education-info {
+        .experience-info {
             padding-top: 1rem;
             padding-left: 3rem;
             display: flex;
             flex-direction: column;
         }
         
-        .education-info .period-background {
+        .experience-info .period-background {
             border-radius: 1rem;
             background: #EBEBEB;
             padding: 0.7rem;
@@ -28,104 +29,96 @@
             height: 2.7rem;
             text-align: center;
             font-weight: 700;
-            
         }
 
-        .education-info .degree-title {
+        .experience-info .position-title {
             padding-top: 2rem;
             font-size: 1.5rem;
             font-weight: 800;
             color: #022c38;
-
         }
 
-        .education-info .school-name {
+        .experience-info .company-name {
+            padding-top: 1.5rem;
             padding-left: 0.1rem;
             font-size: 1.5rem;
             font-weight: 600;
             color: #022c38;
-
         }
         
-        .education-info .location {
+        .experience-info .location {
             font-size: 1.5rem;
             font-weight: 600;
             color: #022c38;   
         }
 
-        .education-info p {
+        .experience-info p {
             font-size: 1.2rem;
-        } 
-
+        }
     }
 }
 
-.mdlg-education-container {
- 
+.mdlg-experience-container {
     width: 100%;
     height: auto;
     clear: both;
     float: left;
     padding-bottom: 2rem;
-    padding-left: 2rem;
-    //background-color: aqua;
+    margin-left: 2rem;
+    margin-right: 2rem;
 
-    .education-wrapper {
+    .experience-wrapper {
         width: 100%;
         display: flex;
         flex-direction: row;
         padding: 1rem;
         
-
-        .education-info {
+        .experience-info {
             padding-top: 1rem;
             padding-left: 3rem;
             display: flex;
             flex-direction: column;
         }
         
-        .education-info .period-background {
+        .experience-info .period-background {
             border-radius: 1rem;
             background: #EBEBEB;
             padding: 0.3rem;
             width: 8rem;
             height: 1.6rem;
+            font-size: 0.8rem;
             text-align: center;
             font-weight: 700;
-            
         }
 
-        .education-info .degree-title {
+        .experience-info .position-title {
             padding-top: 2rem;
             font-size: 1.3rem;
             font-weight: 800;
             color: #022c38;
-
         }
 
-        .education-info .school-name {
-            padding-top: 0.1rem;
+        .experience-info .company-name {
+            padding-top: 2rem;
             padding-left: 0.1rem;
             font-size: 1.3rem;
             font-weight: 600;
             color: #022c38;
-
         }
         
-        .education-info .location {
+        .experience-info .location {
             font-size: 1.3rem;
             font-weight: 600;
             color: #022c38;   
         }
 
-        .education-info p {
+        .experience-info p {
             font-size: 1rem;
-        } 
-
+        }
     }
 }
 
-.smsx-education-container {
+.smsx-experience-container {
     width: 100%;
     height: auto;
     clear: both;
@@ -133,7 +126,7 @@
     padding-bottom: 2rem;
     padding-left: 2rem;
 
-    .education-wrapper {
+    .experience-wrapper {
         //width: 100%;
         display: flex;
         flex-direction: column;
@@ -159,7 +152,7 @@
             }
         }
 
-        .education-info {
+        .experience-info {
             padding: 1rem;
             padding-top: 1rem;
             padding-left: 0rem;
@@ -167,31 +160,31 @@
             flex-direction: column;
         }
 
-        .education-info .degree-title {
-            padding-top: 0.5rem;
+        .experience-info .position-title {
+            padding-top: 0.3rem;
             font-size: 1.3rem;
             font-weight: 800;
             color: #022c38;
         }
 
-        .education-info .school-name {
+        .experience-info .company-name {
             padding-top: 0.3rem;
             padding-left: 0.1rem;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: 600;
             color: #022c38;
         }
         
-        .education-info .location {
+        .experience-info .location {
             font-size: 1.3rem;
             padding-bottom: 0.5rem;
             font-weight: 600;
             color: #022c38;   
         }
 
-        .education-info p {
+        .experience-info p {
             font-size: 1rem;
-            padding-bottom: 2.5rem;
+            padding-bottom: 2rem;
         }
     }
 }

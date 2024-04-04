@@ -1,45 +1,40 @@
 import React, { useEffect } from "react";
-import PropTypes from 'prop-types';
-import './Experience.scss';
+import PropTypes from "prop-types";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
+import './Education.scss';
 
-function Experience (props) {
+function Education (props) {
   const data = Array.from(props.data);
   const screenDevice = props.screenDevice;
   useEffect(() => {
     AOS.init();
     AOS.refresh();
   }, []);
-  
-  console.log("Experience DATA ");
-  console.log(data);
 
   const smsxView = () => {
     return (
-      <div className="smsx-experience-container">
+      <div className="smsx-education-container">
           {data.map((val, i) => (
-            <div className="experience-wrapper">
-              <div className="logo-period-section">
-               
-                <img 
-                  src={val.logo}
-                  alt="icon"
-                  style = {{
-                    width: '4.5rem',
-                    height: '4.5rem',
-                    paddingTop: '1px',
-                    borderRadius: '1rem'
-                  }}
-                />
-             
-                <div className="period-background">{val.year} </div>
-              </div>
-
-              <div className="experience-info">
-              
-                <h5 className="position-title"> {val.position} </h5>
-                <span className="company-name"> {val.compnayName}</span>
+            <div className="education-wrapper">
+               <div className="logo-period-section">
+                  <img 
+                    src={val.logo}
+                    alt="icon"
+                    style = {{
+                      width: '5rem',
+                      height: '5rem',
+                      paddingTop: '1px',
+                      borderRadius: '1rem'
+                    }}
+                  />
+                  <div className="period-background">{val.year} </div>
+                </div>
+  
+              <div className="education-info">
+                
+                <h5 className="degree-title"> {val.degree} </h5>
+                <span className="school-name">{val.school}</span>
                 <h5 className="location"> {val.location}</h5>
                 <p>{val.details}</p>
               </div>
@@ -51,9 +46,9 @@ function Experience (props) {
 
   const mdlgView = () => {
     return (
-      <div className="mdlg-experience-container">
+      <div className="mdlg-education-container">
           {data.map((val, i) => (
-            <div className="experience-wrapper">
+            <div className="education-wrapper">
               <img 
                 src={val.logo}
                 alt="icon"
@@ -65,40 +60,10 @@ function Experience (props) {
                 }}
               />
   
-              <div className="experience-info">
+              <div className="education-info">
                 <div className="period-background">{val.year} </div>
-                <h5 className="position-title"> {val.position} <span className="company-name">- {val.compnayName}</span></h5>
-                <h5 className="location"> {val.location}</h5>
-                <p>{val.details}</p>
-              </div>
-            </div>
-          ))}
-      </div>
-    );
-  };
-  
-  const desktopView = () => {
-    return (
-      <div className="desktop-experience-container">
-          {data.map((val, i) => (
-            <div
-              data-aos="fade-up"
-              data-aos-duration="700"
-              className="experience-wrapper">
-              <img 
-                src={val.logo}
-                alt="icon"
-                style = {{
-                  width: '5rem',
-                  height: '5rem',
-                  paddingTop: '1px',
-                  borderRadius: '1rem'
-                }}
-              />
-  
-              <div className="experience-info">
-                <div className="period-background">{val.year} </div>
-                <h5 className="position-title"> {val.position} <span className="company-name">- {val.compnayName}</span></h5>
+                <h5 className="degree-title"> {val.degree} </h5>
+                <span className="school-name">{val.school}</span>
                 <h5 className="location"> {val.location}</h5>
                 <p>{val.details}</p>
               </div>
@@ -108,6 +73,37 @@ function Experience (props) {
     );
   };
 
+  const desktopView = () => {
+    return (
+      <div className="desktop-education-container">
+          {data.map((val, i) => (
+            <div
+              data-aos="fade-up"
+              data-aos-duration="700"
+              className="education-wrapper">
+              <img 
+                src={val.logo}
+                alt="icon"
+                style = {{
+                  width: '5rem',
+                  height: '5rem',
+                  paddingTop: '1px',
+                  borderRadius: '1rem'
+                }}
+              />
+  
+              <div className="education-info">
+                <div className="period-background">{val.year} </div>
+                <h5 className="degree-title"> {val.degree} </h5>
+                <span className="school-name">{val.school}</span>
+                <h5 className="location"> {val.location}</h5>
+                <p>{val.details}</p>
+              </div>
+            </div>
+          ))}
+      </div>
+    );
+  };
 
   if ( screenDevice.laptop ) { 
     return desktopView();
@@ -116,12 +112,33 @@ function Experience (props) {
   } else if ( screenDevice.xs || screenDevice.sm ) {    
     return smsxView();
   }
-  
-};
 
-export default Experience;
+}
 
-Experience.prototype = {
+/*
+const Education = () => {
+  return (
+    <ul>
+      {educationContent.map((val, i) => (
+        <li key={i}>
+          <div className="icon">
+            <img src="img/about/book.png" alt="icon" />
+          </div>
+          <span className="time open-sans-font text-uppercase">{val.year}</span>
+          <h5 className="poppins-font text-uppercase">
+            {val.degree}
+            <span className="place open-sans-font">{val.school}</span>
+          </h5>
+          <p className="open-sans-font">{val.details}</p>
+        </li>
+      ))}
+    </ul>
+  );
+};*/
+
+export default Education;
+
+Education.prototype = {
   data: PropTypes.Array,
   screenDevice: PropTypes.object.isRequired
 }

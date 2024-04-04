@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../../Layouts';
-import Profile from './Profile';
+import Profile from './Components/Profile';
 import { useMediaQuery } from 'react-responsive';
 
 function AboutMe() {
@@ -8,7 +8,7 @@ function AboutMe() {
     const sm = useMediaQuery({ query: 'only screen and (min-width: 576px) and (max-width: 767px)' });
     const md = useMediaQuery({ query: 'only screen and (min-width: 768px) and (max-width: 991px)' });
     const lg = useMediaQuery({ query: 'only screen and (min-width: 992px) and (max-width: 1200px)' });
-    const laptop = useMediaQuery({ query: 'only screen and (min-width: 1200px)' });
+    const desktop = useMediaQuery({ query: 'only screen and (min-width: 1200px)' });
     const isPortrait = useMediaQuery({ query: '(orientation: portrait)' })
     const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' })
 
@@ -19,7 +19,7 @@ function AboutMe() {
         xs: xs,
         md: md,
         lg: lg,
-        laptop: laptop
+        desktop: desktop
     };
 
     return (
