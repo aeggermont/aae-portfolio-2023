@@ -101,11 +101,10 @@ const AboutData  =  {
       location: "Seattle, WA",
       logo: DisneyLogo,
       compnayName: "The Walt Disney Company",
-      details: ` Develops front-end applications and provides technical leadership and mentor ship
-                 to the UI/UX team to adopt best software development practices and modern UI frameworks
-                 for the implementation of Web base interactive dashboards, Web sites, and Web APIs
-                 integrations with back-end databases, Machine Learning systems, and marketing platforms.
-      `,
+      details: `Develops front-end applications and provides technical leadership to a UI team
+                to adopt best software development practices and modern UI frameworks for the implementation of Web 
+                base interactive dashboards, Web sites, and Web APIs integrations with back-end databases,
+                Machine Learning systems, and revenue management systems.`,
     },
     {
       year: "2013 - 2017",
@@ -113,9 +112,9 @@ const AboutData  =  {
       location: "Palo Alto, CA",
       logo: DisneyLogo,
       compnayName: "The Walt Disney Company",
-      details: `Developed Web applications in content management systems and data access systems,ç
-                tools for data exploration, data visualizations, backend services, and proof of
-                concepts to define requirements for data driven workflows.
+      details: `Developed Web applications in content management systems and data access systems, tools
+                for data exploration, data visualizations, backend services, and proof of concepts to
+                define requirements for data driven workflows.
       
       `,
     },
@@ -125,8 +124,10 @@ const AboutData  =  {
       location: "Boston, MA",
       logo: AkamaiLogo,
       compnayName: "Akamai Technologies",
-      details: `Developed web applications and an API for the support of the GNET project which
-                visualizes global traffic patterns among Akamai customers`,
+      details: `Developed web applications and an API for the support of the GNET project which visualizes global
+                traffic patterns among Akamai customers. The GNET project provides with a suite of 3D interactive
+                visualization applications in WebGL to visualize Internet traffic patterns for content delivery,
+                streaming media, firewall web applications, and static media assets storage on Akamai distributed network`,
     },
     {
       year: "2011 - 2012",
@@ -134,8 +135,10 @@ const AboutData  =  {
       location: "San Francisco, CA",
       logo: CBSLogo,
       compnayName: "CBS Corporation",
-      details: `Developed web applications and an API for the support of the GNET project which
-                visualizes global traffic patterns among Akamai customers`,
+      details: `Architecting and implementing workflows for the acquisition, encoding, transcoding, and publishing of video
+                content and metadata from external partners to public sites and CBS video players. Workflow components included
+                a Java API to interface with a external video publisher (thePlatform/MPX ), job schedulers, and
+                a content management system.`,
     },
     {
       year: "2008 - 2010",
@@ -155,11 +158,10 @@ const AboutData  =  {
       location: "Los Angeles, CA",
       logo: SonyLogo,
       compnayName: "Sony Pictures Imageworks",
-      details: `Developed and engineered media file based workflows for the production of
-                stereoscopic imagery. Projects involved developing applications APIs to 
-                extend and implement features for 3D animation, bitmap manipulation, encoding 
-                of media and integration of queuing systems and management controls of
-                high-performance server enclosures for the rendering of stereoscopic imagery.`,
+      details: `Assisted in the technical aspects for the production of the motion picture “Valkyrie”, directed by Bryan Singer. Main
+                projects and activities included visual quality assurance on all outputs before they go to film and prepared daily reports for reviews,
+                processing image conversions from all supported formats at Sony Imageworks for testing and pre-visualization of shots, and 
+                monitoring, troubleshooting and verification for the completion of renders in the rendering queue.`,
     },
     
     {
@@ -168,11 +170,9 @@ const AboutData  =  {
       location: "Cambridge, MA",
       logo: HarvardLogo,
       compnayName: "Harvard University",
-      details: `Developed and engineered media file based workflows for the production of
-                stereoscopic imagery. Projects involved developing applications APIs to 
-                extend and implement features for 3D animation, bitmap manipulation, encoding 
-                of media and integration of queuing systems and management controls of
-                high-performance server enclosures for the rendering of stereoscopic imagery.`,
+      details: `development and integration of an innovative system architecture for the production of digital video
+                and multimedia content for the first distance education project at Harvard University. The project gained
+                national acclaim in the fields of digital video technology, distance education and streaming media`,
     },
   ],
   education: [
