@@ -117,7 +117,7 @@ function Profile(props) {
                                 data-aos="fade-up"
                                 data-aos-duration="1000"
                                 className="about-title">
-                                    <h3> { AboutMeData.pageTitle } </h3>
+                                    <div className="label">  { AboutMeData.pageTitle } </div>
                             </div>
 
                             <div className="intro-container">

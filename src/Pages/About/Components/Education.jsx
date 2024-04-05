@@ -105,7 +105,7 @@ function Education (props) {
     );
   };
 
-  if ( screenDevice.laptop ) { 
+  if ( screenDevice.desktop ) { 
     return desktopView();
   } else if ( screenDevice.md || screenDevice.lg) { 
     return mdlgView();

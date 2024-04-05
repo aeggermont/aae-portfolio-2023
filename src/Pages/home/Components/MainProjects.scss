@@ -35,7 +35,9 @@
 
  @media #{$lg}, #{$md}{
     .latest-projects-section {
-        padding: 3rem;
+         padding-top: 5rem;
+         margin-left: 15px;
+         margin-bottom: 30px;
         .carousel-container {
             width: 98%;
             display: flex;
@@ -48,8 +50,8 @@
 
            .section-title-label {
             margin-bottom: 30px;
-            font-weight: 800;
-            font-size: 2rem;
+            font-weight: 700;
+            font-size: 1.8rem;
             color: #074C5F;
             font-family: $defaultFont;
          }

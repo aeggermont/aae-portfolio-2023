@@ -136,49 +136,51 @@ function MainProjectsSection(props) {
     } else if ( screenDevice.md || screenDevice.lg) {
 
         return(
-            <div className='latest-projects-section'>
-                <div className='section-title'>
-                    <span className='section-title-label'>
-                        Latest Projects
-                    </span>
+            <section className='container'>
+                <div className='latest-projects-section'>
+                    <div className='section-title'>
+                        <span className='section-title-label'>
+                            Latest Projects
+                        </span>
+                    </div>
+                
+                <div className='carousel-container'>
+                        <Carousel
+                                swipeable={true}
+                                draggable={true}
+                                showDots={true}
+                                responsive={responsive}
+                                infinite={false}
+                                autoPlay={false}
+                                arrows={true}
+                                autoPlaySpeed={5000}
+                                keyBoardControl={true}
+                                renderDotsOutside={false}
+                                customTransition="all .5"
+                                partialVisible={false}
+                                transitionDuration={1000}
+                                rewind={true}
+                                containerClass="carousel-container"
+                                removeArrowOnDeviceType={[]}
+                                dotListClass="custom-dot-list-style"
+                                itemClass="carousel-item-padding-40-px"
+                                >
+                                {
+                                    Object.keys(projects).map( project => (
+                                        <div className='project'>
+                                            <LatestProject
+                                                title={projects[project].data().title}
+                                                description={projects[project].data().description}
+                                                thumbnailImg={projects[project].data().thumbnailImg}
+                                                dimensions={cardDimensions}
+                                            />
+                                        </div>
+                                    ))
+                                }
+                        </Carousel>
                 </div>
-               
-               <div className='carousel-container'>
-                    <Carousel
-                            swipeable={true}
-                            draggable={true}
-                            showDots={true}
-                            responsive={responsive}
-                            infinite={false}
-                            autoPlay={false}
-                            arrows={true}
-                            autoPlaySpeed={5000}
-                            keyBoardControl={true}
-                            renderDotsOutside={false}
-                            customTransition="all .5"
-                            partialVisible={false}
-                            transitionDuration={1000}
-                            rewind={true}
-                            containerClass="carousel-container"
-                            removeArrowOnDeviceType={[]}
-                            dotListClass="custom-dot-list-style"
-                            itemClass="carousel-item-padding-40-px"
-                            >
-                            {
-                                Object.keys(projects).map( project => (
-                                    <div className='project'>
-                                        <LatestProject
-                                            title={projects[project].data().title}
-                                            description={projects[project].data().description}
-                                            thumbnailImg={projects[project].data().thumbnailImg}
-                                            dimensions={cardDimensions}
-                                        />
-                                    </div>
-                                ))
-                            }
-                    </Carousel>
-               </div>
-            </div>
+                </div>
+            </section>
         );
     } else if (  screenDevice.desktop ) {
         return (

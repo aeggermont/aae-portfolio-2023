@@ -85,7 +85,8 @@
 
 @media #{$md}, #{$lg}{
     .contact-section {
-        padding-top: 1rem;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
         margin-left: 0rem;    
         .section-title {
            margin-bottom: 30px;
@@ -105,8 +106,8 @@
 
                  span {
                      margin-bottom: 30px;
-                     font-weight: 800;
-                     font-size: 2rem;
+                     font-weight: 700;
+                     font-size: 1.8rem;
                      color: #074C5F;
                      font-family: $defaultFont;
                      padding-bottom: 1rem;
@@ -141,8 +142,8 @@
  
                  span {
                      margin-bottom: 30px;
-                     font-weight: 800;
-                     font-size: 2rem;
+                     font-weight: 700;
+                     font-size: 1.8rem;
                      color: #074C5F;
                      font-family: $defaultFont;
                      padding-bottom: 1rem;
@@ -199,7 +200,7 @@
                 span {
                     margin-bottom: 30px;
                     font-weight: 800;
-                    font-size: 2rem;
+                    font-size: 2.1rem;
                     color: #074C5F;
                     font-family: $defaultFont;
                     padding-bottom: 2rem;
@@ -235,7 +236,7 @@
                 span {
                     margin-bottom: 30px;
                     font-weight: 800;
-                    font-size: 2.2rem;
+                    font-size: 2.1rem;
                     color: #074C5F;
                     font-family: $defaultFont;
                     padding-bottom: 2rem;

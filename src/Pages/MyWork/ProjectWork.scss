@@ -36,16 +36,16 @@
 		position: relative;	
 		padding-top: 7rem;
         padding-bottom: 11rem;
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
        
         .portfolio-main-header {
           
             text-align: center;
             display: block;
-			font-size: 2.2rem;
+			font-size: 2rem;
             color: #022c38;
-            font-weight: 700;
+            font-weight: 800;
             margin-bottom: 50px;
             font-family: $defaultFont;
 
@@ -53,15 +53,15 @@
 
         .portfolio-main-summary {
             text-align: left;
-            display: block;
-			font-size: 24px;
+            //display: block;
+			font-size: 1.2rem;
             //margin-top: 20px;
             // padding: 30px;
         }
     }
 }
 
-@media #{$laptop} {
+@media #{$desktop} {
     .portfolio-header-area {
         display: flex;
         flex-direction: column;
@@ -74,10 +74,11 @@
             display: flex;
             font-family: $defaultFont;
             text-align: center;
-			font-size: 3rem;
+			font-size: 2.2rem;
             font-weight: 700;
             color: #022c38;
             margin-bottom: 50px;
+            
         }
 
         .portfolio-main-summary {
@@ -88,7 +89,7 @@
             align-content: center;
             justify-content: center;
             text-align: left;
-			font-size: 24px;
+			font-size: 1.2rem;
             font-family: $defaultFont;
         }
     }
