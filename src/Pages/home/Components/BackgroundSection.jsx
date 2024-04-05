@@ -23,7 +23,7 @@ function BackgroundSection(props) {
         } else if ( screenDevice.lg || screenDevice.md ) {
             cardDimensions = {
                 width: '158px',
-                height: '180px',
+                height: '190px',
                 isPortraitScr: false
             };
     
