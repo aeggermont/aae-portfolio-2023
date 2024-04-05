@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../Components/header/header';
 import Footer from '../Components/Footer/Footer';
 import { useMediaQuery } from 'react-responsive';
+
 function Index(props) {
 
     const xs = useMediaQuery({ query: '(max-width: 767px)' });
@@ -23,14 +24,14 @@ function Index(props) {
     };
 
     return (
-        <>
+        <div className='app-main-view'>
             
             <Header/>
             {props.children} 
             
             <Footer  screenDevice={screenDevice} /> 
             
-        </>
+        </div>
     )
 }
 
