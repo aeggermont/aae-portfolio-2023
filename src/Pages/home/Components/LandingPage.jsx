@@ -1,11 +1,15 @@
 import React from 'react';
 import bannerPhoto from "../Images/AE-Front-Page-Photo.png";
+import 'aos/dist/aos.css';
 import "./LandingPage.scss";
+import AOS from 'aos';
 import fsReference from '../../../firebase';
 import IconButton from '@mui/material/IconButton';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { useEffect, useState } from 'react';
 import { collection, where, getDoc, onSnapshot, orderBy, query, deleteDoc, doc } from "firebase/firestore";;
+
+
 
 /*
 
@@ -27,6 +31,11 @@ function LandingPage() {
     };
 
     useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+      }, []);
+
+    useEffect(() => {
         const docRef = doc(fsReference, 'main_page', 'headers');
         getDoc(docRef)
             .then((doc) => {
@@ -37,25 +46,40 @@ function LandingPage() {
             .catch(() => setError('error getting document'));
     },[]);
 
+    /*
     if (isLoading) {
         return <p>loading...</p>
     }
 
     if (hasError) {
         return <p>Has error!</p>
-    }
+    }*/
     
     return(
         <section className="main-baner-area">
                 <div className="aae-banner">
-                    <div class="banner-photo">
+                    <div 
+                        class="banner-photo"
+                        data-aos="fade-left"
+                        data-aos-duration="1000"
+                        >
                         <img  src={bannerPhoto} id="banner-image-dimension" alt="Antonio Aranda Eggermont" />   
                     </div>
                     <div className="heading-info">
-                        <div className="sphere-shape"></div> 
-                        <span className="heading-primary-intro"> { headers['header_1'] }</span>
-                        <span className="heading-primary-main"> { headers['header_2'] }</span>
-                        <span className="heading-primary-sub"> { headers['header_3'] }</span>
+                        <div  className="sphere-shape"></div> 
+                        <span 
+                            className="heading-primary-intro"
+                            data-aos="fade-up"
+                            data-aos-duration="1000"> { headers['header_1'] }</span>
+                        <span
+                            className="heading-primary-main"
+                            data-aos="fade-up"
+                            data-aos-duration="1000"> { headers['header_2'] }</span>
+                        <span
+                            className="heading-primary-sub"
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                        > { headers['header_3'] }</span>
                      
                         <div class="contact-area">
                             <IconButton color="primary" aria-label="upload picture" component="label" onClick={handleLinkedIn}>

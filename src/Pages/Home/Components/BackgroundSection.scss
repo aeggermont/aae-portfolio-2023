@@ -2,8 +2,15 @@
 
 @media #{$laptop}{
    
-    .background-section {
-       margin-top: 50px;
+    .background-section-container {
+        margin: 6rem;
+        max-width: 1400px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .background-section-container .background-section {
+       margin-top: 10rem;
        margin-left: 5rem;
        margin-bottom: 50px;
    
@@ -23,11 +30,16 @@
 }
 
 @media #{$lg}, #{$md} {
-    .background-section {
-       margin-top: 20px;
-       margin-left: 15px;
-       margin-bottom: 30px;
- 
+
+    .background-section-container {
+        margin: 5rem;
+    }
+
+    .background-section-container .background-section {
+       // margin-top: 20px;
+       // margin-left: 15px;
+       // margin-bottom: 30px;
+        //background-color: aqua;
        .section-title {
            margin-bottom: 60px;
            font-family: $defaultFont;

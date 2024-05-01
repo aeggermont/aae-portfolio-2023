@@ -26,7 +26,7 @@ import Project10 from './Components/my-work/projects/project-10/Project10';
 import AutomaticSeater from './Pages/Projects/AutomaticSeater/AutomaticSeater';
 import StoryTeller from './Pages/Projects/StoryTeller/StoryTeller';
 
-import { ParallaxProvider } from 'react-scroll-parallax';
+
 
 
 import ResponsiveTests from './Pages/responsive-tests'
@@ -35,7 +35,7 @@ import './App.scss';
 function App() {
   return (
     <div className="App">
-      <ParallaxProvider>
+     
         <Routes>
           <Route 
               path="/" 
@@ -97,7 +97,7 @@ function App() {
               path="/screen-test" 
               element={<ResponsiveTests />}/>
         </Routes>
-      </ParallaxProvider>
+
     </div>
   );
 }

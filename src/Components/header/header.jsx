@@ -54,7 +54,7 @@ function Header() {
                         <div className="row align-items-center">
                             <div className="row align-items-center">
                                 <div className="col-lg-2"> 
-                                    <div className="brand">
+                                    <div className="brand_logo">
                                         <img src={siteLogo} className="img-fluid" alt="logo" />
                                     </div>
                                 </div>

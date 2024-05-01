@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
+import "./LandingPage.scss";
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 import Background from './Background';
 import { useMediaQuery } from "react-responsive";
 import { useEffect, useState } from 'react';
@@ -11,7 +14,12 @@ import HomeData from '../HomeData';
 
 
 function BackgroundSection(props) {
-    const screenDevice = props.screenDevice;     
+    const screenDevice = props.screenDevice;
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+      }, []);
+
     const cardDimensions = function() { 
         let cardDimensions = {};
         if ( screenDevice.desktop ) {
@@ -39,8 +47,11 @@ function BackgroundSection(props) {
     };
 
     return (
-        <section className='container'>
-            <div className='background-section'>
+        <section className='background-section-container'>
+            <div  
+                data-aos="fade-right"
+                data-aos-duration="2500" 
+                className='background-section'>
                 <div className='row'>
                     <div className='section-title'>
                         <span className='section-title-label'>

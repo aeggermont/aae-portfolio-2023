@@ -29,7 +29,7 @@
    .latest-projects-section {
       // background-color: blue;
       margin-top: 60px;
-      margin-left: 15px;
+      //margin-left: 15px;
       margin-bottom: 30px;
         
       .section-title {
@@ -47,11 +47,11 @@
 }
 
 
-@media #{$laptop}{
+@media #{$desktop}{
   
    .latest-projects-section {
       // background-color: blue;
-      margin-top: 80px;
+      margin-top: 10rem;
       margin-left: 5rem;
       margin-bottom: 30px;
 

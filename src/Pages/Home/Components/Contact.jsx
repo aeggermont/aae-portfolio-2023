@@ -1,5 +1,7 @@
-import React,  {useState} from 'react';
+import React,  {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 import './Contact.scss';
 import TextField from '@mui/material/TextField';
 import FormControl, { useFormControl } from '@mui/material/FormControl';
@@ -10,6 +12,10 @@ import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 
 function Contact(props) {
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+      }, []);
     const screenDevice = props.screenDevice; 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -33,7 +39,10 @@ function Contact(props) {
 
     if (  screenDevice.desktop ) {
         return (
-            <section className='container'>
+            <section 
+                data-aos="fade-up"
+                data-aos-duration="1500" 
+                className='container'>
                 <a href="#hey"> </a>
                 <div className='contact-section'>
                     <div className='contact-form-container'>

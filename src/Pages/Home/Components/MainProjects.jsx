@@ -1,5 +1,7 @@
 import React from 'react';
 import './MainProjects.scss';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import Box from '@mui/material/Box';
@@ -13,6 +15,10 @@ import { collection, where, getDoc, onSnapshot, orderBy, query, deleteDoc, doc, 
 
 
 function MainProjectsSection(props) {
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+      }, []);
     const screenDevice = props.screenDevice; 
     const [projects, setProjects] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
@@ -136,8 +142,9 @@ function MainProjectsSection(props) {
     } else if ( screenDevice.md || screenDevice.lg) {
 
         return(
-            <section className='container'>
-                <div className='latest-projects-section'>
+            <section className='latest-projects-container'>
+                <div 
+                    className='latest-projects-section'>
                     <div className='section-title'>
                         <span className='section-title-label'>
                             Latest Projects
@@ -185,7 +192,10 @@ function MainProjectsSection(props) {
     } else if (  screenDevice.desktop ) {
         return (
             <section className='container'>
-                <div className='latest-projects-section'>
+                <div 
+                    data-aos="fade-right"
+                    data-aos-duration="2500" 
+                    className='latest-projects-section'>
                     <div className='row'>
                         <div className='section-title'>
                             <span className='section-title-label'>

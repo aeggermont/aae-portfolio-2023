@@ -1,5 +1,9 @@
 @import "../../scss/variables.scss";
 
+.home-page-background {
+    background-color: aqua;
+}
+
 .contact-write-section {
     display: flex;
     align-content: space-evenly;
@@ -22,8 +26,9 @@
     
     }
 
-    @media #{$laptop} {
+    @media #{$desktop} {
         flex-direction: row;
     }
 
 }
+

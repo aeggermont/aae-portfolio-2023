@@ -34,7 +34,11 @@
  
 
  @media #{$lg}, #{$md}{
-    .latest-projects-section {
+    .latest-projects-container {
+        margin: 5rem;
+    }
+    
+    .latest-projects-container .latest-projects-section {
          padding-top: 5rem;
          margin-left: 15px;
          margin-bottom: 30px;

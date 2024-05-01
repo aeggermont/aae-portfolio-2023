@@ -26,7 +26,7 @@
         @media #{$xs}{
 			display: none;
 		}
-		@media #{$md}{
+		@media #{$sm}{
 			display: none;
 		}
 
@@ -85,13 +85,25 @@
 	& .mobile_wrapper{
 		display: none;
 		@media #{$md}{
+			padding: 8px 0;
+			display: block;
+		}
+		@media #{$lg}{
 			padding: 10px 0;
 			display: block;
 		}
-		@media #{$xs}{
+
+		@media #{$desktop}{
 			padding: 10px 0;
 			display: block;
 		}
+
+		@media #{$laptop}{
+			padding: 10px 0;
+			display: block;
+		}
+
+
 		& .menu_button{
 			float: right;
 
